@@ -1,0 +1,33 @@
+# SPEED+ (SPEC2021) recipe: the Tango spacecraft, synthetic training and the lightbox and sunlamp
+# real domains. The `doper` verbs route on `kind`; the stages are added stage by stage.
+#
+# score: the SPEED score definition of the evaluation summaries. `paper` (the paper's tables) is
+# e_R[rad] + |t_hat - t| / |t| averaged over solved frames only, with no deadband. `official`
+# applies the SPEC2021 per-term deadbands (0.169 deg, 0.002173 relative) and is comparable with
+# the SPEC2021 leaderboard only when every frame has a pose (`comparable_to_spec2021`).
+name: speedplus
+kind: speedplus
+profile: speedplus
+score: paper
+#
+# mask_mode: masks of the 64-point conversion (`doper prepare speedplus --stage convert`). The
+# paper's are projected hulls (`hull`): the convex hull of the in-frame projected 64 points. `auto`
+# would silently use official SPNv2 masks wherever they are installed; it, `official` and `none`
+# are non-paper conversions and need --accept-non-paper-masks.
+mask_mode: hull
+#
+# legacy_checkpoints: source-format SPEED+ checkpoints (no recorded keypoint layout), accepted only
+# with the layout they were trained on: checkpoint file SHA-256 -> keypoints_3d.json SHA-256.
+# The gen-7 epoch-10 checkpoint was trained on the paper's 75-keypoint layout.
+legacy_checkpoints:
+  "0824734e2d596adc0a5c45d8de034b67a11c2669926919e7105916974e4c4bba": "a6697cafc62bdf5286fb8af453e44bae881b4ad481b8928edf288c85f77fbfa6"
+#
+# layout: the paper's 75-point keypoint layout (`doper prepare speedplus --stage layout`). Its
+# identity is points_sha256, the SHA-256 of the 75x3 little-endian float64 points, which the layout
+# file embeds as keypoint_layout_sha256 (confirm it on the first real build). sha256 is that of the
+# keypoints_3d.json file, which SPEED+ checkpoints record; a layout with these points but another
+# file SHA-256 is recorded as a formatting deviation. Any other layout needs --accept-new-layout and
+# is not the paper's.
+layout:
+  sha256: "a6697cafc62bdf5286fb8af453e44bae881b4ad481b8928edf288c85f77fbfa6"
+  points_sha256: "4c78a38de43fbe96ed2639749d95eafaa6a5db93f1de68f8ebdb3fae97c8ef0e"

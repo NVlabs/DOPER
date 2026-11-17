@@ -1,0 +1,21 @@
+{
+ "name": "shirt",
+ "description": "SHIRT (Park and D'Amico): Tango image sequences along the ROE1 and ROE2 rendezvous trajectories, in the synthetic and lightbox domains, with servicer ephemeris metadata",
+ "license": {
+  "name": null,
+  "note": "SHIRT is user-supplied: download it from its public release and check that release's license. DOPER ships no SHIRT data and no record that carries its ground truth."
+ },
+ "trajectories": [
+  "roe1",
+  "roe2"
+ ],
+ "domains": [
+  "synthetic",
+  "lightbox"
+ ],
+ "paper_domain": "lightbox",
+ "image_size": [
+  1920,
+  1200
+ ]
+}

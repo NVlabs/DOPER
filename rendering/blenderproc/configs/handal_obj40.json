@@ -1,0 +1,41 @@
+{
+  "name": "handal_obj40",
+  "dataset": "handal",
+  "target_object": 40,
+  "control_objects": [1, 39],
+  "others_per_layout": 19,
+  "distractors": [
+    {"dataset": "tless", "model_type": "cad", "count": 2},
+    {"dataset": "hb", "model_type": "", "count": 2},
+    {"dataset": "tyol", "model_type": "", "count": 2}
+  ],
+  "blenderproc": "2.8.0",
+  "blender": "4.2.1",
+  "bop_toolkit": "cea62d651c7e395b2e1962b9749e4e89693c6ac4",
+  "camera": {
+    "K": [1589.9579874674478, 0.0, 957.4749755561352, 0.0, 1590.54801852087, 714.9199825459331, 0.0, 0.0, 1.0],
+    "width": 1920,
+    "height": 1440,
+    "radius_m": [0.61, 1.4],
+    "elevation_deg": [5, 89],
+    "inplane_rad": [-3.141592653589793, 3.141592653589793]
+  },
+  "samples": 50,
+  "color_management": {"view_transform": "Filmic", "look": "Medium High Contrast"},
+  "jpeg_quality": 95,
+  "depth_scale_mm_per_uint": 1.0,
+  "render_threads": 6,
+  "layouts": 1000,
+  "frames_per_layout": 25,
+  "base_seed": 60000,
+  "workers": 32,
+  "split": {"modulo": 10, "val_residue": 9},
+  "count_bound_px": 8,
+  "count_bound_attempts": 1,
+  "unit_check": {"mode": "extent", "atol_mm": 1.0, "rtol": 0.01},
+  "room_materials": {"minimum": 8, "maximum": null},
+  "keypoints_sha256": "91c62d706e63afc3c2dcd8422bcc402c324b19cd86fa232ed93521839b50de9c",
+  "source_keypoints_sha256": "732d6355d642d1d0dde2859f08e37e932e3d5a7a28416218690f1af8c246a163",
+  "overlay_frames": [0, 1, 2, 3, 4, 5, 6, 7],
+  "provenance": "BOP-style reconstruction; the original HANDAL lighting and material recipe is not known"
+}

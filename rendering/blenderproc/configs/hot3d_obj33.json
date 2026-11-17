@@ -1,0 +1,41 @@
+{
+  "name": "hot3d_obj33",
+  "dataset": "hot3d",
+  "target_object": 33,
+  "control_objects": [1, 32],
+  "others_per_layout": 19,
+  "distractors": [
+    {"dataset": "tless", "model_type": "cad", "count": 2},
+    {"dataset": "hb", "model_type": "", "count": 2},
+    {"dataset": "tyol", "model_type": "", "count": 2}
+  ],
+  "blenderproc": "2.8.0",
+  "blender": "4.2.1",
+  "bop_toolkit": "cea62d651c7e395b2e1962b9749e4e89693c6ac4",
+  "camera": {
+    "K": [1023.999993218316, 0.0, 704.0000000149012, 0.0, 1023.999993218316, 704.0000000149012, 0.0, 0.0, 1.0],
+    "width": 1408,
+    "height": 1408,
+    "radius_m": [0.61, 1.4],
+    "elevation_deg": [5, 89],
+    "inplane_rad": [-3.141592653589793, 3.141592653589793]
+  },
+  "samples": 50,
+  "color_management": {"view_transform": "Filmic", "look": "Medium High Contrast"},
+  "jpeg_quality": 95,
+  "depth_scale_mm_per_uint": 1.0,
+  "render_threads": 6,
+  "layouts": 1000,
+  "frames_per_layout": 25,
+  "base_seed": 70000,
+  "workers": 8,
+  "split": {"modulo": 10, "val_residue": 9},
+  "count_bound_px": 8,
+  "count_bound_attempts": 1,
+  "unit_check": {"mode": "min_extent", "atol_mm": 0.1, "rtol": 0.001},
+  "room_materials": {"minimum": 16, "maximum": 16},
+  "keypoints_sha256": "f677c49add8abd151d7d1da89ccb7e8120f43e3de10c6418e216b78a636d3587",
+  "source_keypoints_sha256": "079032a9e13fd1bdab0eb2b52f8e65fbd3f233760ac835170b43da71c7b1038d",
+  "overlay_frames": [0, 12, 24],
+  "provenance": "BOP-style supplement derived from the HANDAL obj40 renderer; not the official HOT3D generator"
+}

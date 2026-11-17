@@ -1,0 +1,592 @@
+{
+ "contact_sheet": "a05aa41fd9db59c4a1942b2db059d47649fa6b9692cdd17c86cc1fecbded96a6",
+ "keypoints_3d": {
+  "extraction": {
+   "method": "masked SIFT, mutual ratio matching, known-pose triangulation, feature tracks, spatial quality selection",
+   "seed": 20260826,
+   "source": "SPEED+ synthetic train images and masks"
+  },
+  "keypoint_layout": "mesh_free_sift_multiview_tracks_v1",
+  "keypoint_layout_sha256": "c718e6d10fc41d3186ef1d1c11faf86b51b27ede4112b7162ad200e976e5fbb0",
+  "keypoints_3d": [
+   [
+    -0.2411355255298785,
+    -0.49160875664841447,
+    -0.16482081525544184
+   ],
+   [
+    0.5005859586423029,
+    0.41512485773644153,
+    -0.21005530215904028
+   ],
+   [
+    -0.36554221127127007,
+    0.3632590562616236,
+    0.30215240731076226
+   ],
+   [
+    0.0537297792475096,
+    -0.5026833035666199,
+    0.2613353560688119
+   ],
+   [
+    -0.20213419315118442,
+    0.3481451688123615,
+    -0.30195361808911003
+   ],
+   [
+    0.36133382585546325,
+    -0.4631560213576979,
+    -0.29457741489238404
+   ],
+   [
+    0.241284599697701,
+    0.11193900685978067,
+    0.30239046949319126
+   ],
+   [
+    0.20881988104302981,
+    0.017687931624075427,
+    -0.29949711778178506
+   ],
+   [
+    -0.46440037429131276,
+    -0.1268875464518797,
+    -0.29990105330301203
+   ],
+   [
+    0.03680703375354474,
+    -0.3067262016806889,
+    -0.30366198764921154
+   ],
+   [
+    -0.4901364473036455,
+    -0.23718500628138056,
+    0.28132280755609596
+   ],
+   [
+    -0.001354501445037118,
+    0.5002479483621582,
+    -0.08747939865279948
+   ],
+   [
+    0.506949181426413,
+    -0.3557158467828113,
+    -0.03711462944307581
+   ],
+   [
+    -0.48935230273133823,
+    0.26193552456381936,
+    0.0074050675286847605
+   ],
+   [
+    0.054479633644722913,
+    -0.4980420873837899,
+    -0.05619784070301523
+   ],
+   [
+    0.276145900951169,
+    0.508321444375866,
+    0.13107690745257433
+   ],
+   [
+    0.09680112521377207,
+    0.4627403070684122,
+    -0.2959244990285809
+   ],
+   [
+    -0.22693865735419536,
+    -0.19494187384178563,
+    -0.29820083348528165
+   ],
+   [
+    0.5033394813472104,
+    -0.11695650604265605,
+    -0.22007773918810578
+   ],
+   [
+    0.06053370554432864,
+    -0.10299057091960379,
+    -0.29991928819342983
+   ],
+   [
+    -0.3676725940092512,
+    -0.4088617666476756,
+    -0.3008765064186923
+   ],
+   [
+    0.21036879544711587,
+    -0.4960909380524338,
+    0.1876340133351017
+   ],
+   [
+    -0.049007242084820046,
+    0.4114643377360969,
+    -0.29963549199634054
+   ],
+   [
+    0.22664574519176622,
+    -0.2870427227832291,
+    -0.2998114378783907
+   ],
+   [
+    -0.23399923058565444,
+    0.5035175305817746,
+    -0.1880310702916714
+   ],
+   [
+    -0.2857613969605259,
+    -0.5023908602282477,
+    0.20695655982266378
+   ],
+   [
+    0.10408063656065661,
+    0.15158708941059074,
+    -0.30016184730975864
+   ],
+   [
+    -0.09804477729873372,
+    -0.2692489958261181,
+    0.2976470430650667
+   ],
+   [
+    0.15895751941583497,
+    -0.19326096512232074,
+    -0.304211771128317
+   ],
+   [
+    -0.407359650138736,
+    0.46765615744270245,
+    0.15860200801366778
+   ],
+   [
+    -0.04151243550568619,
+    0.09727518349133782,
+    0.3067039218881583
+   ],
+   [
+    -0.10340608154539184,
+    -0.08825419001510951,
+    -0.3000744993732702
+   ],
+   [
+    0.24822428580041322,
+    -0.14304481339136213,
+    -0.30303710515989235
+   ],
+   [
+    -0.5162065428983491,
+    -0.1303367661133033,
+    -0.11849408602641417
+   ],
+   [
+    0.19157149761911105,
+    -0.39960801017248987,
+    -0.2990934727354799
+   ],
+   [
+    0.17143527454827714,
+    -0.49665638191988737,
+    -0.16720939441083252
+   ],
+   [
+    -0.06682772522371928,
+    0.1157912398272517,
+    -0.29903864296748583
+   ],
+   [
+    0.018557160161771766,
+    0.25627803341461164,
+    -0.30018540731149557
+   ],
+   [
+    -0.41291050742416807,
+    -0.4968208932584715,
+    -0.22556769944741203
+   ],
+   [
+    -0.043791561784741084,
+    0.4577830340688156,
+    -0.2993339560283427
+   ],
+   [
+    -0.4245181423384027,
+    -0.5003343618964065,
+    -0.10117458611048716
+   ],
+   [
+    0.0803053722163968,
+    0.27046267480251474,
+    0.29602150227282936
+   ],
+   [
+    0.27400019292473965,
+    -0.05205017624834362,
+    -0.3003481631960939
+   ],
+   [
+    0.4463068899293661,
+    -0.21117609982698307,
+    0.29298991615256187
+   ],
+   [
+    -0.27028949780387246,
+    -0.482566240473151,
+    -0.15929771448315522
+   ],
+   [
+    -0.1842882079172854,
+    0.4930219160282728,
+    -0.2939764715306552
+   ],
+   [
+    -0.48937986381136905,
+    0.1335770316223449,
+    -0.14975487010345684
+   ],
+   [
+    -0.3076546515632128,
+    -0.1724786914664787,
+    0.3060173512273458
+   ],
+   [
+    0.40144173699464686,
+    0.48628408599849726,
+    -0.2635137666741173
+   ],
+   [
+    0.08030348417197873,
+    -0.49962386928832886,
+    0.25515410718268117
+   ],
+   [
+    0.2019111858502283,
+    0.5049808103372669,
+    -0.22247179138066409
+   ],
+   [
+    -0.02502259839059647,
+    0.4357859897320141,
+    -0.2986302475167514
+   ],
+   [
+    -0.4880008718872972,
+    -0.024878649769217897,
+    0.1006795241397566
+   ],
+   [
+    0.07778831543573296,
+    0.508796848748555,
+    0.18384545117258277
+   ],
+   [
+    0.04433836505344431,
+    -0.12642305942909665,
+    -0.2978065850042053
+   ],
+   [
+    0.4971285938600477,
+    0.05281859555527021,
+    0.09644726647934757
+   ],
+   [
+    -0.4984038235807886,
+    0.4786936500149068,
+    -0.08507099399783338
+   ],
+   [
+    0.06000694997248539,
+    -0.2993471339338287,
+    -0.29929582455622267
+   ],
+   [
+    0.12299992274324985,
+    0.12894020458301472,
+    -0.30075675869632534
+   ],
+   [
+    0.11766774363534699,
+    0.04926971280210185,
+    0.29465998675868044
+   ],
+   [
+    0.50293561004624,
+    -0.06572676145820276,
+    -0.05583224628446101
+   ],
+   [
+    0.26638808893814614,
+    0.3082014396471957,
+    -0.29719663930830814
+   ],
+   [
+    0.16447318609280898,
+    -0.21186914878776308,
+    -0.3017762094688179
+   ],
+   [
+    0.3046625098155291,
+    0.05111912412960493,
+    -0.29835170020204743
+   ]
+  ],
+  "object_name": "tango",
+  "official_keypoint_count": 0
+ },
+ "landmark_candidates": "56029b2061907bb2bc1dc11ba4bcec26545b1bde75b88ce1c0b1d28ad1516632",
+ "overlays": {
+  "img000001.jpg": "fc16e8615a22cfb5b03deac3e121798331be577f931be837458ec010f584acfb",
+  "img000002.jpg": "70a22dfc5d0ec1996a99fda2c4c3da24bacfc8419fc50dc2d984a824923f774a",
+  "img000003.jpg": "82a683a0665ba7a10aa0924215e4c56e96ed54e7fe39c81f3e30e0eb2abf843a",
+  "img000004.jpg": "972639e36a00fde550100351380eb8818dcfca701706d62b2d726f4e4ecc69c7",
+  "img000005.jpg": "e276732bb4f1322d6a4a97290ebbd88ca933f5c3c7689f2b4b397b7611228a54",
+  "img000006.jpg": "3cf53c385f3359980d771123d9ac209cf5cbaaa018b8fd6e161f800008a9d5b3",
+  "img000007.jpg": "e0718bf260f431ccb3db0fa9062ea0cc344ba27173d0fa85b965f92df2f22699",
+  "img000008.jpg": "1c79b546619f2f702a3eacb819140d0a805a12bd5ab366f205e98c0d44013f46",
+  "img000009.jpg": "40bcd143663df6c23a848fd606d7f51676c8659f4d1ce126aa8358d0a9d50aad",
+  "img000010.jpg": "19ab3014d1081b896ef25753a270e3b3221a71501aaede9859555cb9df41dfbf",
+  "img000011.jpg": "92ca47182b8dcd0f5f9623d9e310a2726444908d296a06469523301491e99c7c",
+  "img000012.jpg": "316c141f285fe6cd5dd14d7a0c50d7d284ea8cee7241616bdff91bf00052187e"
+ },
+ "pair_diagnostics": [
+  {
+   "first": "img000011.jpg",
+   "first_features": 1108,
+   "mutual_ratio_matches": 305,
+   "pose_angle_deg": 8.000000000000083,
+   "second": "img000012.jpg",
+   "second_features": 1133,
+   "triangulated_matches": 293
+  },
+  {
+   "first": "img000010.jpg",
+   "first_features": 1121,
+   "mutual_ratio_matches": 250,
+   "pose_angle_deg": 15.999999999999963,
+   "second": "img000012.jpg",
+   "second_features": 1133,
+   "triangulated_matches": 222
+  },
+  {
+   "first": "img000008.jpg",
+   "first_features": 1057,
+   "mutual_ratio_matches": 319,
+   "pose_angle_deg": 7.9999999999999,
+   "second": "img000009.jpg",
+   "second_features": 1062,
+   "triangulated_matches": 294
+  },
+  {
+   "first": "img000007.jpg",
+   "first_features": 1019,
+   "mutual_ratio_matches": 271,
+   "pose_angle_deg": 7.999999999999717,
+   "second": "img000008.jpg",
+   "second_features": 1057,
+   "triangulated_matches": 257
+  },
+  {
+   "first": "img000008.jpg",
+   "first_features": 1057,
+   "mutual_ratio_matches": 240,
+   "pose_angle_deg": 15.999999999999963,
+   "second": "img000010.jpg",
+   "second_features": 1121,
+   "triangulated_matches": 215
+  },
+  {
+   "first": "img000006.jpg",
+   "first_features": 980,
+   "mutual_ratio_matches": 178,
+   "pose_angle_deg": 16.000000000000053,
+   "second": "img000008.jpg",
+   "second_features": 1057,
+   "triangulated_matches": 154
+  },
+  {
+   "first": "img000006.jpg",
+   "first_features": 980,
+   "mutual_ratio_matches": 234,
+   "pose_angle_deg": 7.9999999999999,
+   "second": "img000007.jpg",
+   "second_features": 1019,
+   "triangulated_matches": 215
+  },
+  {
+   "first": "img000007.jpg",
+   "first_features": 1019,
+   "mutual_ratio_matches": 224,
+   "pose_angle_deg": 15.99999999999987,
+   "second": "img000009.jpg",
+   "second_features": 1062,
+   "triangulated_matches": 190
+  },
+  {
+   "first": "img000005.jpg",
+   "first_features": 1009,
+   "mutual_ratio_matches": 199,
+   "pose_angle_deg": 15.999999999999963,
+   "second": "img000007.jpg",
+   "second_features": 1019,
+   "triangulated_matches": 155
+  },
+  {
+   "first": "img000002.jpg",
+   "first_features": 1129,
+   "mutual_ratio_matches": 281,
+   "pose_angle_deg": 7.999999999999717,
+   "second": "img000003.jpg",
+   "second_features": 1084,
+   "triangulated_matches": 269
+  },
+  {
+   "first": "img000003.jpg",
+   "first_features": 1084,
+   "mutual_ratio_matches": 277,
+   "pose_angle_deg": 7.999999999999717,
+   "second": "img000004.jpg",
+   "second_features": 1074,
+   "triangulated_matches": 258
+  },
+  {
+   "first": "img000001.jpg",
+   "first_features": 1069,
+   "mutual_ratio_matches": 208,
+   "pose_angle_deg": 15.999999999999778,
+   "second": "img000003.jpg",
+   "second_features": 1084,
+   "triangulated_matches": 184
+  },
+  {
+   "first": "img000003.jpg",
+   "first_features": 1084,
+   "mutual_ratio_matches": 180,
+   "pose_angle_deg": 15.999999999999963,
+   "second": "img000005.jpg",
+   "second_features": 1009,
+   "triangulated_matches": 152
+  },
+  {
+   "first": "img000005.jpg",
+   "first_features": 1009,
+   "mutual_ratio_matches": 240,
+   "pose_angle_deg": 8.000000000000083,
+   "second": "img000006.jpg",
+   "second_features": 980,
+   "triangulated_matches": 222
+  },
+  {
+   "first": "img000004.jpg",
+   "first_features": 1074,
+   "mutual_ratio_matches": 178,
+   "pose_angle_deg": 16.000000000000053,
+   "second": "img000006.jpg",
+   "second_features": 980,
+   "triangulated_matches": 156
+  },
+  {
+   "first": "img000010.jpg",
+   "first_features": 1121,
+   "mutual_ratio_matches": 322,
+   "pose_angle_deg": 7.9999999999999,
+   "second": "img000011.jpg",
+   "second_features": 1108,
+   "triangulated_matches": 308
+  },
+  {
+   "first": "img000009.jpg",
+   "first_features": 1062,
+   "mutual_ratio_matches": 243,
+   "pose_angle_deg": 15.999999999999963,
+   "second": "img000011.jpg",
+   "second_features": 1108,
+   "triangulated_matches": 215
+  },
+  {
+   "first": "img000001.jpg",
+   "first_features": 1069,
+   "mutual_ratio_matches": 289,
+   "pose_angle_deg": 7.9999999999999,
+   "second": "img000002.jpg",
+   "second_features": 1129,
+   "triangulated_matches": 274
+  },
+  {
+   "first": "img000004.jpg",
+   "first_features": 1074,
+   "mutual_ratio_matches": 261,
+   "pose_angle_deg": 7.9999999999999,
+   "second": "img000005.jpg",
+   "second_features": 1009,
+   "triangulated_matches": 239
+  },
+  {
+   "first": "img000002.jpg",
+   "first_features": 1129,
+   "mutual_ratio_matches": 225,
+   "pose_angle_deg": 15.999999999999963,
+   "second": "img000004.jpg",
+   "second_features": 1074,
+   "triangulated_matches": 205
+  },
+  {
+   "first": "img000009.jpg",
+   "first_features": 1062,
+   "mutual_ratio_matches": 330,
+   "pose_angle_deg": 7.999999999999717,
+   "second": "img000010.jpg",
+   "second_features": 1121,
+   "triangulated_matches": 313
+  }
+ ],
+ "report": {
+  "candidate_pairs": 21,
+  "configuration": {
+   "anchors": 80,
+   "mask_erode_px": 5,
+   "max_range_relative": 0.15,
+   "max_reprojection_px": 2.5,
+   "max_track_spread_m": 0.02,
+   "max_view_deg": 18.0,
+   "merge_radius_m": 0.015,
+   "min_mask_containment": 0.9,
+   "min_track_images": 3,
+   "min_triangulation_angle_deg": 1.0,
+   "min_view_deg": 6.0,
+   "neighbors_per_anchor": 6,
+   "nfeatures": 2500,
+   "num_keypoints": 64,
+   "overlay_images": 12,
+   "ratio_threshold": 0.85,
+   "seed": 20260826,
+   "sift_contrast_threshold": 0.01,
+   "target_view_deg": 10.0,
+   "validation_views": 300
+  },
+  "mask_validated_landmark_candidates": 295,
+  "merged_landmark_candidates": 380,
+  "multi_image_tracks": 559,
+  "selected_bounds_max": [
+   0.506949181426413,
+   0.508796848748555,
+   0.3067039218881583
+  ],
+  "selected_bounds_min": [
+   -0.5162065428983491,
+   -0.5026833035666199,
+   -0.304211771128317
+  ],
+  "selected_keypoints": 64,
+  "selected_mean_mask_containment": 1.0,
+  "selected_median_reprojection_px": 0.16678632527259776,
+  "selected_median_spread_m": 0.014649524878463254,
+  "selected_median_track_images": 8.0,
+  "selected_min_mask_containment": 1.0,
+  "triangulated_edges": 4790,
+  "unique_images_processed": 12
+ },
+ "versions": {
+  "opencv": "5.0.0",
+  "scikit-learn": "1.9.1"
+ }
+}

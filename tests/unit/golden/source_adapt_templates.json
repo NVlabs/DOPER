@@ -1,0 +1,131 @@
+{
+ "handal": {
+  "source": "configs/pbronly/obj000002_pbr_v5.yaml",
+  "template": {
+   "backbone": "convnext_small.dinov3_lvd1689m",
+   "backbone_lr_multiplier": 0.1,
+   "batch_size": 16,
+   "crop_size": 512,
+   "data_root": "<data_root>",
+   "det_size": 640,
+   "epochs": 3,
+   "freeze_keypoint_head": false,
+   "grad_clip": 5.0,
+   "gradient_accumulation_steps": 1,
+   "init_from": "<init_from>",
+   "keypoint_head": "heatmap",
+   "keypoint_heatmap_sigma": 0.75,
+   "keypoints_3d": "<keypoints_3d>",
+   "lr": 1e-05,
+   "max_iters_per_epoch": 368,
+   "min_mix_keypoint_samples": 0,
+   "min_mix_mask_only_samples": 1,
+   "mix_data_root": [
+    "<labels>"
+   ],
+   "mix_per_batch": [
+    4
+   ],
+   "no_amp": true,
+   "no_pretrained": true,
+   "num_classes": 1,
+   "num_keypoints": 64,
+   "num_workers": 8,
+   "require_init_from": true,
+   "require_no_init_from": false,
+   "require_pretrained_backbone": false,
+   "resume": null,
+   "save_interval": 1,
+   "seed": 42,
+   "val_interval": 1,
+   "warmup_iters": 20,
+   "work_dir": "<work_dir>"
+  }
+ },
+ "hopev2": {
+  "source": "configs/pbronly/hope_onboarding_adapt3_controlled.yaml",
+  "template": {
+   "backbone": "convnext_small.dinov3_lvd1689m",
+   "backbone_lr_multiplier": 0.1,
+   "batch_size": 16,
+   "crop_size": 512,
+   "data_root": "<data_root>",
+   "det_size": 640,
+   "epochs": 3,
+   "freeze_keypoint_head": false,
+   "grad_clip": 5.0,
+   "gradient_accumulation_steps": 1,
+   "init_from": "<init_from>",
+   "keypoint_head": "heatmap",
+   "keypoint_heatmap_sigma": 0.75,
+   "keypoints_3d": "<keypoints_3d>",
+   "lr": 1e-05,
+   "max_iters_per_epoch": 1,
+   "min_mix_keypoint_samples": 0,
+   "min_mix_mask_only_samples": 1,
+   "mix_data_root": [
+    "<labels>"
+   ],
+   "mix_per_batch": [
+    4
+   ],
+   "no_amp": true,
+   "no_pretrained": true,
+   "num_classes": 1,
+   "num_keypoints": 64,
+   "num_workers": 8,
+   "require_init_from": true,
+   "require_no_init_from": false,
+   "require_pretrained_backbone": false,
+   "resume": null,
+   "save_interval": 1,
+   "seed": 42,
+   "val_interval": 1,
+   "warmup_iters": 20,
+   "work_dir": "<work_dir>"
+  }
+ },
+ "hot3d": {
+  "source": "configs/pbronly/hot3d_onboarding_adapt3_tiny.yaml",
+  "template": {
+   "backbone": "convnext_tiny.dinov3_lvd1689m",
+   "backbone_lr_multiplier": 0.1,
+   "batch_size": 16,
+   "crop_size": 512,
+   "data_root": "<data_root>",
+   "det_size": 640,
+   "epochs": 3,
+   "freeze_keypoint_head": false,
+   "grad_clip": 5.0,
+   "gradient_accumulation_steps": 1,
+   "init_from": "<init_from>",
+   "keypoint_head": "heatmap",
+   "keypoint_heatmap_sigma": 0.75,
+   "keypoints_3d": "<keypoints_3d>",
+   "lr": 1e-05,
+   "max_iters_per_epoch": 1,
+   "min_mix_keypoint_samples": 0,
+   "min_mix_mask_only_samples": 1,
+   "mix_data_root": [
+    "<labels>"
+   ],
+   "mix_per_batch": [
+    4
+   ],
+   "no_amp": true,
+   "no_pretrained": true,
+   "num_classes": 1,
+   "num_keypoints": 64,
+   "num_workers": 8,
+   "require_init_from": true,
+   "require_no_init_from": false,
+   "require_pretrained_backbone": false,
+   "resume": null,
+   "save_interval": 1,
+   "seed": 42,
+   "val_interval": 1,
+   "warmup_iters": 20,
+   "work_dir": "<work_dir>"
+  }
+ }
+}

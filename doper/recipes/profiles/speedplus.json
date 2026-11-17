@@ -1,0 +1,35 @@
+{
+ "name": "speedplus",
+ "description": "SPEED+ v2 (SPEC2021): synthetic Tango renders and the lightbox and sunlamp hardware-in-the-loop domains",
+ "license": {
+  "name": "CC BY-NC-SA 4.0",
+  "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "file": "LICENSE.md",
+  "attribution": "SPEED+ v2, Zenodo record 5588480; the extracted LICENSE.md is authoritative"
+ },
+ "archive": {
+  "name": "speedplusv2.zip",
+  "url": "https://zenodo.org/records/5588480/files/speedplusv2.zip?download=1",
+  "zenodo_record": 5588480,
+  "bytes": 16928863098,
+  "md5": "5cb3f44219054c49959e2009e597523b",
+  "sha256": null
+ },
+ "tango_points": {
+  "name": "tangoPoints.mat",
+  "url": "https://raw.githubusercontent.com/tpark94/spnv2/main/core/utils/models/tangoPoints.mat",
+  "sha256": "6d6a57f353ceb3691117deeab921debb29a68cfed60653cebf07a001da9c1725",
+  "license": "MIT (SPNv2)"
+ },
+ "extracted_dir": "speedplusv2",
+ "image_counts": {
+  "train": 47966,
+  "val": 11994,
+  "lightbox": 6740,
+  "sunlamp": 2791
+ },
+ "image_size": [
+  1920,
+  1200
+ ]
+}

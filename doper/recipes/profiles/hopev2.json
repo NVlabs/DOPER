@@ -1,0 +1,119 @@
+{
+ "name": "hopev2",
+ "hf_repo": "bop-benchmark/hope",
+ "revision": "ddd0a26ca3460085e93b648748160fb25e4b5566",
+ "files": {
+  "hope_models.zip": "b92d47db20fc98c8f54ea42754ca1b5db123f7ed99aa9b9aca3ed0409160385d",
+  "hope_onboarding_dynamic.zip": "142facb2e4804a85b2c7f9129f2c702875f6172a2faa6387a3771b75f656df8b",
+  "hope_onboarding_static.zip": "3167789e3611d65f0758888a445dd83ed0e6a5b2ee12c8c08bf028b21112ff6a",
+  "hope_test_bop24.zip": "7d261a226e3182fcd2abd6ec51fd60041a352c8e284f74396a65b29fb5073912",
+  "hope_train_pbr.z01": "424f7e35cea7a325068f1e47555d9611f05d1d2eb863847d1f81d554d910add6",
+  "hope_train_pbr.z02": "6d4198b2740dcd2f0359a1668f54fe8959d5a685429ed0a2077520cd01f60c32",
+  "hope_train_pbr.zip": "213cb829e26349dcaafddbdfc4dda5ff72b526d4b4849086ebac0db618a842d3",
+  "hope_val_realsense.zip": "25c75bb2daad4ad7e143b3f8d5bdff793fadb65463492792e822dbb36245a49f"
+ },
+ "parts": {
+  "models": [
+   "hope_models.zip"
+  ],
+  "pbr": [
+   "hope_train_pbr.z01",
+   "hope_train_pbr.z02",
+   "hope_train_pbr.zip"
+  ],
+  "val": [
+   "hope_val_realsense.zip"
+  ],
+  "static": [
+   "hope_onboarding_static.zip"
+  ],
+  "dynamic": [
+   "hope_onboarding_dynamic.zip"
+  ],
+  "test": [
+   "hope_test_bop24.zip"
+  ]
+ },
+ "exclusions": [],
+ "defects": {},
+ "meta": {
+  "bop_version": "BOP24",
+  "objects": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28
+  ],
+  "counts": {
+   "pbr_scenes": 50,
+   "pbr_frames": 49450,
+   "static_rgb": 10074,
+   "dynamic_rgb": 8792,
+   "val_rgb": 50,
+   "test_rgb": 457
+  },
+  "layout": {
+   "pbr": "train_pbr",
+   "models": "models",
+   "models_eval": "models_eval",
+   "val": "val",
+   "static": "onboarding_static",
+   "dynamic": "onboarding_dynamic",
+   "test": "test"
+  },
+  "evaluation_notes": [
+   "HOPEv2/BOP24 test includes RealSense and Vicon imagery.",
+   "Numeric val/test scene IDs overlap; separate roots and byte-hash exclusions are required.",
+   "Provided dynamic masks are Cutie tracking outputs, not ground-truth masks."
+  ],
+  "resources": {
+   "pbr_inventory": {
+    "file": "resources/hopev2_pbr_inventory.json",
+    "sha256": "bfffa75bcc580b253a618ddd7e57b2611283534979add76f3cebc16ae42cebd8"
+   }
+  },
+  "onboarding_prefix": {
+   "static": "onboarding_static",
+   "dynamic": "onboarding_dynamic",
+   "test": "test"
+  },
+  "bytes": {
+   "hope_models.zip": 87499751,
+   "hope_onboarding_dynamic.zip": 5756555925,
+   "hope_onboarding_static.zip": 2921652958,
+   "hope_test_bop24.zip": 1331482534,
+   "hope_train_pbr.z01": 42949672960,
+   "hope_train_pbr.z02": 42949672960,
+   "hope_train_pbr.zip": 15190966162,
+   "hope_val_realsense.zip": 153745625
+  },
+  "test_population": {
+   "images": 457,
+   "scenes": 47
+  }
+ }
+}

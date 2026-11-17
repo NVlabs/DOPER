@@ -1,0 +1,13 @@
+{
+ "about": "SHA-256 pins of the Table 2 replay artifacts read from DOPER_SHIRT_ARTIFACTS (test_shirt_policies.test_exact_replay_when_artifacts_supplied). null: not yet known; the replay warns with the observed value, which is then pinned here (no code change). keypoints_3d.json is the paper's 75-point layout (the shirt recipe's legacy checkpoint registry).",
+ "artifacts": {
+  "camera.json": null,
+  "keypoints_3d.json": "a6697cafc62bdf5286fb8af453e44bae881b4ad481b8928edf288c85f77fbfa6",
+  "roe1/records.jsonl": null,
+  "roe1/heatmap_measurements.npz": null,
+  "roe1/metadata.json": null,
+  "roe2/records.jsonl": null,
+  "roe2/heatmap_measurements.npz": null,
+  "roe2/metadata.json": null
+ }
+}

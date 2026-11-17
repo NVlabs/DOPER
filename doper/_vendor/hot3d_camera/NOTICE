@@ -1,0 +1,32 @@
+HOT3D camera model (camera-only subset)
+
+Origin:    https://github.com/facebookresearch/hand_tracking_toolkit
+Revision:  bc628e9286c18444b47a0971a89d075ea6f00747
+License:   Apache-2.0 (see LICENSE in this directory)
+Copyright: Meta Platforms, Inc. and affiliates
+
+Vendored files: camera.py, camera_distortion.py, math_utils.py. The package
+__init__.py is local. Only the camera models are included; the toolkit's hand
+annotation and model code is not.
+
+SHA-256 of the upstream files (before the local edits below):
+  camera.py             20565a0294208f6472e72216db258bef96f33f5e0c78c70ea0e72e7b1431a400
+  camera_distortion.py  83815230ee4401c1e45208149263f1606164452e710e0090179b18d2ef5cd047
+  math_utils.py         1209672b2c59e57f9cd2a8a3252637cf39e65bbd5fcabbe7e47beee635a362c9
+
+Local edits (each modified file carries the line "Modified from upstream; see NOTICE."
+after its Apache-2.0 header; all other bytes are upstream):
+  camera.py             `from typing_extensions import Protocol` became
+                        `from typing import Protocol`
+  camera_distortion.py  `from typing_extensions import Protocol, runtime_checkable`
+                        became `from typing import Protocol, runtime_checkable`
+  math_utils.py         unmodified
+The only change is the import source, so no extra dependency is needed on Python 3.10
+and later. The package __init__.py is local. Linting (ruff) and pyright exclude this
+directory (see pyproject.toml), so no formatting or annotation edits were made.
+
+SHA-256 of the files as shipped (pinned by tests/unit/test_vendor_hot3d_camera.py):
+  __init__.py           b79f962b13e023529542659c36fdffdd7bd2e232957c23eb17e6d69b4ea825f7
+  camera.py             492fc3644c1e111fe22e5767e05d380c5efe351c7c6b51da2feb6a817e1ac80e
+  camera_distortion.py  7c1cad837ad737e014c95881f1885fc2c8218e1658caeb7144f837227e469668
+  math_utils.py         1209672b2c59e57f9cd2a8a3252637cf39e65bbd5fcabbe7e47beee635a362c9

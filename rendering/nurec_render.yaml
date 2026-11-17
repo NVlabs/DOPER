@@ -1,0 +1,79 @@
+# Domain-randomized render of the object for the NuRec synthetic baseline: 10,000 images
+# (seed 142), split 9,750 train / 250 val by `doper prepare RECIPE --stage synthetic`, which
+# authors the object (rendering/nurec_assets.py) and writes a resolved copy of this file with the
+# object and asset paths.
+#
+# The three asset directories are required user inputs (`--hdri-dir`, `--texture-dir`,
+# `--distractor-dir`); they are empty here on purpose and the stage refuses to render without
+# them. Public CC0 sets work: Poly Haven HDRIs (.hdr/.exr), ambientCG PBR texture sets, and a
+# directory of distractor meshes.
+#
+# Lists stay in flow style: Blender's fallback YAML reader has no block lists.
+
+output:
+  resolution: 640
+  image_format: PNG
+  compression: 15
+  render_masks: true
+  mask_dir: masks
+
+object:
+  mesh_name: object
+  keypoint_prefix: KP_object_
+  num_keypoints: 64
+
+pose:
+  axis_bias:
+    x: 0.05
+    y: 0.05
+    z: 0.1
+  axis_jiggle_deg: 35.0
+  ground_clearance_min: 0.002
+  ground_clearance_max: 0.025
+  xy_jitter: 0.04
+
+camera:
+  auto_distance: true
+  fill_factor_min: 0.35
+  fill_factor_max: 0.82
+  distance_min: 0.1
+  distance_max: 1.2
+  image_jitter_min: 0.0
+  image_jitter_max: 0.18
+  focal_length_mm: 50
+  sensor_width_mm: 36
+  top_down_jiggle_deg: 25
+
+visibility:
+  min_keypoints: 8
+  fallback_to_random: true
+
+scene:
+  hdri_dir: ""         # required user input
+  texture_dir: ""      # required user input
+  distractor_dir: ""   # required user input
+  num_distractors_min: 0
+  num_distractors_max: 8
+  change_hdri_every: 1
+  change_ground_every: 1
+  change_distractors_every: 1
+  change_material_every: 1
+  ground_style: texture
+  procedural_ground_modes: color,wood,checker
+  procedural_world_background: false
+  world_background_modes: hdri
+  world_background_value_range: [0.18, 1.0]
+  world_background_saturation_range: [0.0, 0.75]
+  world_background_strength_range: [0.35, 1.5]
+  no_ground: 0.5
+
+material:
+  # Keep the material the asset script authored.
+  object_material_mode: preserve
+
+render:
+  engine: BLENDER_EEVEE
+  use_raytracing: false
+  shadow_rays: 2
+  eevee_samples: 32
+  samples: 32

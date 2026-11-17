@@ -1,0 +1,37 @@
+# Starter config for a new synthetic-first DOPER model: `python -m doper.train --config FILE`.
+#
+# Copy this file, replace the data/work paths, and keep the architecture policy fields unless
+# this is an explicitly documented ablation. CLI flags override values from this file; unknown
+# keys fail at startup. (The BOP recipes beside it are read by the `doper` command instead.)
+
+data_root: data/my_object
+keypoints_3d: data/my_object/keypoints_3d.json
+work_dir: work_dirs/doper_my_object
+
+# Production backbone policy: the package default, DINOv3 ConvNeXt-Small.
+backbone: convnext_small.dinov3_lvd1689m
+backbone_lr_multiplier: 0.1
+require_pretrained_backbone: true
+require_no_init_from: true
+
+# Keep these consistent with the render config and keypoints_3d.json. The input sizes are the
+# package defaults (detection 640, crop 512), as in the BOP recipes.
+num_classes: 1
+num_keypoints: 64
+det_size: 640
+crop_size: 512
+keypoint_head: heatmap
+keypoint_heatmap_sigma: 0.75
+
+# A conservative starting point. Tune the microbatch for available VRAM while preserving the
+# effective batch size (batch_size * gradient_accumulation_steps).
+epochs: 120
+batch_size: 16
+gradient_accumulation_steps: 4
+num_workers: 8
+lr: 5.0e-4
+grad_clip: 5.0
+val_interval: 1
+save_interval: 10
+seed: 42
+no_amp: true

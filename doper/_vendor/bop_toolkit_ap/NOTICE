@@ -1,0 +1,33 @@
+BOP toolkit pose matching and detection scoring (BOP24 AP subset)
+
+Origin:    https://github.com/thodan/bop_toolkit
+Revision:  cea62d651c7e395b2e1962b9749e4e89693c6ac4
+License:   MIT (see LICENSE in this directory)
+Copyright: (c) 2019 Tomas Hodan
+
+Vendored files: score.py and pose_matching.py from bop_toolkit_lib/, plus misc.py, which
+holds only the `log` function of bop_toolkit_lib/misc.py (the one helper score.py calls).
+The package __init__.py is local. doper.bop.ap uses score.calc_ap,
+score.calc_pose_detection_scores and pose_matching.match_poses_scene to compute the BOP24
+detection AP exactly as scripts/eval_calc_scores.py does; the pose errors come from
+doper.evaluation.bop_metrics (toolkit_mssd, toolkit_mspd, toolkit_symmetry_transforms).
+
+SHA-256 of the upstream files (before the local edits below):
+  score.py              240918e3f63775d982f3a9524440417595b1cab78d0213a530bc12c022a345a1
+  pose_matching.py      1373a5f1435bcaa6e2503f8815e4415da55d84ae6804db1cc6c7ee7665d19c1d
+
+Local edits (each modified file carries the line "Modified from upstream; see NOTICE."
+as its third line, after the upstream author header; all other bytes are upstream):
+  score.py              `from bop_toolkit_lib import misc` became `from . import misc`
+  misc.py               upstream bop_toolkit_lib/misc.py reduced to its header, the
+                        `sys` and `datetime` imports and the verbatim `log` function, so
+                        no scipy or toolkit transform import is needed
+  pose_matching.py      unmodified
+Linting (ruff) and pyright exclude this directory (see pyproject.toml), so no formatting or
+annotation edits were made.
+
+SHA-256 of the files as shipped (pinned by tests/unit/test_vendor_bop_toolkit_ap.py):
+  __init__.py           b2a987988818f0302884c397f269af6268f1865036d40bb99b3f8a5ad929ba8a
+  misc.py               86e7193543d88f3b3a7963fa028fbd3d41275c8318af24fd5c107f8d2bb4a520
+  pose_matching.py      1373a5f1435bcaa6e2503f8815e4415da55d84ae6804db1cc6c7ee7665d19c1d
+  score.py              3b44c55ad507bc956ec9977dbed26f487e36d1e01d5609e87cf72c4a739d69e4

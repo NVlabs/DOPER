@@ -1,0 +1,215 @@
+{
+ "name": "handal",
+ "hf_repo": "bop-benchmark/handal",
+ "revision": "627203580f2e639764ae981daf1f4a6d521b5d62",
+ "files": {
+  "handal_models.zip": "2b4579b0dbfd23bf96db78b77e9b6d2c4fb8544908748f6331567a8aa7fe336f",
+  "handal_onboarding_dynamic.zip": "acef1e2433005953c60ba4a72f9c75f330338a2a5b52a474df32160c439bca00",
+  "handal_onboarding_static.zip": "f9f2b22844aebef2a553b0029cf05ce177829edc8f3e4ba25cd1f27a7c439753",
+  "handal_test_bop24.zip": "97e2fd4ba5a9acc00d0a242e8c0011cd9d50b33975e51e79f23156ab3794ed89",
+  "handal_train_pbr.z01": "7f03188342ebeed84514e60fd20e82d65ff5b1a4c70ee566b7e4ad0babf54848",
+  "handal_train_pbr.zip": "683c24e623267a249339674b433d1509ba680982ba0c14c4112782383af153cf",
+  "handal_val.zip": "126f39dde9a829cb12dd1a9685a0e9707f9a67f987dccda5c45714b5b2750f4e"
+ },
+ "parts": {
+  "models": [
+   "handal_models.zip"
+  ],
+  "pbr": [
+   "handal_train_pbr.z01",
+   "handal_train_pbr.zip"
+  ],
+  "val": [
+   "handal_val.zip"
+  ],
+  "static": [
+   "handal_onboarding_static.zip"
+  ],
+  "dynamic": [
+   "handal_onboarding_dynamic.zip"
+  ],
+  "test": [
+   "handal_test_bop24.zip"
+  ]
+ },
+ "exclusions": [
+  "train_pbr/000014/mask_visib/000019_000019.png",
+  "train_pbr/000048/mask_visib/000420_000014.png",
+  "train_pbr/000002/mask_visib/000233_000015.png",
+  "train_pbr/000018/mask_visib/000149_000004.png",
+  "train_pbr/000031/mask_visib/000101_000016.png",
+  "train_pbr/000023/depth/000103.png",
+  "train_pbr/000023/mask_visib/000378_000012.png",
+  "train_pbr/000041/mask_visib/000315_000000.png",
+  "train_pbr/000008/mask_visib/000015_000009.png",
+  "train_pbr/000034/mask_visib/000399_000008.png",
+  "train_pbr/000001/mask_visib/000487_000007.png"
+ ],
+ "defects": {
+  "reason": "Zero-byte required visible masks/depth in official published multipart PBR ZIP; exclude complete frames explicitly, never alter source files or train on invalid labels.",
+  "excluded_frames": [
+   {
+    "scene": "000001",
+    "frame": 487
+   },
+   {
+    "scene": "000002",
+    "frame": 233
+   },
+   {
+    "scene": "000008",
+    "frame": 15
+   },
+   {
+    "scene": "000014",
+    "frame": 19
+   },
+   {
+    "scene": "000018",
+    "frame": 149
+   },
+   {
+    "scene": "000023",
+    "frame": 103
+   },
+   {
+    "scene": "000023",
+    "frame": 378
+   },
+   {
+    "scene": "000031",
+    "frame": 101
+   },
+   {
+    "scene": "000034",
+    "frame": 399
+   },
+   {
+    "scene": "000041",
+    "frame": 315
+   },
+   {
+    "scene": "000048",
+    "frame": 420
+   }
+  ],
+  "missing_required_files": [
+   {
+    "scene": "000008",
+    "frame": 52,
+    "instance": 17,
+    "path": "train_pbr/000008/mask_visib/000052_000017.png",
+    "obj_id": 1
+   },
+   {
+    "scene": "000018",
+    "frame": 215,
+    "instance": 17,
+    "path": "train_pbr/000018/mask_visib/000215_000017.png",
+    "obj_id": 16
+   },
+   {
+    "scene": "000023",
+    "frame": 133,
+    "instance": 19,
+    "path": "train_pbr/000023/mask_visib/000133_000019.png",
+    "obj_id": 5
+   },
+   {
+    "scene": "000037",
+    "frame": 70,
+    "instance": 6,
+    "path": "train_pbr/000037/mask_visib/000070_000006.png",
+    "obj_id": 38
+   },
+   {
+    "scene": "000047",
+    "frame": 334,
+    "instance": 11,
+    "path": "train_pbr/000047/mask_visib/000334_000011.png",
+    "obj_id": 13
+   },
+   {
+    "scene": "000048",
+    "frame": 172,
+    "instance": 9,
+    "path": "train_pbr/000048/mask_visib/000172_000009.png",
+    "obj_id": 30
+   },
+   {
+    "scene": "000049",
+    "frame": 325,
+    "instance": 15,
+    "path": "train_pbr/000049/mask_visib/000325_000015.png",
+    "obj_id": 7
+   }
+  ]
+ },
+ "meta": {
+  "pbr_parts_order": [
+   "handal_train_pbr.z01",
+   "handal_train_pbr.zip"
+  ],
+  "onboarding_static_objects": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40
+  ],
+  "overlap_policy": "record",
+  "onboarding_prefix": {
+   "static": "static",
+   "dynamic": "dynamic",
+   "test": "test"
+  },
+  "bytes": {
+   "handal_models.zip": 62466900,
+   "handal_onboarding_dynamic.zip": 33485090463,
+   "handal_onboarding_static.zip": 16836000400,
+   "handal_test_bop24.zip": 562787374,
+   "handal_train_pbr.z01": 48318382080,
+   "handal_train_pbr.zip": 26170216286,
+   "handal_val.zip": 3484706036
+  },
+  "test_population": {
+   "images": 1684,
+   "scenes": 61
+  }
+ }
+}

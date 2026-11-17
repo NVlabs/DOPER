@@ -1,0 +1,316 @@
+{
+ "summary_sha256": "5c21d071b8a908636b4b3151086cbc6db572614ecfc046e6b962fd82bfeaa8af",
+ "first_annotation": {
+  "primesense": {
+   "id": 0,
+   "image_id": 0,
+   "category_id": 1,
+   "keypoints": [
+    27.67,
+    33.24,
+    1,
+    25.08,
+    30.78,
+    1
+   ],
+   "num_keypoints": 64,
+   "bbox": [
+    20.0,
+    17.0,
+    21.0,
+    20.0
+   ],
+   "area": 420.0,
+   "iscrowd": 0,
+   "camera_intrinsics": {
+    "fx": 80.0,
+    "fy": 80.0,
+    "cx": 32.0,
+    "cy": 24.0
+   },
+   "camera_extrinsics": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "object_pose": [
+    [
+     0.40422999562968875,
+     0.6417158132854823,
+     -0.6517660052599963,
+     -0.007312774868892618
+    ],
+    [
+     0.07327404294913409,
+     -0.7330089437418251,
+     -0.6762608986363046,
+     0.005683852741274571
+    ],
+    [
+     -0.9117176236440261,
+     0.22560740983807637,
+     -0.34332531418909995,
+     0.26
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "view": "mono",
+   "camera_index": 0,
+   "mask_file": "masks/primesense_000000.png",
+   "mask_type": "provided_foreground_visibility_unasserted"
+  },
+  "kinect": {
+   "id": 0,
+   "image_id": 0,
+   "category_id": 1,
+   "keypoints": [
+    34.8,
+    41.09,
+    1,
+    31.69,
+    38.13,
+    1
+   ],
+   "num_keypoints": 64,
+   "bbox": [
+    25.0,
+    22.0,
+    26.0,
+    23.0
+   ],
+   "area": 598.0,
+   "iscrowd": 0,
+   "camera_intrinsics": {
+    "fx": 96.0,
+    "fy": 96.0,
+    "cx": 40.0,
+    "cy": 30.0
+   },
+   "camera_extrinsics": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "object_pose": [
+    [
+     0.40422999562968875,
+     0.6417158132854823,
+     -0.6517660052599963,
+     -0.007312774868892618
+    ],
+    [
+     0.07327404294913409,
+     -0.7330089437418251,
+     -0.6762608986363046,
+     0.005683852741274571
+    ],
+    [
+     -0.9117176236440261,
+     0.22560740983807637,
+     -0.34332531418909995,
+     0.26
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "view": "mono",
+   "camera_index": 0,
+   "mask_file": "masks/kinect_000000.png",
+   "mask_type": "gt_projected_amodal"
+  },
+  "canon": {
+   "id": 0,
+   "image_id": 0,
+   "category_id": 1,
+   "keypoints": [
+    41.5,
+    49.86,
+    1,
+    37.61,
+    46.17,
+    1
+   ],
+   "num_keypoints": 64,
+   "bbox": [
+    29.0,
+    25.0,
+    33.0,
+    29.0
+   ],
+   "area": 957.0,
+   "iscrowd": 0,
+   "camera_intrinsics": {
+    "fx": 120.0,
+    "fy": 120.0,
+    "cx": 48.0,
+    "cy": 36.0
+   },
+   "camera_extrinsics": [
+    [
+     1.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "object_pose": [
+    [
+     0.40422999562968875,
+     0.6417158132854823,
+     -0.6517660052599963,
+     -0.007312774868892618
+    ],
+    [
+     0.07327404294913409,
+     -0.7330089437418251,
+     -0.6762608986363046,
+     0.005683852741274571
+    ],
+    [
+     -0.9117176236440261,
+     0.22560740983807637,
+     -0.34332531418909995,
+     0.26
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "view": "mono",
+   "camera_index": 0,
+   "mask_file": "masks/canon_000000.png",
+   "mask_type": "gt_projected_amodal"
+  }
+ },
+ "records": {
+  "primesense": {
+   "frame": 0,
+   "source_rgb": "data/train_primesense/000001/rgb/000000.png",
+   "image_file": "train/images/primesense_000001_000000.png",
+   "mask_file": "train/masks/primesense_000000.png",
+   "mask_origin": "provided",
+   "mask_pixels_sha256": "bb7769885232c1d9b33d5403450d82b1b2457679981ae50a530a56c36f13cd4e"
+  },
+  "kinect": {
+   "frame": 0,
+   "source_rgb": "sensors/train_kinect/01/rgb/0000.png",
+   "image_file": "train/images/kinect_000001_000000.png",
+   "mask_file": "train/masks/kinect_000000.png",
+   "mask_origin": "gt_projected_amodal",
+   "mask_pixels_sha256": "d3451b6024627b327d4d1f3dcfae7f4c3790e6615bec23e2a755103b55ee6eb5"
+  },
+  "canon": {
+   "frame": 0,
+   "source_rgb": "sensors/train_canon/01/rgb/0000.jpg",
+   "image_file": "train/images/canon_000001_000000.jpg",
+   "mask_file": "train/masks/canon_000000.png",
+   "mask_origin": "gt_projected_amodal",
+   "mask_pixels_sha256": "71e899054bde5bbf52b5914847bdb34150fa46445296fa36e72bf45c8304eb3e"
+  }
+ },
+ "ready": {
+  "primesense": {
+   "frames": 4,
+   "masks": 4,
+   "projected_masks": 0
+  },
+  "kinect": {
+   "frames": 4,
+   "masks": 4,
+   "projected_masks": 4
+  },
+  "canon": {
+   "frames": 4,
+   "masks": 4,
+   "projected_masks": 4
+  }
+ },
+ "review_overlays": [
+  "canon/review/000000.jpg",
+  "canon/review/000002.jpg",
+  "canon/review/000003.jpg",
+  "kinect/review/000000.jpg",
+  "kinect/review/000002.jpg",
+  "kinect/review/000003.jpg",
+  "primesense/review/000000.jpg",
+  "primesense/review/000002.jpg",
+  "primesense/review/000003.jpg"
+ ],
+ "ring_mask": {
+  "pixels_sha256": "40405317755d01eead5bf5bee68b748929d623b6dabfe71ed322ac979c854849",
+  "foreground": 721,
+  "center": 0
+ }
+}

@@ -1,0 +1,74 @@
+# Minimal render recipe for the 3DBenchy example (see README.md).
+# Procedural ground and world, no HDRI, texture or distractor directories.
+# Relative paths in this file resolve against this file's directory.
+
+output:
+  resolution: 256
+  image_format: PNG
+  compression: 15
+  render_masks: true       # Required for mask supervision.
+  mask_dir: masks
+
+object:
+  mesh_name: object
+  keypoint_prefix: KP_object_
+  num_keypoints: 64
+
+pose:
+  axis_bias:
+    x: 0.10
+    y: 0.10
+    z: 0.35
+  axis_jiggle_deg: 35.0
+  ground_clearance_min: 0.002
+  ground_clearance_max: 0.025
+  xy_jitter: 0.04
+
+camera:
+  auto_distance: true
+  fill_factor_min: 0.35
+  fill_factor_max: 0.82
+  distance_min: 0.10
+  distance_max: 1.20
+  image_jitter_min: 0.0
+  image_jitter_max: 0.18
+  focal_length_mm: 50
+  sensor_width_mm: 36
+
+visibility:
+  min_keypoints: 8
+  fallback_to_random: true
+
+scene:
+  # Procedural ground and world need no assets. Directories of your own HDRIs, textures and
+  # distractors are described in the README.
+  # hdri_dir: my_hdris
+  # texture_dir: my_textures
+  # distractor_dir: my_distractors
+  num_distractors_min: 0
+  num_distractors_max: 0
+  change_hdri_every: 1
+  change_ground_every: 1
+  change_distractors_every: 4
+  change_material_every: 1
+  ground_style: procedural
+  procedural_ground_modes: color,wood,checker
+  procedural_world_background: true
+  world_background_modes: studio,random,dark
+  world_background_value_range: [0.18, 1.0]
+  world_background_saturation_range: [0.0, 0.75]
+  world_background_strength_range: [0.35, 1.5]
+
+material:
+  # Preserve a textured CAD/scan material. Use "override" and define an
+  # object_color_choices palette for untextured or color-variable parts.
+  object_material_mode: preserve
+
+render:
+  # High-quality EEVEE: ray tracing on, 64 samples. For quick previews, use_raytracing: false
+  # and 16 samples render several times faster at visibly lower lighting quality.
+  engine: BLENDER_EEVEE
+  use_raytracing: true
+  shadow_rays: 2
+  eevee_samples: 64
+  samples: 64

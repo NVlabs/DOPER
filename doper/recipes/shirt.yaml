@@ -1,0 +1,25 @@
+# SHIRT recipe: the SPEED+ model on the SHIRT ROE1 and ROE2 trajectories, framewise and filtered.
+# The `doper` verbs route on `kind`: `doper evaluate shirt --method framewise` is the framewise
+# row of Table 2; `--method pnp-ukf|pnp-ukf-rts|keypoint-ukf` are the filtered rows (their gates
+# and SHIRT-tuned process noise are fixed in doper.shirt.policies).
+#
+# score: the SPEED score definition of the per-frame summaries (see the speedplus recipe).
+name: shirt
+kind: shirt
+profile: shirt
+score: paper
+#
+# legacy_checkpoints: source-format SPEED+ checkpoints (no recorded keypoint layout), accepted only
+# with the layout they were trained on: checkpoint file SHA-256 -> keypoints_3d.json SHA-256.
+# The gen-7 epoch-10 checkpoint was trained on the paper's 75-keypoint layout.
+legacy_checkpoints:
+  "0824734e2d596adc0a5c45d8de034b67a11c2669926919e7105916974e4c4bba": "a6697cafc62bdf5286fb8af453e44bae881b4ad481b8928edf288c85f77fbfa6"
+#
+# trajectories, domain: what `doper evaluate shirt` evaluates by default. Table 2 reports both
+# trajectories in the lightbox domain.
+trajectories: [roe1, roe2]
+domain: lightbox
+#
+# checkpoint_sha256: the checkpoint the recipe pins, the gen-7 epoch-10 SPEED+ checkpoint of the
+# paper. Any other checkpoint needs --allow-unpinned-checkpoint, which the summaries record.
+checkpoint_sha256: "0824734e2d596adc0a5c45d8de034b67a11c2669926919e7105916974e4c4bba"

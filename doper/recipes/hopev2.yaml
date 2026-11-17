@@ -1,0 +1,123 @@
+# HOPEv2 base recipe: one ConvNeXt-Small DOPER model per object, trained on official PBR only.
+#
+# Source: configs/pbronly/hope_base25_controlled.yaml as the HOPE campaign launched it (paths
+# filled per object, require_pretrained_backbone injected). Validation is the official
+# RealSense val split, scored top-5 score-greedy one-to-one against every GT instance.
+name: hopev2
+profile: hopev2
+objects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
+generated_objects: []
+prepare:
+  parts: [models, pbr, val]
+keypoints:
+  count: 64
+  source_units: mm
+convert:
+  models: models
+  val_scenes: 5
+  seed: 42
+  source_view: none
+base:
+  launch:
+    init_from: null
+    resume: null
+    require_no_init_from: true
+    require_pretrained_backbone: true
+  config:
+    backbone: convnext_small.dinov3_lvd1689m
+    no_pretrained: false
+    backbone_lr_multiplier: 0.1
+    num_classes: 1
+    num_keypoints: 64
+    det_size: 640
+    crop_size: 512
+    keypoint_head: heatmap
+    keypoint_heatmap_sigma: 0.75
+    epochs: 25
+    max_iters_per_epoch: 0
+    batch_size: 16
+    gradient_accumulation_steps: 4
+    num_workers: 8
+    lr: 5.0e-4
+    warmup_iters: 200
+    grad_clip: 5.0
+    val_interval: 1
+    save_interval: 5
+    seed: 42
+    no_amp: false
+validation:
+  population: val
+  models: models_eval
+  protocol: top5-greedy
+  camera: pinhole
+test:
+  population: test
+  camera: pinhole
+  method: doper
+  dataset: hopev2
+  # Fixed-policy banks of the source export (hope_all_adapt_test): each exports one method's
+  # final endpoint for every object. Only the static method may fall back to the original base,
+  # where it was skipped below its label minimum (ten objects in the source campaign).
+  policies:
+    static_pseudo: {method: static_pseudo, csv_method: doperstaticfallback, fallback: skipped}
+    dynamic_pseudo: {method: dynamic_pseudo, csv_method: doperdynamic}
+    combined_pseudo: {method: combined_pseudo, csv_method: dopercombined}
+    gt_box_mask: {method: gt_box_mask, csv_method: dopergtboxmask}
+    gt_box_mask_keypoints: {method: gt_box_mask_keypoints, csv_method: dopergtboxmaskkeypoints}
+
+# Adaptation: one shared template for every method (the source fine-tuning recipe). Batch 16 =
+# 12 PBR + real_per_batch real labels; an epoch is ceil(labels / real_per_batch) iterations; three
+# epochs from the teacher (the epoch-25 base, init_from); FP32; last.pth is the endpoint. Backbone
+# and architecture come from the base above. Below a method's minimum the object is skipped.
+adapt:
+  real_per_batch: 4
+  gate:
+    detector_threshold: 0.1
+    score: 0.5
+    keypoint_score: 0.3
+    max_reprojection_px: 3.0
+    min_inliers: 50
+    ransac_px: 8.0
+    mask_probability: 0.5
+    min_area_fraction: 0.002
+    box_pad: 0.05
+    # The paper's EPnP RANSAC; USAC is the default. Remove this line for USAC.
+    pnp_method: epnp
+  config:
+    no_pretrained: true
+    backbone_lr_multiplier: 0.1
+    freeze_keypoint_head: false
+    epochs: 3
+    batch_size: 16
+    gradient_accumulation_steps: 1
+    num_workers: 8
+    lr: 1.0e-5
+    warmup_iters: 20
+    grad_clip: 5.0
+    val_interval: 1
+    save_interval: 1
+    seed: 42
+    no_amp: true
+  methods:
+    static_pseudo: {source: static, minimum_labels: 20}
+    dynamic_pseudo: {source: dynamic, minimum_labels: 20}
+    combined_pseudo:
+      source: combined
+      minimum_labels: 20
+      components: [static_pseudo, dynamic_pseudo]
+    gt_box_mask: {source: gt, supervision: box_mask, minimum_labels: 1}
+    gt_box_mask_keypoints: {source: gt, supervision: box_mask_keypoints, minimum_labels: 1}
+
+# Multi-view fusion (doper.bop.multiview): the cam_*_w2c fields encode camera-to-world and are
+# inverted. Scenes 41-47 fuse with the 3 nearest camera centers among the scene's frames; scenes
+# 1-40 stay single-view. A support that sees the original pose behind it is skipped.
+multiview:
+  gate:
+    # The paper's EPnP RANSAC; USAC is the default. Remove this block for USAC.
+    pnp_method: epnp
+  convention: c2w_named_w2c
+  support: nearest
+  nearest_k: 3
+  scope: scene
+  scenes: [41, 42, 43, 44, 45, 46, 47]
+  skip_nonpositive_support_depth: true

@@ -1,0 +1,109 @@
+{
+ "name": "tless",
+ "hf_repo": "bop-benchmark/tless",
+ "revision": "5fd309a04476a842d93abfb584fba9ee7caecdf1",
+ "files": {
+  "tless_base.zip": "dd70ca884b7c471a530a952f70c5ab2c212f3d2c2f371be86397442b97d70a7e",
+  "tless_models.zip": "6a29c59766b8d2af05e62e71739f0ca7243ad81bc3c7f9a24925504a8cb37928",
+  "tless_test_primesense_bop19.zip": "1a18f6bbfb5ac4ced8529f7a35225adfed88c0f62ef38067933e2b541ef1d00b",
+  "tless_train_pbr.zip": "f1f48e90eaa0ab20059740240169dd872d51a1dca3f0ecc4b330d8ee92f6c2d6",
+  "tless_train_primesense.zip": "7262fdf0e9de09cf5d051ca108d860c7c5fd563ee58496751e970458c6897ba1"
+ },
+ "parts": {
+  "base": [
+   "tless_base.zip"
+  ],
+  "models": [
+   "tless_models.zip"
+  ],
+  "pbr": [
+   "tless_train_pbr.zip"
+  ],
+  "static": [
+   "tless_train_primesense.zip"
+  ],
+  "test": [
+   "tless_test_primesense_bop19.zip"
+  ]
+ },
+ "exclusions": [],
+ "defects": {},
+ "meta": {
+  "objects": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30
+  ],
+  "expected_frames": {
+   "train_pbr": 50000,
+   "train_primesense": 37584,
+   "test_primesense": 1000
+  },
+  "onboarding": "Official isolated-object PrimeSense training images, as suggested by Tomas Hodan; no dynamic arm.",
+  "evaluation": "Fixed BOP19 PrimeSense test images, reporting only; no test-driven selection or adaptation.",
+  "original_source": "https://cmp.felk.cvut.cz/t-less/download.html",
+  "bytes": {
+   "tless_base.zip": 49597,
+   "tless_models.zip": 33468762,
+   "tless_test_primesense_bop19.zip": 825276992,
+   "tless_train_pbr.zip": 22992204635,
+   "tless_train_primesense.zip": 2486152818
+  },
+  "test_population": {
+   "images": 1000,
+   "scenes": 20
+  },
+  "archive_prefix": {
+   "tless_base.zip": "tless"
+  },
+  "sensors": {
+   "url_template": "http://ptak.felk.cvut.cz/darwin/t-less/v2/t-less_v2_train_{sensor}_{obj:02d}.zip",
+   "transport": "official published HTTP URL, no credentials",
+   "names": [
+    "kinect",
+    "canon"
+   ],
+   "frames": 1296,
+   "frames_by_object": {
+    "19": 648,
+    "20": 648
+   },
+   "max_archive_bytes": 2000000000,
+   "sha256": {
+    "kinect": {
+     "1": "74105f091132ec92e540f6521da94830a192aa642d6c445ff06ae6a18da97080"
+    },
+    "canon": {
+     "1": "6d6476a20fd1c816e009009eb90a0e93b1c788b3019162bd63fc314893c67afd"
+    }
+   }
+  }
+ }
+}

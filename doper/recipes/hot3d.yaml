@@ -1,0 +1,144 @@
+# HOT3D base recipe: one ConvNeXt-Small DOPER model per object, trained on official PBR only.
+#
+# Source: configs/pbronly/hot3d_base25_tiny.yaml as the HOT3D campaign launched it. The backbone
+# is ConvNeXt-Small, as the paper states (user decision); the source campaign trained
+# ConvNeXt-Tiny, so the released HOT3D numbers are rerun with this recipe. Every other setting is
+# the source's. Training reads the canonical-millimeter PBR view with the pinned depth and mask
+# defect filters. Validation is the frozen labeled-TRAIN panel scored with the native fisheye
+# camera; the test export rectifies each native test image inside the timed span.
+name: hot3d
+profile: hot3d
+objects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]
+# Object 33 has no official PBR. Its base trains only on BlenderProc renders of the campaign
+# below (seed 70000 + layout; layout l is validation when l % 10 == 9), prepared with
+# `doper prepare --obj-id 33 --generated-root DIR`, with this recipe's ConvNeXt-Small base
+# (the same backbone as every other HOT3D object). Fully occluded target annotations (empty
+# visible mask, kept by the render audit) are excluded from training, as the source
+# positive-visible selection did; images follow its 4 conversion shards; `--keypoints-only`
+# selects the pinned keypoints.
+generated:
+  33:
+    render_config: hot3d_obj33
+    base_seed: 70000
+    conversion_shards: 4
+    keypoints_sha256: "f677c49add8abd151d7d1da89ccb7e8120f43e3de10c6418e216b78a636d3587"
+    empty_masks: exclude
+prepare:
+  parts: [models, pbr, metadata, val]
+keypoints:
+  count: 64
+  source_units: mm
+convert:
+  models: models
+  val_scenes: 5
+  seed: 42
+  source_view: hot3d
+base:
+  launch:
+    init_from: null
+    resume: null
+    require_no_init_from: true
+    require_pretrained_backbone: true
+  config:
+    backbone: convnext_small.dinov3_lvd1689m
+    no_pretrained: false
+    backbone_lr_multiplier: 0.1
+    num_classes: 1
+    num_keypoints: 64
+    det_size: 640
+    crop_size: 512
+    keypoint_head: heatmap
+    keypoint_heatmap_sigma: 0.75
+    epochs: 25
+    max_iters_per_epoch: 0
+    batch_size: 16
+    gradient_accumulation_steps: 4
+    num_workers: 8
+    lr: 5.0e-4
+    warmup_iters: 200
+    grad_clip: 5.0
+    val_interval: 1
+    save_interval: 1
+    seed: 42
+    no_amp: false
+validation:
+  population: hot3d_panel
+  models: models_eval
+  protocol: top5-greedy
+  camera: native
+test:
+  population: hot3d_index
+  camera: native
+  method: doper
+  dataset: hot3d
+  # Fixed-policy banks of the source export (hot3d_all_arm_plan): each exports one method's
+  # final endpoint for every object, directly timed with every model resident. A pseudo-label
+  # method skipped below 20 labels falls back to the original base; GT methods never do.
+  record_time: true
+  policies:
+    static_pseudo: {method: static_pseudo, csv_method: doperstaticpseudofallback, fallback: skipped}
+    dynamic_pseudo:
+      method: dynamic_pseudo
+      csv_method: doperdynamicpseudofallback
+      fallback: skipped
+    combined_pseudo:
+      method: combined_pseudo
+      csv_method: dopercombinedpseudofallback
+      fallback: skipped
+    gt_box_mask: {method: gt_box_mask, csv_method: dopergtboxmask}
+    gt_box_mask_keypoints: {method: gt_box_mask_keypoints, csv_method: dopergtboxmaskkeypoints}
+
+# Adaptation: one shared template for every method (the source fine-tuning recipe). Batch 16 =
+# 12 PBR + real_per_batch real labels; an epoch is ceil(labels / real_per_batch) iterations; three
+# epochs from the teacher (the epoch-25 base, init_from); FP32; last.pth is the endpoint. Backbone
+# and architecture come from the base above. Below a method's minimum the object is skipped.
+adapt:
+  real_per_batch: 4
+  gate:
+    detector_threshold: 0.1
+    score: 0.5
+    keypoint_score: 0.3
+    max_reprojection_px: 3.0
+    min_inliers: 50
+    ransac_px: 8.0
+    mask_probability: 0.5
+    min_area_fraction: 0.002
+    box_pad: 0.05
+    # The paper's EPnP RANSAC; USAC is the default. Remove this line for USAC.
+    pnp_method: epnp
+  config:
+    no_pretrained: true
+    backbone_lr_multiplier: 0.1
+    freeze_keypoint_head: false
+    epochs: 3
+    batch_size: 16
+    gradient_accumulation_steps: 1
+    num_workers: 8
+    lr: 1.0e-5
+    warmup_iters: 20
+    grad_clip: 5.0
+    val_interval: 1
+    save_interval: 1
+    seed: 42
+    no_amp: true
+  methods:
+    static_pseudo: {source: static, minimum_labels: 20}
+    dynamic_pseudo: {source: dynamic, minimum_labels: 20}
+    combined_pseudo:
+      source: combined
+      minimum_labels: 20
+      components: [static_pseudo, dynamic_pseudo]
+    gt_box_mask: {source: gt, supervision: box_mask, minimum_labels: 1}
+    gt_box_mask_keypoints: {source: gt, supervision: box_mask_keypoints, minimum_labels: 1}
+
+# Multi-view fusion (doper.bop.multiview): every synchronized stream at the reference timestamp
+# (Aria 214-1 + 1201-1/1201-2; Quest3 1201-1 + 1201-2), staged by stage_hot3d_support with the
+# world-from-camera poses under the w2c names. This grouping is pending author confirmation.
+multiview:
+  gate:
+    # The paper's EPnP RANSAC; USAC is the default. Remove this block for USAC.
+    pnp_method: epnp
+  convention: c2w_named_w2c
+  support: streams
+  streams: ["214-1", "1201-1", "1201-2"]
+  skip_nonpositive_support_depth: true

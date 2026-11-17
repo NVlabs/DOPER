@@ -1,0 +1,93 @@
+# Starter synthetic-data recipe for a new object.
+#
+# Use it with a .blend and .usda produced by rendering/mesh_setup.py (see examples/minimal/README.md):
+#
+#   python rendering/synth_parallel.py --blend-file object.blend --usd object.usda \
+#       --config configs/synth_example.yaml --outdir out/train
+#
+# The object name and keypoint prefix below must match the mesh_setup.py run
+# (--mesh-name object, --keypoint-prefix KP_object_ for the selector).
+# Relative paths in this file resolve against this file's directory.
+# Copy this file and tune pose, camera and material ranges for your deployment.
+
+output:
+  resolution: 640
+  image_format: PNG
+  compression: 15
+  render_masks: true       # Required for mask supervision.
+  mask_dir: masks
+
+object:
+  mesh_name: object
+  keypoint_prefix: KP_object_
+  num_keypoints: 64
+  # To use a reviewed keypoint layout other than the one authored into the USD:
+  # keypoints_json: my_object/keypoints_3d.json
+
+pose:
+  axis_bias:
+    x: 0.10
+    y: 0.10
+    z: 0.35
+  axis_jiggle_deg: 35.0
+  ground_clearance_min: 0.002
+  ground_clearance_max: 0.025
+  xy_jitter: 0.04
+
+camera:
+  auto_distance: true
+  fill_factor_min: 0.35
+  fill_factor_max: 0.82
+  distance_min: 0.10
+  distance_max: 1.20
+  image_jitter_min: 0.0
+  image_jitter_max: 0.18
+  focal_length_mm: 50
+  sensor_width_mm: 36
+
+visibility:
+  min_keypoints: 8
+  fallback_to_random: true
+
+scene:
+  # Procedural ground and world need no assets. To add your own, uncomment these and point
+  # them at directories of HDRI (.hdr/.exr), texture sets and distractor meshes.
+  # hdri_dir: assets/hdri
+  # texture_dir: assets/textures/cco_textures
+  # distractor_dir: assets/distractors
+  num_distractors_min: 0
+  # Raise this after setting distractor_dir; without distractor meshes none are rendered.
+  num_distractors_max: 0
+  change_hdri_every: 1
+  change_ground_every: 1
+  change_distractors_every: 4
+  change_material_every: 1
+  ground_style: procedural
+  procedural_ground_modes: color,wood,checker
+  procedural_world_background: true
+  world_background_modes: studio,random,dark
+  world_background_value_range: [0.18, 1.0]
+  world_background_saturation_range: [0.0, 0.75]
+  world_background_strength_range: [0.35, 1.5]
+
+# Optional, off by default (see examples/minimal/README.md, "Domain randomization"):
+# truncation and capsule occluders, and glare/shadow stress views.
+# robustness:
+#   mode_weights: {easy: 0.4, clipping: 0.25, occlusion: 0.25, combined: 0.1}
+#   clipping_fraction: [0.1, 0.35]
+#   proxy_count: [1, 3]
+# robust_appearance: {enabled: true, axis: z, preset: mixed}
+
+material:
+  # Preserve a textured CAD/scan material. Use "override" and define an
+  # object_color_choices palette for untextured or color-variable parts.
+  object_material_mode: preserve
+
+render:
+  # High-quality EEVEE: ray tracing on, 64 samples. For quick previews, use_raytracing: false
+  # and 16 samples render several times faster at visibly lower lighting quality.
+  engine: BLENDER_EEVEE
+  use_raytracing: true
+  shadow_rays: 2
+  eevee_samples: 64
+  samples: 64

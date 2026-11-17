@@ -1,0 +1,3352 @@
+{
+  "dataset_revision": "30fe9674782f32e1e5edba98476b6ff4300132c5",
+  "selection_rule": "one clip per labelled-training source sequence; minimum SHA256 hot3d-val42:device:sequence:clip; fixed five published BOP temporal positions",
+  "purpose": "held-out validation only; never any optimization input",
+  "initial_clips": 257,
+  "initial_images": 1285,
+  "test_images_used": 0,
+  "models_used_for_selection": false,
+  "clip_rows": [
+    {
+      "device": "Aria",
+      "sequence_id": "P0001_23fa0ee8",
+      "clip_id": 1856,
+      "source_path": "train_aria/clip-001856.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0001_4bf4e21a",
+      "clip_id": 1860,
+      "source_path": "train_aria/clip-001860.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0001_550ea2ac",
+      "clip_id": 1869,
+      "source_path": "train_aria/clip-001869.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0001_624f2ba9",
+      "clip_id": 1878,
+      "source_path": "train_aria/clip-001878.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0001_8d136980",
+      "clip_id": 1886,
+      "source_path": "train_aria/clip-001886.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0001_95eabc0a",
+      "clip_id": 1891,
+      "source_path": "train_aria/clip-001891.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0001_9b6feab7",
+      "clip_id": 1897,
+      "source_path": "train_aria/clip-001897.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0001_a68492d5",
+      "clip_id": 1909,
+      "source_path": "train_aria/clip-001909.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0001_a9d6c83d",
+      "clip_id": 1935,
+      "source_path": "train_aria/clip-001935.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0001_b2bcbe28",
+      "clip_id": 1947,
+      "source_path": "train_aria/clip-001947.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0001_f6cc0cc8",
+      "clip_id": 1962,
+      "source_path": "train_aria/clip-001962.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0002_016222d1",
+      "clip_id": 1972,
+      "source_path": "train_aria/clip-001972.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0002_2ea9af5b",
+      "clip_id": 2004,
+      "source_path": "train_aria/clip-002004.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0002_59a84a3a",
+      "clip_id": 2018,
+      "source_path": "train_aria/clip-002018.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0002_65085bfc",
+      "clip_id": 2033,
+      "source_path": "train_aria/clip-002033.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0002_c68438ce",
+      "clip_id": 2047,
+      "source_path": "train_aria/clip-002047.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0003_1fa0bb65",
+      "clip_id": 2062,
+      "source_path": "train_aria/clip-002062.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0003_5766eae8",
+      "clip_id": 2068,
+      "source_path": "train_aria/clip-002068.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0003_743d3087",
+      "clip_id": 2090,
+      "source_path": "train_aria/clip-002090.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0003_c701bd11",
+      "clip_id": 2106,
+      "source_path": "train_aria/clip-002106.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0003_cbd17f20",
+      "clip_id": 2128,
+      "source_path": "train_aria/clip-002128.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0003_e3a74169",
+      "clip_id": 2145,
+      "source_path": "train_aria/clip-002145.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0003_ebdc6ff7",
+      "clip_id": 2164,
+      "source_path": "train_aria/clip-002164.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0003_f4730606",
+      "clip_id": 2195,
+      "source_path": "train_aria/clip-002195.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0009_02511c2f",
+      "clip_id": 2207,
+      "source_path": "train_aria/clip-002207.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0009_0e02bf39",
+      "clip_id": 2220,
+      "source_path": "train_aria/clip-002220.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0009_1b21bb01",
+      "clip_id": 2234,
+      "source_path": "train_aria/clip-002234.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0009_247b5403",
+      "clip_id": 2249,
+      "source_path": "train_aria/clip-002249.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0009_24af5475",
+      "clip_id": 2257,
+      "source_path": "train_aria/clip-002257.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0009_37e30628",
+      "clip_id": 2272,
+      "source_path": "train_aria/clip-002272.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0009_5bb7cc2a",
+      "clip_id": 2275,
+      "source_path": "train_aria/clip-002275.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0009_5f2583e0",
+      "clip_id": 2282,
+      "source_path": "train_aria/clip-002282.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0009_88a58b3b",
+      "clip_id": 2288,
+      "source_path": "train_aria/clip-002288.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0009_8c0caf6c",
+      "clip_id": 2308,
+      "source_path": "train_aria/clip-002308.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0009_8c95667c",
+      "clip_id": 2311,
+      "source_path": "train_aria/clip-002311.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0009_911a4ba5",
+      "clip_id": 2317,
+      "source_path": "train_aria/clip-002317.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0009_927973d7",
+      "clip_id": 2328,
+      "source_path": "train_aria/clip-002328.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0009_9e03121a",
+      "clip_id": 2346,
+      "source_path": "train_aria/clip-002346.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0009_b1e71d7f",
+      "clip_id": 2355,
+      "source_path": "train_aria/clip-002355.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0009_b7d8c222",
+      "clip_id": 2375,
+      "source_path": "train_aria/clip-002375.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0009_cf323827",
+      "clip_id": 2386,
+      "source_path": "train_aria/clip-002386.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0009_e71e2f24",
+      "clip_id": 2409,
+      "source_path": "train_aria/clip-002409.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0009_ea91844d",
+      "clip_id": 2420,
+      "source_path": "train_aria/clip-002420.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0010_0ecbf39f",
+      "clip_id": 2447,
+      "source_path": "train_aria/clip-002447.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0010_1573a837",
+      "clip_id": 2452,
+      "source_path": "train_aria/clip-002452.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0010_160e551c",
+      "clip_id": 2476,
+      "source_path": "train_aria/clip-002476.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0010_1c9fe708",
+      "clip_id": 2485,
+      "source_path": "train_aria/clip-002485.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0010_41c4c626",
+      "clip_id": 2491,
+      "source_path": "train_aria/clip-002491.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0010_573b2de6",
+      "clip_id": 2498,
+      "source_path": "train_aria/clip-002498.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0010_6d15aa57",
+      "clip_id": 2500,
+      "source_path": "train_aria/clip-002500.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0010_8ff3e5c4",
+      "clip_id": 2504,
+      "source_path": "train_aria/clip-002504.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0010_924e574e",
+      "clip_id": 2517,
+      "source_path": "train_aria/clip-002517.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0010_99385ad8",
+      "clip_id": 2528,
+      "source_path": "train_aria/clip-002528.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0010_b152143e",
+      "clip_id": 2540,
+      "source_path": "train_aria/clip-002540.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0010_e481fd15",
+      "clip_id": 2552,
+      "source_path": "train_aria/clip-002552.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0010_fd1891a8",
+      "clip_id": 2563,
+      "source_path": "train_aria/clip-002563.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0011_0c2d00ed",
+      "clip_id": 2590,
+      "source_path": "train_aria/clip-002590.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0011_11475e24",
+      "clip_id": 2603,
+      "source_path": "train_aria/clip-002603.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0011_2255f410",
+      "clip_id": 2617,
+      "source_path": "train_aria/clip-002617.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0011_30a5b61d",
+      "clip_id": 2622,
+      "source_path": "train_aria/clip-002622.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0011_451a7734",
+      "clip_id": 2623,
+      "source_path": "train_aria/clip-002623.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0011_47878e48",
+      "clip_id": 2630,
+      "source_path": "train_aria/clip-002630.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0011_4dcdcfec",
+      "clip_id": 2657,
+      "source_path": "train_aria/clip-002657.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0011_76ea6d47",
+      "clip_id": 2671,
+      "source_path": "train_aria/clip-002671.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0011_7a8886e7",
+      "clip_id": 2680,
+      "source_path": "train_aria/clip-002680.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0011_7c7e8d86",
+      "clip_id": 2685,
+      "source_path": "train_aria/clip-002685.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0011_ad5f7dee",
+      "clip_id": 2691,
+      "source_path": "train_aria/clip-002691.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0011_b0c895c1",
+      "clip_id": 2694,
+      "source_path": "train_aria/clip-002694.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0011_ccc678c7",
+      "clip_id": 2704,
+      "source_path": "train_aria/clip-002704.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0011_cd22f5e0",
+      "clip_id": 2729,
+      "source_path": "train_aria/clip-002729.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0011_cee8fe4f",
+      "clip_id": 2738,
+      "source_path": "train_aria/clip-002738.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0011_d0f907a0",
+      "clip_id": 2752,
+      "source_path": "train_aria/clip-002752.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0011_dbf1ebb7",
+      "clip_id": 2767,
+      "source_path": "train_aria/clip-002767.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0011_e5cb6a80",
+      "clip_id": 2780,
+      "source_path": "train_aria/clip-002780.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0011_ff7cfc3a",
+      "clip_id": 2797,
+      "source_path": "train_aria/clip-002797.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_0323d770",
+      "clip_id": 2810,
+      "source_path": "train_aria/clip-002810.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_0a21e4c2",
+      "clip_id": 2813,
+      "source_path": "train_aria/clip-002813.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_130a66e1",
+      "clip_id": 2817,
+      "source_path": "train_aria/clip-002817.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_1c45bbd9",
+      "clip_id": 2826,
+      "source_path": "train_aria/clip-002826.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_44c5f677",
+      "clip_id": 2845,
+      "source_path": "train_aria/clip-002845.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_476bae57",
+      "clip_id": 2851,
+      "source_path": "train_aria/clip-002851.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_6e4f7815",
+      "clip_id": 2872,
+      "source_path": "train_aria/clip-002872.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_73e66984",
+      "clip_id": 2885,
+      "source_path": "train_aria/clip-002885.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_915e71c6",
+      "clip_id": 2901,
+      "source_path": "train_aria/clip-002901.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_af3dab9a",
+      "clip_id": 2910,
+      "source_path": "train_aria/clip-002910.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_b8fc4c1b",
+      "clip_id": 2925,
+      "source_path": "train_aria/clip-002925.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_c06d939b",
+      "clip_id": 2940,
+      "source_path": "train_aria/clip-002940.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_c4353c31",
+      "clip_id": 2947,
+      "source_path": "train_aria/clip-002947.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_ca1f6626",
+      "clip_id": 2967,
+      "source_path": "train_aria/clip-002967.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_d6272ce1",
+      "clip_id": 2969,
+      "source_path": "train_aria/clip-002969.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_d85e10f6",
+      "clip_id": 2974,
+      "source_path": "train_aria/clip-002974.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_db543fe8",
+      "clip_id": 2998,
+      "source_path": "train_aria/clip-002998.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_e846d3cc",
+      "clip_id": 3008,
+      "source_path": "train_aria/clip-003008.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_e97d31b6",
+      "clip_id": 3017,
+      "source_path": "train_aria/clip-003017.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_f1a33781",
+      "clip_id": 3026,
+      "source_path": "train_aria/clip-003026.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0012_f7e3880b",
+      "clip_id": 3034,
+      "source_path": "train_aria/clip-003034.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0014_0de48e2c",
+      "clip_id": 3046,
+      "source_path": "train_aria/clip-003046.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0014_1fdca00e",
+      "clip_id": 3061,
+      "source_path": "train_aria/clip-003061.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0014_24cb3bf0",
+      "clip_id": 3077,
+      "source_path": "train_aria/clip-003077.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0014_65c6a968",
+      "clip_id": 3099,
+      "source_path": "train_aria/clip-003099.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0014_6db96fd0",
+      "clip_id": 3101,
+      "source_path": "train_aria/clip-003101.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0014_8254f925",
+      "clip_id": 3138,
+      "source_path": "train_aria/clip-003138.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0014_84ea2dcc",
+      "clip_id": 3161,
+      "source_path": "train_aria/clip-003161.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0014_9a25ec6a",
+      "clip_id": 3168,
+      "source_path": "train_aria/clip-003168.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0014_9b7a0725",
+      "clip_id": 3177,
+      "source_path": "train_aria/clip-003177.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0014_e40eec5d",
+      "clip_id": 3195,
+      "source_path": "train_aria/clip-003195.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0014_f7ba43e0",
+      "clip_id": 3207,
+      "source_path": "train_aria/clip-003207.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0015_1eb4f17f",
+      "clip_id": 3219,
+      "source_path": "train_aria/clip-003219.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0015_367cc58d",
+      "clip_id": 3232,
+      "source_path": "train_aria/clip-003232.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0015_3c7f5241",
+      "clip_id": 3236,
+      "source_path": "train_aria/clip-003236.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0015_3f46732d",
+      "clip_id": 3246,
+      "source_path": "train_aria/clip-003246.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0015_42b8b389",
+      "clip_id": 3254,
+      "source_path": "train_aria/clip-003254.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0015_4e5d1c14",
+      "clip_id": 3258,
+      "source_path": "train_aria/clip-003258.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0015_53358a64",
+      "clip_id": 3268,
+      "source_path": "train_aria/clip-003268.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0015_60573a3b",
+      "clip_id": 3278,
+      "source_path": "train_aria/clip-003278.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0015_745920f0",
+      "clip_id": 3286,
+      "source_path": "train_aria/clip-003286.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0015_7e95628d",
+      "clip_id": 3291,
+      "source_path": "train_aria/clip-003291.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0015_7fc6548d",
+      "clip_id": 3302,
+      "source_path": "train_aria/clip-003302.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0015_b0c5102b",
+      "clip_id": 3309,
+      "source_path": "train_aria/clip-003309.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0015_c3e1f590",
+      "clip_id": 3326,
+      "source_path": "train_aria/clip-003326.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0015_cc5dfd13",
+      "clip_id": 3331,
+      "source_path": "train_aria/clip-003331.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0015_cc739faa",
+      "clip_id": 3341,
+      "source_path": "train_aria/clip-003341.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0015_dbe00981",
+      "clip_id": 3345,
+      "source_path": "train_aria/clip-003345.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Aria",
+      "sequence_id": "P0015_e7458eb3",
+      "clip_id": 3360,
+      "source_path": "train_aria/clip-003360.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_210fc0da",
+      "clip_id": 5,
+      "source_path": "train_quest3/clip-000005.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_273c2819",
+      "clip_id": 16,
+      "source_path": "train_quest3/clip-000016.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_28bcd2d9",
+      "clip_id": 25,
+      "source_path": "train_quest3/clip-000025.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_2f137f83",
+      "clip_id": 34,
+      "source_path": "train_quest3/clip-000034.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_36766e32",
+      "clip_id": 45,
+      "source_path": "train_quest3/clip-000045.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_3961b9af",
+      "clip_id": 46,
+      "source_path": "train_quest3/clip-000046.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_39fbd23d",
+      "clip_id": 56,
+      "source_path": "train_quest3/clip-000056.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_45904c71",
+      "clip_id": 62,
+      "source_path": "train_quest3/clip-000062.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_50a6227b",
+      "clip_id": 75,
+      "source_path": "train_quest3/clip-000075.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_5a9cfa51",
+      "clip_id": 88,
+      "source_path": "train_quest3/clip-000088.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_5d79f6b9",
+      "clip_id": 104,
+      "source_path": "train_quest3/clip-000104.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_75103f48",
+      "clip_id": 108,
+      "source_path": "train_quest3/clip-000108.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_8546e921",
+      "clip_id": 112,
+      "source_path": "train_quest3/clip-000112.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_9e1a9528",
+      "clip_id": 121,
+      "source_path": "train_quest3/clip-000121.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_a2f1b530",
+      "clip_id": 127,
+      "source_path": "train_quest3/clip-000127.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_af0d3d4a",
+      "clip_id": 139,
+      "source_path": "train_quest3/clip-000139.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_b5613628",
+      "clip_id": 144,
+      "source_path": "train_quest3/clip-000144.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_c3aec89e",
+      "clip_id": 152,
+      "source_path": "train_quest3/clip-000152.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_c516d959",
+      "clip_id": 162,
+      "source_path": "train_quest3/clip-000162.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_c7164ba4",
+      "clip_id": 169,
+      "source_path": "train_quest3/clip-000169.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0002_f5003dd1",
+      "clip_id": 172,
+      "source_path": "train_quest3/clip-000172.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_01a10066",
+      "clip_id": 178,
+      "source_path": "train_quest3/clip-000178.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_01e416d3",
+      "clip_id": 185,
+      "source_path": "train_quest3/clip-000185.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_0d6af33b",
+      "clip_id": 194,
+      "source_path": "train_quest3/clip-000194.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_173ffd89",
+      "clip_id": 197,
+      "source_path": "train_quest3/clip-000197.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_20a97e64",
+      "clip_id": 199,
+      "source_path": "train_quest3/clip-000199.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_2776d78c",
+      "clip_id": 212,
+      "source_path": "train_quest3/clip-000212.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_35878261",
+      "clip_id": 225,
+      "source_path": "train_quest3/clip-000225.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_3e0fe5b2",
+      "clip_id": 229,
+      "source_path": "train_quest3/clip-000229.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_3fb19e29",
+      "clip_id": 235,
+      "source_path": "train_quest3/clip-000235.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_414fb0e3",
+      "clip_id": 241,
+      "source_path": "train_quest3/clip-000241.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_465de82a",
+      "clip_id": 251,
+      "source_path": "train_quest3/clip-000251.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_46b683a2",
+      "clip_id": 261,
+      "source_path": "train_quest3/clip-000261.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_47c5f35c",
+      "clip_id": 275,
+      "source_path": "train_quest3/clip-000275.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_4974528f",
+      "clip_id": 283,
+      "source_path": "train_quest3/clip-000283.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_5d6407e0",
+      "clip_id": 295,
+      "source_path": "train_quest3/clip-000295.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_5e1a34f8",
+      "clip_id": 302,
+      "source_path": "train_quest3/clip-000302.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_63305f3a",
+      "clip_id": 320,
+      "source_path": "train_quest3/clip-000320.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_6714a5d5",
+      "clip_id": 336,
+      "source_path": "train_quest3/clip-000336.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_715615c4",
+      "clip_id": 343,
+      "source_path": "train_quest3/clip-000343.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_741eacdc",
+      "clip_id": 346,
+      "source_path": "train_quest3/clip-000346.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_8243ea4a",
+      "clip_id": 349,
+      "source_path": "train_quest3/clip-000349.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_8434dc52",
+      "clip_id": 376,
+      "source_path": "train_quest3/clip-000376.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_85e44cd9",
+      "clip_id": 388,
+      "source_path": "train_quest3/clip-000388.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_86dac9af",
+      "clip_id": 394,
+      "source_path": "train_quest3/clip-000394.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_88dbdb01",
+      "clip_id": 404,
+      "source_path": "train_quest3/clip-000404.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_90feb35f",
+      "clip_id": 410,
+      "source_path": "train_quest3/clip-000410.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_926be597",
+      "clip_id": 426,
+      "source_path": "train_quest3/clip-000426.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_9fdd4e36",
+      "clip_id": 435,
+      "source_path": "train_quest3/clip-000435.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_a7520271",
+      "clip_id": 455,
+      "source_path": "train_quest3/clip-000455.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_b0a97c8d",
+      "clip_id": 469,
+      "source_path": "train_quest3/clip-000469.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_b153ade2",
+      "clip_id": 495,
+      "source_path": "train_quest3/clip-000495.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_b233d76d",
+      "clip_id": 506,
+      "source_path": "train_quest3/clip-000506.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_b573833a",
+      "clip_id": 525,
+      "source_path": "train_quest3/clip-000525.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_bbaa72c2",
+      "clip_id": 534,
+      "source_path": "train_quest3/clip-000534.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_c5515328",
+      "clip_id": 545,
+      "source_path": "train_quest3/clip-000545.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_cae067da",
+      "clip_id": 555,
+      "source_path": "train_quest3/clip-000555.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_cbee62a7",
+      "clip_id": 568,
+      "source_path": "train_quest3/clip-000568.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_cd1a4c22",
+      "clip_id": 576,
+      "source_path": "train_quest3/clip-000576.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_d0ad9b47",
+      "clip_id": 594,
+      "source_path": "train_quest3/clip-000594.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_df02bb4e",
+      "clip_id": 597,
+      "source_path": "train_quest3/clip-000597.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_f487587a",
+      "clip_id": 601,
+      "source_path": "train_quest3/clip-000601.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_fc5d48f1",
+      "clip_id": 624,
+      "source_path": "train_quest3/clip-000624.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_fd2fdb29",
+      "clip_id": 642,
+      "source_path": "train_quest3/clip-000642.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0003_ffa12119",
+      "clip_id": 646,
+      "source_path": "train_quest3/clip-000646.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0010_086ff32a",
+      "clip_id": 664,
+      "source_path": "train_quest3/clip-000664.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0010_21887126",
+      "clip_id": 681,
+      "source_path": "train_quest3/clip-000681.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0010_2383f26a",
+      "clip_id": 689,
+      "source_path": "train_quest3/clip-000689.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0010_23c65d8d",
+      "clip_id": 694,
+      "source_path": "train_quest3/clip-000694.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0010_3224a967",
+      "clip_id": 712,
+      "source_path": "train_quest3/clip-000712.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0010_3f07d999",
+      "clip_id": 723,
+      "source_path": "train_quest3/clip-000723.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0010_5edabbe9",
+      "clip_id": 756,
+      "source_path": "train_quest3/clip-000756.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0010_5f6f1136",
+      "clip_id": 769,
+      "source_path": "train_quest3/clip-000769.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0010_7913f087",
+      "clip_id": 789,
+      "source_path": "train_quest3/clip-000789.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0010_be72b0b8",
+      "clip_id": 824,
+      "source_path": "train_quest3/clip-000824.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0010_d534ad6b",
+      "clip_id": 832,
+      "source_path": "train_quest3/clip-000832.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_0ec32d10",
+      "clip_id": 844,
+      "source_path": "train_quest3/clip-000844.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_3f269bab",
+      "clip_id": 862,
+      "source_path": "train_quest3/clip-000862.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_51741362",
+      "clip_id": 867,
+      "source_path": "train_quest3/clip-000867.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_5606d86b",
+      "clip_id": 878,
+      "source_path": "train_quest3/clip-000878.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_6836c65f",
+      "clip_id": 890,
+      "source_path": "train_quest3/clip-000890.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_6e5bca50",
+      "clip_id": 904,
+      "source_path": "train_quest3/clip-000904.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_70204e36",
+      "clip_id": 921,
+      "source_path": "train_quest3/clip-000921.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_7c9c3ca6",
+      "clip_id": 925,
+      "source_path": "train_quest3/clip-000925.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_8e6b8023",
+      "clip_id": 927,
+      "source_path": "train_quest3/clip-000927.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_92a09f5e",
+      "clip_id": 942,
+      "source_path": "train_quest3/clip-000942.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_9b8a49b1",
+      "clip_id": 943,
+      "source_path": "train_quest3/clip-000943.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_a2b36677",
+      "clip_id": 954,
+      "source_path": "train_quest3/clip-000954.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_af4dd597",
+      "clip_id": 971,
+      "source_path": "train_quest3/clip-000971.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_b6ee6ae4",
+      "clip_id": 979,
+      "source_path": "train_quest3/clip-000979.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_b82fb9b0",
+      "clip_id": 989,
+      "source_path": "train_quest3/clip-000989.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_c931a47e",
+      "clip_id": 998,
+      "source_path": "train_quest3/clip-000998.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_c97846cb",
+      "clip_id": 1010,
+      "source_path": "train_quest3/clip-001010.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_cbac0f7f",
+      "clip_id": 1017,
+      "source_path": "train_quest3/clip-001017.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_d3e0776d",
+      "clip_id": 1024,
+      "source_path": "train_quest3/clip-001024.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0013_dc32809f",
+      "clip_id": 1032,
+      "source_path": "train_quest3/clip-001032.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0017_1a07e9e7",
+      "clip_id": 1047,
+      "source_path": "train_quest3/clip-001047.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0017_44db2c1d",
+      "clip_id": 1054,
+      "source_path": "train_quest3/clip-001054.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0017_6e3c944c",
+      "clip_id": 1069,
+      "source_path": "train_quest3/clip-001069.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0017_96f0f972",
+      "clip_id": 1074,
+      "source_path": "train_quest3/clip-001074.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0017_9f8076b0",
+      "clip_id": 1083,
+      "source_path": "train_quest3/clip-001083.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0017_caa7d043",
+      "clip_id": 1097,
+      "source_path": "train_quest3/clip-001097.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0017_d2495f49",
+      "clip_id": 1103,
+      "source_path": "train_quest3/clip-001103.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0017_d52cdc84",
+      "clip_id": 1105,
+      "source_path": "train_quest3/clip-001105.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0017_dca3ec2e",
+      "clip_id": 1110,
+      "source_path": "train_quest3/clip-001110.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0017_f586b574",
+      "clip_id": 1116,
+      "source_path": "train_quest3/clip-001116.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0018_15ad9743",
+      "clip_id": 1124,
+      "source_path": "train_quest3/clip-001124.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0018_164fb810",
+      "clip_id": 1133,
+      "source_path": "train_quest3/clip-001133.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0018_2188e5dc",
+      "clip_id": 1134,
+      "source_path": "train_quest3/clip-001134.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0018_3904ae02",
+      "clip_id": 1138,
+      "source_path": "train_quest3/clip-001138.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0018_66239f6d",
+      "clip_id": 1143,
+      "source_path": "train_quest3/clip-001143.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0018_7ebe203c",
+      "clip_id": 1144,
+      "source_path": "train_quest3/clip-001144.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0018_824bddd3",
+      "clip_id": 1145,
+      "source_path": "train_quest3/clip-001145.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0018_897ba7de",
+      "clip_id": 1147,
+      "source_path": "train_quest3/clip-001147.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0018_a06fdd96",
+      "clip_id": 1148,
+      "source_path": "train_quest3/clip-001148.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0018_a082e8a6",
+      "clip_id": 1153,
+      "source_path": "train_quest3/clip-001153.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0018_a4d171a6",
+      "clip_id": 1159,
+      "source_path": "train_quest3/clip-001159.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0018_a74d82ff",
+      "clip_id": 1161,
+      "source_path": "train_quest3/clip-001161.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0018_d9676f23",
+      "clip_id": 1162,
+      "source_path": "train_quest3/clip-001162.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0021_03d537b2",
+      "clip_id": 1171,
+      "source_path": "train_quest3/clip-001171.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0021_0d5a33a1",
+      "clip_id": 1184,
+      "source_path": "train_quest3/clip-001184.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0021_1bad784d",
+      "clip_id": 1190,
+      "source_path": "train_quest3/clip-001190.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0021_1d015a74",
+      "clip_id": 1194,
+      "source_path": "train_quest3/clip-001194.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0021_34aa56d1",
+      "clip_id": 1199,
+      "source_path": "train_quest3/clip-001199.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0021_4333c7e1",
+      "clip_id": 1205,
+      "source_path": "train_quest3/clip-001205.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0021_47369140",
+      "clip_id": 1210,
+      "source_path": "train_quest3/clip-001210.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0021_5d8b0988",
+      "clip_id": 1234,
+      "source_path": "train_quest3/clip-001234.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0021_78c0171e",
+      "clip_id": 1238,
+      "source_path": "train_quest3/clip-001238.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0021_7aa28cd2",
+      "clip_id": 1240,
+      "source_path": "train_quest3/clip-001240.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0021_7febe2a6",
+      "clip_id": 1242,
+      "source_path": "train_quest3/clip-001242.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0021_8f2f3894",
+      "clip_id": 1255,
+      "source_path": "train_quest3/clip-001255.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0021_a2060743",
+      "clip_id": 1266,
+      "source_path": "train_quest3/clip-001266.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    },
+    {
+      "device": "Quest3",
+      "sequence_id": "P0021_b9a17970",
+      "clip_id": 1281,
+      "source_path": "train_quest3/clip-001281.tar",
+      "frames": [
+        29,
+        59,
+        89,
+        119,
+        149
+      ]
+    }
+  ]
+}

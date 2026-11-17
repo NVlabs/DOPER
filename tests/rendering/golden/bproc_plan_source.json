@@ -1,0 +1,7461 @@
+{
+ "note": "Pre-physics draws of the source BlenderProc renderers (recording stub), seeds 60000-60009 (HANDAL obj40) and 70000-70009 (HOT3D obj33). Pools: distractor ids and the 16 materials of the paper assets.",
+ "pools": {
+  "distractors": {
+   "tless": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+   ],
+   "hb": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+   ],
+   "tyol": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+   ]
+  },
+  "room_materials": [
+   "Bricks002",
+   "Bricks020",
+   "Carpet004",
+   "Concrete013",
+   "Fabric030",
+   "Ground024",
+   "Marble001",
+   "Metal001",
+   "Metal004",
+   "Metal032",
+   "Plastic001",
+   "Rocks006",
+   "Tiles011",
+   "Tiles046",
+   "WoodFloor007",
+   "WoodFloor018"
+  ]
+ },
+ "draws": {
+  "handal_obj40": {
+   "60000": {
+    "dataset": "handal",
+    "target_ids": [
+     14,
+     12,
+     8,
+     37,
+     30,
+     20,
+     5,
+     6,
+     26,
+     29,
+     9,
+     28,
+     17,
+     34,
+     2,
+     19,
+     36,
+     38,
+     13,
+     40
+    ],
+    "distractors": {
+     "tless": [
+      26,
+      4
+     ],
+     "hb": [
+      3,
+      8
+     ],
+     "tyol": [
+      11,
+      17
+     ]
+    },
+    "objects": [
+     [
+      "hb",
+      8
+     ],
+     [
+      "handal",
+      19
+     ],
+     [
+      "handal",
+      37
+     ],
+     [
+      "handal",
+      6
+     ],
+     [
+      "tyol",
+      17
+     ],
+     [
+      "handal",
+      38
+     ],
+     [
+      "handal",
+      29
+     ],
+     [
+      "hb",
+      3
+     ],
+     [
+      "handal",
+      2
+     ],
+     [
+      "handal",
+      5
+     ],
+     [
+      "handal",
+      13
+     ],
+     [
+      "handal",
+      9
+     ],
+     [
+      "tyol",
+      11
+     ],
+     [
+      "handal",
+      30
+     ],
+     [
+      "handal",
+      14
+     ],
+     [
+      "handal",
+      36
+     ],
+     [
+      "tless",
+      4
+     ],
+     [
+      "handal",
+      28
+     ],
+     [
+      "handal",
+      8
+     ],
+     [
+      "handal",
+      17
+     ],
+     [
+      "tless",
+      26
+     ],
+     [
+      "handal",
+      12
+     ],
+     [
+      "handal",
+      40
+     ],
+     [
+      "handal",
+      26
+     ],
+     [
+      "handal",
+      34
+     ],
+     [
+      "handal",
+      20
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "hb",
+      "id": 8,
+      "grey": null,
+      "roughness": 0.6563091879619781,
+      "specular_ior_level": 0.6627590301557762
+     },
+     {
+      "dataset": "handal",
+      "id": 19,
+      "grey": null,
+      "roughness": 0.9696286986140674,
+      "specular_ior_level": 0.9053341949238704
+     },
+     {
+      "dataset": "handal",
+      "id": 37,
+      "grey": null,
+      "roughness": 0.05722612114613124,
+      "specular_ior_level": 0.9573002599635988
+     },
+     {
+      "dataset": "handal",
+      "id": 6,
+      "grey": null,
+      "roughness": 0.7815477654051673,
+      "specular_ior_level": 0.3367971682554681
+     },
+     {
+      "dataset": "tyol",
+      "id": 17,
+      "grey": null,
+      "roughness": 0.5118716131313437,
+      "specular_ior_level": 0.6873867084207543
+     },
+     {
+      "dataset": "handal",
+      "id": 38,
+      "grey": null,
+      "roughness": 0.39808030108391734,
+      "specular_ior_level": 0.4394219877679818
+     },
+     {
+      "dataset": "handal",
+      "id": 29,
+      "grey": null,
+      "roughness": 0.5884007575800034,
+      "specular_ior_level": 0.8546819692475626
+     },
+     {
+      "dataset": "hb",
+      "id": 3,
+      "grey": null,
+      "roughness": 0.23198311212588796,
+      "specular_ior_level": 0.57583675816284
+     },
+     {
+      "dataset": "handal",
+      "id": 2,
+      "grey": null,
+      "roughness": 0.7665684605101158,
+      "specular_ior_level": 0.7835864485385956
+     },
+     {
+      "dataset": "handal",
+      "id": 5,
+      "grey": null,
+      "roughness": 0.3987757656991141,
+      "specular_ior_level": 0.9844399965815231
+     },
+     {
+      "dataset": "handal",
+      "id": 13,
+      "grey": null,
+      "roughness": 0.28095425235923877,
+      "specular_ior_level": 0.6401364181896457
+     },
+     {
+      "dataset": "handal",
+      "id": 9,
+      "grey": null,
+      "roughness": 0.8505957285101535,
+      "specular_ior_level": 0.35117931836763217
+     },
+     {
+      "dataset": "tyol",
+      "id": 11,
+      "grey": null,
+      "roughness": 0.10004653199042057,
+      "specular_ior_level": 0.34863122805080116
+     },
+     {
+      "dataset": "handal",
+      "id": 30,
+      "grey": null,
+      "roughness": 0.8911416212215275,
+      "specular_ior_level": 0.026341165239362585
+     },
+     {
+      "dataset": "handal",
+      "id": 14,
+      "grey": null,
+      "roughness": 0.4217825238002284,
+      "specular_ior_level": 0.5443617857682871
+     },
+     {
+      "dataset": "handal",
+      "id": 36,
+      "grey": null,
+      "roughness": 0.6953362648112951,
+      "specular_ior_level": 0.7514910485388642
+     },
+     {
+      "dataset": "tless",
+      "id": 4,
+      "grey": 0.4186580967692787,
+      "roughness": 0.5975125479988309,
+      "specular_ior_level": 0.2837252320300606
+     },
+     {
+      "dataset": "handal",
+      "id": 28,
+      "grey": null,
+      "roughness": 0.16935438383119972,
+      "specular_ior_level": 0.6940582772357228
+     },
+     {
+      "dataset": "handal",
+      "id": 8,
+      "grey": null,
+      "roughness": 0.8988799635570602,
+      "specular_ior_level": 0.5102584284041605
+     },
+     {
+      "dataset": "handal",
+      "id": 17,
+      "grey": null,
+      "roughness": 0.6083293647898205,
+      "specular_ior_level": 0.8626149218340942
+     },
+     {
+      "dataset": "tless",
+      "id": 26,
+      "grey": 0.5636620365580803,
+      "roughness": 0.16269532629428396,
+      "specular_ior_level": 0.5088938060750878
+     },
+     {
+      "dataset": "handal",
+      "id": 12,
+      "grey": null,
+      "roughness": 0.15742307620656182,
+      "specular_ior_level": 0.12895855269035605
+     },
+     {
+      "dataset": "handal",
+      "id": 40,
+      "grey": null,
+      "roughness": 0.3412441148476908,
+      "specular_ior_level": 0.03735184177674444
+     },
+     {
+      "dataset": "handal",
+      "id": 26,
+      "grey": null,
+      "roughness": 0.737789383647427,
+      "specular_ior_level": 0.48752223343930734
+     },
+     {
+      "dataset": "handal",
+      "id": 34,
+      "grey": null,
+      "roughness": 0.7197668474623777,
+      "specular_ior_level": 0.6243939596629737
+     },
+     {
+      "dataset": "handal",
+      "id": 20,
+      "grey": null,
+      "roughness": 0.28312884967551255,
+      "specular_ior_level": 0.39280803966342426
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "Concrete013",
+    "emission": 5.644401128430406,
+    "emission_color": [
+     0.9508286813899789,
+     0.7775267714992768,
+     0.7626629120726565,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.82431112255414,
+     0.6414710513011055,
+     0.9178094359817723
+    ],
+    "point_light_position_m": [
+     1.1439558461186343,
+     0.31206724073229464,
+     0.7264154118973783
+    ],
+    "rng_state_sha256": "a2e084593fda261ad27e38543e658cca1d211419471a15b2c6b9e1148455e5ac"
+   },
+   "60001": {
+    "dataset": "handal",
+    "target_ids": [
+     34,
+     8,
+     22,
+     24,
+     32,
+     2,
+     40,
+     39,
+     33,
+     1,
+     12,
+     37,
+     30,
+     13,
+     26,
+     38,
+     21,
+     31,
+     7,
+     5
+    ],
+    "distractors": {
+     "tless": [
+      4,
+      2
+     ],
+     "hb": [
+      10,
+      14
+     ],
+     "tyol": [
+      9,
+      15
+     ]
+    },
+    "objects": [
+     [
+      "handal",
+      31
+     ],
+     [
+      "handal",
+      12
+     ],
+     [
+      "handal",
+      38
+     ],
+     [
+      "handal",
+      7
+     ],
+     [
+      "handal",
+      32
+     ],
+     [
+      "tyol",
+      9
+     ],
+     [
+      "handal",
+      2
+     ],
+     [
+      "handal",
+      1
+     ],
+     [
+      "handal",
+      5
+     ],
+     [
+      "handal",
+      30
+     ],
+     [
+      "tless",
+      2
+     ],
+     [
+      "tless",
+      4
+     ],
+     [
+      "handal",
+      24
+     ],
+     [
+      "handal",
+      39
+     ],
+     [
+      "handal",
+      21
+     ],
+     [
+      "tyol",
+      15
+     ],
+     [
+      "handal",
+      13
+     ],
+     [
+      "hb",
+      14
+     ],
+     [
+      "handal",
+      22
+     ],
+     [
+      "handal",
+      8
+     ],
+     [
+      "hb",
+      10
+     ],
+     [
+      "handal",
+      40
+     ],
+     [
+      "handal",
+      33
+     ],
+     [
+      "handal",
+      37
+     ],
+     [
+      "handal",
+      34
+     ],
+     [
+      "handal",
+      26
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "handal",
+      "id": 31,
+      "grey": null,
+      "roughness": 0.6112361648577541,
+      "specular_ior_level": 0.8382007881192934
+     },
+     {
+      "dataset": "handal",
+      "id": 12,
+      "grey": null,
+      "roughness": 0.1936511655162232,
+      "specular_ior_level": 0.8383578648558331
+     },
+     {
+      "dataset": "handal",
+      "id": 38,
+      "grey": null,
+      "roughness": 0.3360547370349444,
+      "specular_ior_level": 0.5487310963169988
+     },
+     {
+      "dataset": "handal",
+      "id": 7,
+      "grey": null,
+      "roughness": 0.2494159724014623,
+      "specular_ior_level": 0.03744950733039065
+     },
+     {
+      "dataset": "handal",
+      "id": 32,
+      "grey": null,
+      "roughness": 0.766801209986258,
+      "specular_ior_level": 0.6710574527565056
+     },
+     {
+      "dataset": "tyol",
+      "id": 9,
+      "grey": null,
+      "roughness": 0.37511547480193763,
+      "specular_ior_level": 0.7284976918433773
+     },
+     {
+      "dataset": "handal",
+      "id": 2,
+      "grey": null,
+      "roughness": 0.42983460884729074,
+      "specular_ior_level": 0.010994704071276562
+     },
+     {
+      "dataset": "handal",
+      "id": 1,
+      "grey": null,
+      "roughness": 0.9933095908855186,
+      "specular_ior_level": 0.04937039642594043
+     },
+     {
+      "dataset": "handal",
+      "id": 5,
+      "grey": null,
+      "roughness": 0.17934723759786075,
+      "specular_ior_level": 0.37749040697703984
+     },
+     {
+      "dataset": "handal",
+      "id": 30,
+      "grey": null,
+      "roughness": 0.2789343466865485,
+      "specular_ior_level": 0.9078930846311258
+     },
+     {
+      "dataset": "tless",
+      "id": 2,
+      "grey": 0.5434626649504314,
+      "roughness": 0.12017862547472025,
+      "specular_ior_level": 0.6131313792613393
+     },
+     {
+      "dataset": "tless",
+      "id": 4,
+      "grey": 0.8736599183118907,
+      "roughness": 0.5071612433196242,
+      "specular_ior_level": 0.7911078982227574
+     },
+     {
+      "dataset": "handal",
+      "id": 24,
+      "grey": null,
+      "roughness": 0.4301648090527107,
+      "specular_ior_level": 0.8085389069632997
+     },
+     {
+      "dataset": "handal",
+      "id": 39,
+      "grey": null,
+      "roughness": 0.4782337924611775,
+      "specular_ior_level": 0.3635491852463443
+     },
+     {
+      "dataset": "handal",
+      "id": 21,
+      "grey": null,
+      "roughness": 0.26503763044007844,
+      "specular_ior_level": 0.22342988723247192
+     },
+     {
+      "dataset": "tyol",
+      "id": 15,
+      "grey": null,
+      "roughness": 0.27412259881243894,
+      "specular_ior_level": 0.9594230131352227
+     },
+     {
+      "dataset": "handal",
+      "id": 13,
+      "grey": null,
+      "roughness": 0.019917161022561136,
+      "specular_ior_level": 0.11016612295169737
+     },
+     {
+      "dataset": "hb",
+      "id": 14,
+      "grey": null,
+      "roughness": 0.2781294325622745,
+      "specular_ior_level": 0.13220793726987246
+     },
+     {
+      "dataset": "handal",
+      "id": 22,
+      "grey": null,
+      "roughness": 0.4344686760240748,
+      "specular_ior_level": 0.4313079207423801
+     },
+     {
+      "dataset": "handal",
+      "id": 8,
+      "grey": null,
+      "roughness": 0.8890607472117426,
+      "specular_ior_level": 0.9896375632711812
+     },
+     {
+      "dataset": "hb",
+      "id": 10,
+      "grey": null,
+      "roughness": 0.5593696484666635,
+      "specular_ior_level": 0.37753666048065415
+     },
+     {
+      "dataset": "handal",
+      "id": 40,
+      "grey": null,
+      "roughness": 0.7525502637661616,
+      "specular_ior_level": 0.11197411782497413
+     },
+     {
+      "dataset": "handal",
+      "id": 33,
+      "grey": null,
+      "roughness": 0.2982656447519184,
+      "specular_ior_level": 0.11709087942241314
+     },
+     {
+      "dataset": "handal",
+      "id": 37,
+      "grey": null,
+      "roughness": 0.9580850755427857,
+      "specular_ior_level": 0.7776237676625335
+     },
+     {
+      "dataset": "handal",
+      "id": 34,
+      "grey": null,
+      "roughness": 0.90339221139927,
+      "specular_ior_level": 0.5835488099084302
+     },
+     {
+      "dataset": "handal",
+      "id": 26,
+      "grey": null,
+      "roughness": 0.2971564598136419,
+      "specular_ior_level": 0.2030332571285114
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "Rocks006",
+    "emission": 5.155182612270979,
+    "emission_color": [
+     0.965270204795648,
+     0.9686734883406518,
+     0.9702758451083168,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.5454470185421465,
+     0.767795910888783,
+     0.651246316340913
+    ],
+    "point_light_position_m": [
+     -0.3189391641841607,
+     0.7937624975651556,
+     0.8814632033068909
+    ],
+    "rng_state_sha256": "51b38bed6764dc3233e4a682f6c11b2d0acd19bd5e113833d57b24f5ba312dc1"
+   },
+   "60002": {
+    "dataset": "handal",
+    "target_ids": [
+     38,
+     37,
+     17,
+     8,
+     24,
+     25,
+     20,
+     27,
+     40,
+     11,
+     28,
+     3,
+     10,
+     1,
+     26,
+     36,
+     16,
+     29,
+     23,
+     39
+    ],
+    "distractors": {
+     "tless": [
+      19,
+      18
+     ],
+     "hb": [
+      6,
+      33
+     ],
+     "tyol": [
+      21,
+      7
+     ]
+    },
+    "objects": [
+     [
+      "handal",
+      23
+     ],
+     [
+      "tyol",
+      21
+     ],
+     [
+      "handal",
+      11
+     ],
+     [
+      "handal",
+      20
+     ],
+     [
+      "handal",
+      37
+     ],
+     [
+      "tyol",
+      7
+     ],
+     [
+      "handal",
+      40
+     ],
+     [
+      "handal",
+      16
+     ],
+     [
+      "hb",
+      33
+     ],
+     [
+      "hb",
+      6
+     ],
+     [
+      "handal",
+      27
+     ],
+     [
+      "handal",
+      17
+     ],
+     [
+      "tless",
+      18
+     ],
+     [
+      "handal",
+      8
+     ],
+     [
+      "handal",
+      25
+     ],
+     [
+      "handal",
+      10
+     ],
+     [
+      "handal",
+      24
+     ],
+     [
+      "tless",
+      19
+     ],
+     [
+      "handal",
+      3
+     ],
+     [
+      "handal",
+      26
+     ],
+     [
+      "handal",
+      28
+     ],
+     [
+      "handal",
+      38
+     ],
+     [
+      "handal",
+      39
+     ],
+     [
+      "handal",
+      36
+     ],
+     [
+      "handal",
+      1
+     ],
+     [
+      "handal",
+      29
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "handal",
+      "id": 23,
+      "grey": null,
+      "roughness": 0.768076386255214,
+      "specular_ior_level": 0.059390266767766375
+     },
+     {
+      "dataset": "tyol",
+      "id": 21,
+      "grey": null,
+      "roughness": 0.0929260343544438,
+      "specular_ior_level": 0.39308908827616573
+     },
+     {
+      "dataset": "handal",
+      "id": 11,
+      "grey": null,
+      "roughness": 0.16191620447543442,
+      "specular_ior_level": 0.1895209059851033
+     },
+     {
+      "dataset": "handal",
+      "id": 20,
+      "grey": null,
+      "roughness": 0.8865913103764776,
+      "specular_ior_level": 0.9874176341468817
+     },
+     {
+      "dataset": "handal",
+      "id": 37,
+      "grey": null,
+      "roughness": 0.30984854300911335,
+      "specular_ior_level": 0.9626035303492729
+     },
+     {
+      "dataset": "tyol",
+      "id": 7,
+      "grey": null,
+      "roughness": 0.6290756859372324,
+      "specular_ior_level": 0.33827308784911836
+     },
+     {
+      "dataset": "handal",
+      "id": 40,
+      "grey": null,
+      "roughness": 0.14372243045351119,
+      "specular_ior_level": 0.9167437587688451
+     },
+     {
+      "dataset": "handal",
+      "id": 16,
+      "grey": null,
+      "roughness": 0.9493343993881177,
+      "specular_ior_level": 0.20017710615371753
+     },
+     {
+      "dataset": "hb",
+      "id": 33,
+      "grey": null,
+      "roughness": 0.6157150736789169,
+      "specular_ior_level": 0.4155325212121661
+     },
+     {
+      "dataset": "hb",
+      "id": 6,
+      "grey": null,
+      "roughness": 0.01598450025964071,
+      "specular_ior_level": 0.19284272093071453
+     },
+     {
+      "dataset": "handal",
+      "id": 27,
+      "grey": null,
+      "roughness": 0.8030693916657169,
+      "specular_ior_level": 0.7194631525291845
+     },
+     {
+      "dataset": "handal",
+      "id": 17,
+      "grey": null,
+      "roughness": 0.8622909189464117,
+      "specular_ior_level": 0.8929855700400997
+     },
+     {
+      "dataset": "tless",
+      "id": 18,
+      "grey": 0.3659822523084375,
+      "roughness": 0.02869755485933234,
+      "specular_ior_level": 0.20531054133556614
+     },
+     {
+      "dataset": "handal",
+      "id": 8,
+      "grey": null,
+      "roughness": 0.17995037988008156,
+      "specular_ior_level": 0.8086548650497121
+     },
+     {
+      "dataset": "handal",
+      "id": 25,
+      "grey": null,
+      "roughness": 0.9757780916275686,
+      "specular_ior_level": 0.9132343156181192
+     },
+     {
+      "dataset": "handal",
+      "id": 10,
+      "grey": null,
+      "roughness": 0.4186558152602404,
+      "specular_ior_level": 0.9456345055014337
+     },
+     {
+      "dataset": "handal",
+      "id": 24,
+      "grey": null,
+      "roughness": 0.05479334306776684,
+      "specular_ior_level": 0.09384416081409408
+     },
+     {
+      "dataset": "tless",
+      "id": 19,
+      "grey": 0.6450251113625414,
+      "roughness": 0.762389720423714,
+      "specular_ior_level": 0.7375760215483108
+     },
+     {
+      "dataset": "handal",
+      "id": 3,
+      "grey": null,
+      "roughness": 0.39228663374876205,
+      "specular_ior_level": 0.5461020070921594
+     },
+     {
+      "dataset": "handal",
+      "id": 26,
+      "grey": null,
+      "roughness": 0.37652774285751744,
+      "specular_ior_level": 0.37764587484594236
+     },
+     {
+      "dataset": "handal",
+      "id": 28,
+      "grey": null,
+      "roughness": 0.027784197221149,
+      "specular_ior_level": 0.7852944961511601
+     },
+     {
+      "dataset": "handal",
+      "id": 38,
+      "grey": null,
+      "roughness": 0.3416384866446651,
+      "specular_ior_level": 0.3249152802188796
+     },
+     {
+      "dataset": "handal",
+      "id": 39,
+      "grey": null,
+      "roughness": 0.37466507608640753,
+      "specular_ior_level": 0.9310544718222172
+     },
+     {
+      "dataset": "handal",
+      "id": 36,
+      "grey": null,
+      "roughness": 0.0815990946018188,
+      "specular_ior_level": 0.7267138093210527
+     },
+     {
+      "dataset": "handal",
+      "id": 1,
+      "grey": null,
+      "roughness": 0.16169114663074313,
+      "specular_ior_level": 0.5018920003623905
+     },
+     {
+      "dataset": "handal",
+      "id": 29,
+      "grey": null,
+      "roughness": 0.5591379619199348,
+      "specular_ior_level": 0.5522524857436726
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "Fabric030",
+    "emission": 4.309119501190151,
+    "emission_color": [
+     0.7792420110364319,
+     0.8467844574598129,
+     0.9165632394454611,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.53237558237158,
+     0.5876173537157108,
+     0.9165557010826036
+    ],
+    "point_light_position_m": [
+     0.3370023692355028,
+     0.5776770482040796,
+     0.9454114654750689
+    ],
+    "rng_state_sha256": "ed70543882eb9602ef3979ba7a04451f11d4150847631a45de448719b176c837"
+   },
+   "60003": {
+    "dataset": "handal",
+    "target_ids": [
+     30,
+     20,
+     37,
+     36,
+     25,
+     21,
+     2,
+     22,
+     12,
+     26,
+     17,
+     14,
+     9,
+     34,
+     7,
+     19,
+     38,
+     8,
+     40,
+     15
+    ],
+    "distractors": {
+     "tless": [
+      15,
+      2
+     ],
+     "hb": [
+      11,
+      18
+     ],
+     "tyol": [
+      10,
+      21
+     ]
+    },
+    "objects": [
+     [
+      "handal",
+      37
+     ],
+     [
+      "handal",
+      14
+     ],
+     [
+      "tless",
+      2
+     ],
+     [
+      "handal",
+      7
+     ],
+     [
+      "handal",
+      8
+     ],
+     [
+      "handal",
+      20
+     ],
+     [
+      "handal",
+      9
+     ],
+     [
+      "handal",
+      21
+     ],
+     [
+      "handal",
+      30
+     ],
+     [
+      "tyol",
+      10
+     ],
+     [
+      "handal",
+      22
+     ],
+     [
+      "handal",
+      19
+     ],
+     [
+      "tyol",
+      21
+     ],
+     [
+      "handal",
+      25
+     ],
+     [
+      "handal",
+      17
+     ],
+     [
+      "handal",
+      34
+     ],
+     [
+      "handal",
+      38
+     ],
+     [
+      "handal",
+      36
+     ],
+     [
+      "handal",
+      40
+     ],
+     [
+      "handal",
+      2
+     ],
+     [
+      "handal",
+      26
+     ],
+     [
+      "handal",
+      12
+     ],
+     [
+      "hb",
+      11
+     ],
+     [
+      "tless",
+      15
+     ],
+     [
+      "handal",
+      15
+     ],
+     [
+      "hb",
+      18
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "handal",
+      "id": 37,
+      "grey": null,
+      "roughness": 0.8551818205872146,
+      "specular_ior_level": 0.7743592626508151
+     },
+     {
+      "dataset": "handal",
+      "id": 14,
+      "grey": null,
+      "roughness": 0.46407496950571925,
+      "specular_ior_level": 0.8698624979748962
+     },
+     {
+      "dataset": "tless",
+      "id": 2,
+      "grey": 0.7523091828990607,
+      "roughness": 0.11512849429392857,
+      "specular_ior_level": 0.050432167203749434
+     },
+     {
+      "dataset": "handal",
+      "id": 7,
+      "grey": null,
+      "roughness": 0.4752853618621695,
+      "specular_ior_level": 0.28096606262821344
+     },
+     {
+      "dataset": "handal",
+      "id": 8,
+      "grey": null,
+      "roughness": 0.8416756853629651,
+      "specular_ior_level": 0.47596769029473296
+     },
+     {
+      "dataset": "handal",
+      "id": 20,
+      "grey": null,
+      "roughness": 0.2605175684519845,
+      "specular_ior_level": 0.5871507750623428
+     },
+     {
+      "dataset": "handal",
+      "id": 9,
+      "grey": null,
+      "roughness": 0.674813844969341,
+      "specular_ior_level": 0.9142013659813059
+     },
+     {
+      "dataset": "handal",
+      "id": 21,
+      "grey": null,
+      "roughness": 0.3024463094257076,
+      "specular_ior_level": 0.7432660418913722
+     },
+     {
+      "dataset": "handal",
+      "id": 30,
+      "grey": null,
+      "roughness": 0.18171055490905585,
+      "specular_ior_level": 0.8513599306318611
+     },
+     {
+      "dataset": "tyol",
+      "id": 10,
+      "grey": null,
+      "roughness": 0.29204065650610256,
+      "specular_ior_level": 0.4923054272345524
+     },
+     {
+      "dataset": "handal",
+      "id": 22,
+      "grey": null,
+      "roughness": 0.8410907729151588,
+      "specular_ior_level": 0.11037937011899468
+     },
+     {
+      "dataset": "handal",
+      "id": 19,
+      "grey": null,
+      "roughness": 0.9548843218689548,
+      "specular_ior_level": 0.12775244242174955
+     },
+     {
+      "dataset": "tyol",
+      "id": 21,
+      "grey": null,
+      "roughness": 0.19864783843810274,
+      "specular_ior_level": 0.2305197482711525
+     },
+     {
+      "dataset": "handal",
+      "id": 25,
+      "grey": null,
+      "roughness": 0.05201583657985409,
+      "specular_ior_level": 0.7274918157972146
+     },
+     {
+      "dataset": "handal",
+      "id": 17,
+      "grey": null,
+      "roughness": 0.6697930439406362,
+      "specular_ior_level": 0.9570211435053234
+     },
+     {
+      "dataset": "handal",
+      "id": 34,
+      "grey": null,
+      "roughness": 0.6699431877669586,
+      "specular_ior_level": 0.634839779687002
+     },
+     {
+      "dataset": "handal",
+      "id": 38,
+      "grey": null,
+      "roughness": 0.16040114617160373,
+      "specular_ior_level": 0.8908656545781336
+     },
+     {
+      "dataset": "handal",
+      "id": 36,
+      "grey": null,
+      "roughness": 0.9967845622049172,
+      "specular_ior_level": 0.7937489514356092
+     },
+     {
+      "dataset": "handal",
+      "id": 40,
+      "grey": null,
+      "roughness": 0.8253718033709979,
+      "specular_ior_level": 0.909388037077197
+     },
+     {
+      "dataset": "handal",
+      "id": 2,
+      "grey": null,
+      "roughness": 0.1912912163296444,
+      "specular_ior_level": 0.5088588122667576
+     },
+     {
+      "dataset": "handal",
+      "id": 26,
+      "grey": null,
+      "roughness": 0.923168195158516,
+      "specular_ior_level": 0.4520736394166349
+     },
+     {
+      "dataset": "handal",
+      "id": 12,
+      "grey": null,
+      "roughness": 0.29854436435826526,
+      "specular_ior_level": 0.3884734462572136
+     },
+     {
+      "dataset": "hb",
+      "id": 11,
+      "grey": null,
+      "roughness": 0.4533993880509347,
+      "specular_ior_level": 0.1318694658911176
+     },
+     {
+      "dataset": "tless",
+      "id": 15,
+      "grey": 0.38364334207916284,
+      "roughness": 0.5189976393517622,
+      "specular_ior_level": 0.31693209457956284
+     },
+     {
+      "dataset": "handal",
+      "id": 15,
+      "grey": null,
+      "roughness": 0.3300567609086289,
+      "specular_ior_level": 0.26411775207373733
+     },
+     {
+      "dataset": "hb",
+      "id": 18,
+      "grey": null,
+      "roughness": 0.9160782440161442,
+      "specular_ior_level": 0.5354179876235703
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "Tiles046",
+    "emission": 5.346123509009105,
+    "emission_color": [
+     0.569520527135305,
+     0.843440944947757,
+     0.7239756076516177,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.9371096815741541,
+     0.8528559691701058,
+     0.8503861859340478
+    ],
+    "point_light_position_m": [
+     -0.14622122678007657,
+     -0.14516488788260878,
+     1.0364070456072414
+    ],
+    "rng_state_sha256": "285d6c4855e61d110edd5e03f007b9d52420d426f6d2d9ab355f8b23f9998f5d"
+   },
+   "60004": {
+    "dataset": "handal",
+    "target_ids": [
+     23,
+     38,
+     19,
+     8,
+     20,
+     30,
+     29,
+     39,
+     32,
+     31,
+     28,
+     40,
+     13,
+     27,
+     12,
+     7,
+     1,
+     17,
+     4,
+     34
+    ],
+    "distractors": {
+     "tless": [
+      16,
+      18
+     ],
+     "hb": [
+      17,
+      21
+     ],
+     "tyol": [
+      9,
+      13
+     ]
+    },
+    "objects": [
+     [
+      "handal",
+      40
+     ],
+     [
+      "handal",
+      17
+     ],
+     [
+      "handal",
+      39
+     ],
+     [
+      "handal",
+      31
+     ],
+     [
+      "hb",
+      21
+     ],
+     [
+      "handal",
+      29
+     ],
+     [
+      "handal",
+      32
+     ],
+     [
+      "handal",
+      19
+     ],
+     [
+      "handal",
+      23
+     ],
+     [
+      "handal",
+      38
+     ],
+     [
+      "handal",
+      4
+     ],
+     [
+      "tyol",
+      9
+     ],
+     [
+      "handal",
+      34
+     ],
+     [
+      "tyol",
+      13
+     ],
+     [
+      "handal",
+      30
+     ],
+     [
+      "hb",
+      17
+     ],
+     [
+      "handal",
+      1
+     ],
+     [
+      "handal",
+      8
+     ],
+     [
+      "tless",
+      18
+     ],
+     [
+      "handal",
+      20
+     ],
+     [
+      "handal",
+      27
+     ],
+     [
+      "handal",
+      12
+     ],
+     [
+      "tless",
+      16
+     ],
+     [
+      "handal",
+      13
+     ],
+     [
+      "handal",
+      7
+     ],
+     [
+      "handal",
+      28
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "handal",
+      "id": 40,
+      "grey": null,
+      "roughness": 0.06151748301310611,
+      "specular_ior_level": 0.043850151917261604
+     },
+     {
+      "dataset": "handal",
+      "id": 17,
+      "grey": null,
+      "roughness": 0.6801069700961525,
+      "specular_ior_level": 0.31481587328892524
+     },
+     {
+      "dataset": "handal",
+      "id": 39,
+      "grey": null,
+      "roughness": 0.039633505600019325,
+      "specular_ior_level": 0.5987846040344805
+     },
+     {
+      "dataset": "handal",
+      "id": 31,
+      "grey": null,
+      "roughness": 0.1753792034798093,
+      "specular_ior_level": 0.8001566524627886
+     },
+     {
+      "dataset": "hb",
+      "id": 21,
+      "grey": null,
+      "roughness": 0.6388420913331282,
+      "specular_ior_level": 0.5743186311048527
+     },
+     {
+      "dataset": "handal",
+      "id": 29,
+      "grey": null,
+      "roughness": 0.15364734549032455,
+      "specular_ior_level": 0.6433612722600321
+     },
+     {
+      "dataset": "handal",
+      "id": 32,
+      "grey": null,
+      "roughness": 0.9698669453459414,
+      "specular_ior_level": 0.19259363594226353
+     },
+     {
+      "dataset": "handal",
+      "id": 19,
+      "grey": null,
+      "roughness": 0.042057820527997225,
+      "specular_ior_level": 0.7915216023192837
+     },
+     {
+      "dataset": "handal",
+      "id": 23,
+      "grey": null,
+      "roughness": 0.14739133810833538,
+      "specular_ior_level": 0.9542181030310671
+     },
+     {
+      "dataset": "handal",
+      "id": 38,
+      "grey": null,
+      "roughness": 0.014658140332922454,
+      "specular_ior_level": 0.2633276130595622
+     },
+     {
+      "dataset": "handal",
+      "id": 4,
+      "grey": null,
+      "roughness": 0.9676243199362909,
+      "specular_ior_level": 0.7116354026206516
+     },
+     {
+      "dataset": "tyol",
+      "id": 9,
+      "grey": null,
+      "roughness": 0.912668789475162,
+      "specular_ior_level": 0.5059309350463882
+     },
+     {
+      "dataset": "handal",
+      "id": 34,
+      "grey": null,
+      "roughness": 0.9398428061206368,
+      "specular_ior_level": 0.7390570291496776
+     },
+     {
+      "dataset": "tyol",
+      "id": 13,
+      "grey": null,
+      "roughness": 0.9526943228095653,
+      "specular_ior_level": 0.945925233896969
+     },
+     {
+      "dataset": "handal",
+      "id": 30,
+      "grey": null,
+      "roughness": 0.23571646601033325,
+      "specular_ior_level": 0.6374871873167262
+     },
+     {
+      "dataset": "hb",
+      "id": 17,
+      "grey": null,
+      "roughness": 0.3037039320322811,
+      "specular_ior_level": 0.5162459074429906
+     },
+     {
+      "dataset": "handal",
+      "id": 1,
+      "grey": null,
+      "roughness": 0.9582089576741443,
+      "specular_ior_level": 0.5186414562924941
+     },
+     {
+      "dataset": "handal",
+      "id": 8,
+      "grey": null,
+      "roughness": 0.06545561600366279,
+      "specular_ior_level": 0.759813628304004
+     },
+     {
+      "dataset": "tless",
+      "id": 18,
+      "grey": 0.8790456592204667,
+      "roughness": 0.8998316424348152,
+      "specular_ior_level": 0.823397587908971
+     },
+     {
+      "dataset": "handal",
+      "id": 20,
+      "grey": null,
+      "roughness": 0.2528533225395906,
+      "specular_ior_level": 0.17220715470646586
+     },
+     {
+      "dataset": "handal",
+      "id": 27,
+      "grey": null,
+      "roughness": 0.4185051473717649,
+      "specular_ior_level": 0.3359611604285918
+     },
+     {
+      "dataset": "handal",
+      "id": 12,
+      "grey": null,
+      "roughness": 0.8507460768259797,
+      "specular_ior_level": 0.8869798945236491
+     },
+     {
+      "dataset": "tless",
+      "id": 16,
+      "grey": 0.17990665037392173,
+      "roughness": 0.5878408465136009,
+      "specular_ior_level": 0.7587146580456307
+     },
+     {
+      "dataset": "handal",
+      "id": 13,
+      "grey": null,
+      "roughness": 0.04732335592877146,
+      "specular_ior_level": 0.5536964762447535
+     },
+     {
+      "dataset": "handal",
+      "id": 7,
+      "grey": null,
+      "roughness": 0.12972677963759527,
+      "specular_ior_level": 0.4532778096771637
+     },
+     {
+      "dataset": "handal",
+      "id": 28,
+      "grey": null,
+      "roughness": 0.22668268459579666,
+      "specular_ior_level": 0.4435201063704195
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "Rocks006",
+    "emission": 3.65998372405971,
+    "emission_color": [
+     0.8573909939989434,
+     0.5746611997440865,
+     0.6807592149322634,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.697450071207202,
+     0.5474815239450526,
+     0.7625168589680156
+    ],
+    "point_light_position_m": [
+     -0.1692550864329182,
+     -0.12155721076172728,
+     1.1977380261500483
+    ],
+    "rng_state_sha256": "8f1ca406b91495b26ad477817ed589bcb3757c8c2171bd4ae5a24f629230d612"
+   },
+   "60005": {
+    "dataset": "handal",
+    "target_ids": [
+     22,
+     32,
+     17,
+     7,
+     28,
+     14,
+     25,
+     30,
+     15,
+     20,
+     36,
+     2,
+     1,
+     31,
+     34,
+     23,
+     6,
+     35,
+     40,
+     39
+    ],
+    "distractors": {
+     "tless": [
+      20,
+      16
+     ],
+     "hb": [
+      33,
+      6
+     ],
+     "tyol": [
+      6,
+      2
+     ]
+    },
+    "objects": [
+     [
+      "handal",
+      35
+     ],
+     [
+      "handal",
+      15
+     ],
+     [
+      "handal",
+      28
+     ],
+     [
+      "handal",
+      23
+     ],
+     [
+      "handal",
+      6
+     ],
+     [
+      "handal",
+      40
+     ],
+     [
+      "tyol",
+      6
+     ],
+     [
+      "handal",
+      31
+     ],
+     [
+      "handal",
+      30
+     ],
+     [
+      "handal",
+      14
+     ],
+     [
+      "handal",
+      36
+     ],
+     [
+      "handal",
+      1
+     ],
+     [
+      "hb",
+      6
+     ],
+     [
+      "handal",
+      2
+     ],
+     [
+      "hb",
+      33
+     ],
+     [
+      "handal",
+      17
+     ],
+     [
+      "handal",
+      34
+     ],
+     [
+      "handal",
+      32
+     ],
+     [
+      "handal",
+      22
+     ],
+     [
+      "tyol",
+      2
+     ],
+     [
+      "handal",
+      25
+     ],
+     [
+      "tless",
+      16
+     ],
+     [
+      "tless",
+      20
+     ],
+     [
+      "handal",
+      7
+     ],
+     [
+      "handal",
+      20
+     ],
+     [
+      "handal",
+      39
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "handal",
+      "id": 35,
+      "grey": null,
+      "roughness": 0.14756518445764966,
+      "specular_ior_level": 0.7841650215359469
+     },
+     {
+      "dataset": "handal",
+      "id": 15,
+      "grey": null,
+      "roughness": 0.7534349117251683,
+      "specular_ior_level": 0.5801301013499269
+     },
+     {
+      "dataset": "handal",
+      "id": 28,
+      "grey": null,
+      "roughness": 0.8442588215897381,
+      "specular_ior_level": 0.4650693260609199
+     },
+     {
+      "dataset": "handal",
+      "id": 23,
+      "grey": null,
+      "roughness": 0.6313785775894649,
+      "specular_ior_level": 0.8117718131180272
+     },
+     {
+      "dataset": "handal",
+      "id": 6,
+      "grey": null,
+      "roughness": 0.9697585405686582,
+      "specular_ior_level": 0.11896522622798178
+     },
+     {
+      "dataset": "handal",
+      "id": 40,
+      "grey": null,
+      "roughness": 0.9517966492566777,
+      "specular_ior_level": 0.6716094178872153
+     },
+     {
+      "dataset": "tyol",
+      "id": 6,
+      "grey": null,
+      "roughness": 0.4288822483389598,
+      "specular_ior_level": 0.7244763630595404
+     },
+     {
+      "dataset": "handal",
+      "id": 31,
+      "grey": null,
+      "roughness": 0.7629961475621629,
+      "specular_ior_level": 0.2973222386776263
+     },
+     {
+      "dataset": "handal",
+      "id": 30,
+      "grey": null,
+      "roughness": 0.13349620544490792,
+      "specular_ior_level": 0.9094530969645267
+     },
+     {
+      "dataset": "handal",
+      "id": 14,
+      "grey": null,
+      "roughness": 0.03634081103153042,
+      "specular_ior_level": 0.021857560223943473
+     },
+     {
+      "dataset": "handal",
+      "id": 36,
+      "grey": null,
+      "roughness": 0.24588607541041907,
+      "specular_ior_level": 0.6778777004131282
+     },
+     {
+      "dataset": "handal",
+      "id": 1,
+      "grey": null,
+      "roughness": 0.2083678347408061,
+      "specular_ior_level": 0.6804564383045162
+     },
+     {
+      "dataset": "hb",
+      "id": 6,
+      "grey": null,
+      "roughness": 0.5752605190730457,
+      "specular_ior_level": 0.39528460659691234
+     },
+     {
+      "dataset": "handal",
+      "id": 2,
+      "grey": null,
+      "roughness": 0.6064028999558746,
+      "specular_ior_level": 0.7293273234416732
+     },
+     {
+      "dataset": "hb",
+      "id": 33,
+      "grey": null,
+      "roughness": 0.6639856931965997,
+      "specular_ior_level": 0.7151882599884329
+     },
+     {
+      "dataset": "handal",
+      "id": 17,
+      "grey": null,
+      "roughness": 0.4099349133069766,
+      "specular_ior_level": 0.9422292996192705
+     },
+     {
+      "dataset": "handal",
+      "id": 34,
+      "grey": null,
+      "roughness": 0.5732940860719248,
+      "specular_ior_level": 0.6754944526689444
+     },
+     {
+      "dataset": "handal",
+      "id": 32,
+      "grey": null,
+      "roughness": 0.28425746259773277,
+      "specular_ior_level": 0.16610999994565645
+     },
+     {
+      "dataset": "handal",
+      "id": 22,
+      "grey": null,
+      "roughness": 0.20123303860471542,
+      "specular_ior_level": 0.06040954791318043
+     },
+     {
+      "dataset": "tyol",
+      "id": 2,
+      "grey": null,
+      "roughness": 0.4713737364689984,
+      "specular_ior_level": 0.31051869433402857
+     },
+     {
+      "dataset": "handal",
+      "id": 25,
+      "grey": null,
+      "roughness": 0.5792425497936616,
+      "specular_ior_level": 0.3405341124960355
+     },
+     {
+      "dataset": "tless",
+      "id": 16,
+      "grey": 0.1324740280736265,
+      "roughness": 0.2261720476029333,
+      "specular_ior_level": 0.4529765741181332
+     },
+     {
+      "dataset": "tless",
+      "id": 20,
+      "grey": 0.38975824789497426,
+      "roughness": 0.855602010055376,
+      "specular_ior_level": 0.7480563011900353
+     },
+     {
+      "dataset": "handal",
+      "id": 7,
+      "grey": null,
+      "roughness": 0.9100605508277643,
+      "specular_ior_level": 0.5696167717822107
+     },
+     {
+      "dataset": "handal",
+      "id": 20,
+      "grey": null,
+      "roughness": 0.06355741701848217,
+      "specular_ior_level": 0.07519008138552374
+     },
+     {
+      "dataset": "handal",
+      "id": 39,
+      "grey": null,
+      "roughness": 0.05868556467639807,
+      "specular_ior_level": 0.7805227961926821
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "Concrete013",
+    "emission": 5.009360051200776,
+    "emission_color": [
+     0.7147128610870159,
+     0.7090935087041765,
+     0.6837277522690532,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.5229259577171294,
+     0.7703509274140483,
+     0.5696664643621128
+    ],
+    "point_light_position_m": [
+     0.3109013186795063,
+     0.9320955895706432,
+     0.2752853114878174
+    ],
+    "rng_state_sha256": "13297b0db2a79615a92aac2e330370a0384695c348b17fca6a5e79f034b86002"
+   },
+   "60006": {
+    "dataset": "handal",
+    "target_ids": [
+     24,
+     18,
+     14,
+     8,
+     35,
+     3,
+     39,
+     38,
+     15,
+     12,
+     40,
+     16,
+     26,
+     19,
+     9,
+     13,
+     22,
+     31,
+     30,
+     21
+    ],
+    "distractors": {
+     "tless": [
+      30,
+      25
+     ],
+     "hb": [
+      26,
+      18
+     ],
+     "tyol": [
+      17,
+      11
+     ]
+    },
+    "objects": [
+     [
+      "handal",
+      24
+     ],
+     [
+      "handal",
+      8
+     ],
+     [
+      "tless",
+      30
+     ],
+     [
+      "handal",
+      35
+     ],
+     [
+      "handal",
+      19
+     ],
+     [
+      "handal",
+      26
+     ],
+     [
+      "hb",
+      26
+     ],
+     [
+      "handal",
+      22
+     ],
+     [
+      "hb",
+      18
+     ],
+     [
+      "handal",
+      9
+     ],
+     [
+      "handal",
+      16
+     ],
+     [
+      "handal",
+      31
+     ],
+     [
+      "handal",
+      21
+     ],
+     [
+      "tless",
+      25
+     ],
+     [
+      "handal",
+      30
+     ],
+     [
+      "handal",
+      12
+     ],
+     [
+      "handal",
+      18
+     ],
+     [
+      "handal",
+      13
+     ],
+     [
+      "handal",
+      3
+     ],
+     [
+      "tyol",
+      11
+     ],
+     [
+      "handal",
+      14
+     ],
+     [
+      "handal",
+      15
+     ],
+     [
+      "handal",
+      40
+     ],
+     [
+      "handal",
+      38
+     ],
+     [
+      "handal",
+      39
+     ],
+     [
+      "tyol",
+      17
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "handal",
+      "id": 24,
+      "grey": null,
+      "roughness": 0.18913026034313218,
+      "specular_ior_level": 0.48564959528317997
+     },
+     {
+      "dataset": "handal",
+      "id": 8,
+      "grey": null,
+      "roughness": 0.004116554116567639,
+      "specular_ior_level": 0.13003269846205634
+     },
+     {
+      "dataset": "tless",
+      "id": 30,
+      "grey": 0.6852085331149165,
+      "roughness": 0.8132877683406144,
+      "specular_ior_level": 0.9526217399920964
+     },
+     {
+      "dataset": "handal",
+      "id": 35,
+      "grey": null,
+      "roughness": 0.270069143406492,
+      "specular_ior_level": 0.5029669038388096
+     },
+     {
+      "dataset": "handal",
+      "id": 19,
+      "grey": null,
+      "roughness": 0.5573819962049542,
+      "specular_ior_level": 0.5635487457324765
+     },
+     {
+      "dataset": "handal",
+      "id": 26,
+      "grey": null,
+      "roughness": 0.1063358735281279,
+      "specular_ior_level": 0.22535258705763173
+     },
+     {
+      "dataset": "hb",
+      "id": 26,
+      "grey": null,
+      "roughness": 0.4322087983354892,
+      "specular_ior_level": 0.9401227848372844
+     },
+     {
+      "dataset": "handal",
+      "id": 22,
+      "grey": null,
+      "roughness": 0.8793209041240482,
+      "specular_ior_level": 0.2304572452946223
+     },
+     {
+      "dataset": "hb",
+      "id": 18,
+      "grey": null,
+      "roughness": 0.4320645676886895,
+      "specular_ior_level": 0.05990989644014244
+     },
+     {
+      "dataset": "handal",
+      "id": 9,
+      "grey": null,
+      "roughness": 0.805987431117557,
+      "specular_ior_level": 0.14108505445827157
+     },
+     {
+      "dataset": "handal",
+      "id": 16,
+      "grey": null,
+      "roughness": 0.892509118329137,
+      "specular_ior_level": 0.24254497539682374
+     },
+     {
+      "dataset": "handal",
+      "id": 31,
+      "grey": null,
+      "roughness": 0.9036774341274805,
+      "specular_ior_level": 0.3080999218761362
+     },
+     {
+      "dataset": "handal",
+      "id": 21,
+      "grey": null,
+      "roughness": 0.29680409960648024,
+      "specular_ior_level": 0.5383926340882309
+     },
+     {
+      "dataset": "tless",
+      "id": 25,
+      "grey": 0.5655920469464643,
+      "roughness": 0.8728434828915651,
+      "specular_ior_level": 0.5207090281571783
+     },
+     {
+      "dataset": "handal",
+      "id": 30,
+      "grey": null,
+      "roughness": 0.07593034363381912,
+      "specular_ior_level": 0.4816120475210146
+     },
+     {
+      "dataset": "handal",
+      "id": 12,
+      "grey": null,
+      "roughness": 0.8174049602507639,
+      "specular_ior_level": 0.5209978135349695
+     },
+     {
+      "dataset": "handal",
+      "id": 18,
+      "grey": null,
+      "roughness": 0.3818834028101752,
+      "specular_ior_level": 0.21417485337872266
+     },
+     {
+      "dataset": "handal",
+      "id": 13,
+      "grey": null,
+      "roughness": 0.3373955824240453,
+      "specular_ior_level": 0.5187893162915651
+     },
+     {
+      "dataset": "handal",
+      "id": 3,
+      "grey": null,
+      "roughness": 0.8722235752801074,
+      "specular_ior_level": 0.8672056682773925
+     },
+     {
+      "dataset": "tyol",
+      "id": 11,
+      "grey": null,
+      "roughness": 0.45132895286523644,
+      "specular_ior_level": 0.8983172931620169
+     },
+     {
+      "dataset": "handal",
+      "id": 14,
+      "grey": null,
+      "roughness": 0.5668761149107945,
+      "specular_ior_level": 0.09833544428467145
+     },
+     {
+      "dataset": "handal",
+      "id": 15,
+      "grey": null,
+      "roughness": 0.7575655787791331,
+      "specular_ior_level": 0.18832267899352562
+     },
+     {
+      "dataset": "handal",
+      "id": 40,
+      "grey": null,
+      "roughness": 0.25612584438607944,
+      "specular_ior_level": 0.29104048753972056
+     },
+     {
+      "dataset": "handal",
+      "id": 38,
+      "grey": null,
+      "roughness": 0.5426667881149105,
+      "specular_ior_level": 0.42925645203409346
+     },
+     {
+      "dataset": "handal",
+      "id": 39,
+      "grey": null,
+      "roughness": 0.5703312794810659,
+      "specular_ior_level": 0.009860106582111339
+     },
+     {
+      "dataset": "tyol",
+      "id": 17,
+      "grey": null,
+      "roughness": 0.8597033467218408,
+      "specular_ior_level": 0.6236395205880659
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "Fabric030",
+    "emission": 3.872505796970041,
+    "emission_color": [
+     0.926427516642053,
+     0.8694884512253834,
+     0.9175984483647659,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.5526623329319306,
+     0.5816405363956023,
+     0.584568059159903
+    ],
+    "point_light_position_m": [
+     -0.6365782453308333,
+     -0.18102997989560995,
+     1.0439359928407457
+    ],
+    "rng_state_sha256": "87a9b478d10d28f934eea1df34be2728e2593c0c4b0496b6d2a348d42e4dc08f"
+   },
+   "60007": {
+    "dataset": "handal",
+    "target_ids": [
+     32,
+     17,
+     23,
+     29,
+     16,
+     35,
+     33,
+     40,
+     25,
+     2,
+     7,
+     28,
+     39,
+     4,
+     31,
+     13,
+     12,
+     6,
+     38,
+     37
+    ],
+    "distractors": {
+     "tless": [
+      9,
+      21
+     ],
+     "hb": [
+      7,
+      28
+     ],
+     "tyol": [
+      13,
+      21
+     ]
+    },
+    "objects": [
+     [
+      "handal",
+      37
+     ],
+     [
+      "handal",
+      39
+     ],
+     [
+      "handal",
+      4
+     ],
+     [
+      "handal",
+      6
+     ],
+     [
+      "handal",
+      23
+     ],
+     [
+      "hb",
+      7
+     ],
+     [
+      "handal",
+      38
+     ],
+     [
+      "handal",
+      31
+     ],
+     [
+      "hb",
+      28
+     ],
+     [
+      "handal",
+      35
+     ],
+     [
+      "handal",
+      25
+     ],
+     [
+      "tless",
+      21
+     ],
+     [
+      "handal",
+      2
+     ],
+     [
+      "tyol",
+      13
+     ],
+     [
+      "tless",
+      9
+     ],
+     [
+      "tyol",
+      21
+     ],
+     [
+      "handal",
+      40
+     ],
+     [
+      "handal",
+      16
+     ],
+     [
+      "handal",
+      12
+     ],
+     [
+      "handal",
+      13
+     ],
+     [
+      "handal",
+      29
+     ],
+     [
+      "handal",
+      17
+     ],
+     [
+      "handal",
+      33
+     ],
+     [
+      "handal",
+      32
+     ],
+     [
+      "handal",
+      7
+     ],
+     [
+      "handal",
+      28
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "handal",
+      "id": 37,
+      "grey": null,
+      "roughness": 0.9925585920922468,
+      "specular_ior_level": 0.26367190406816055
+     },
+     {
+      "dataset": "handal",
+      "id": 39,
+      "grey": null,
+      "roughness": 0.4847846668061303,
+      "specular_ior_level": 0.7369788802350716
+     },
+     {
+      "dataset": "handal",
+      "id": 4,
+      "grey": null,
+      "roughness": 0.6126770310357834,
+      "specular_ior_level": 0.22147165809660685
+     },
+     {
+      "dataset": "handal",
+      "id": 6,
+      "grey": null,
+      "roughness": 0.033259435580342944,
+      "specular_ior_level": 0.7361145856771809
+     },
+     {
+      "dataset": "handal",
+      "id": 23,
+      "grey": null,
+      "roughness": 0.7816630859737198,
+      "specular_ior_level": 0.34914989873333235
+     },
+     {
+      "dataset": "hb",
+      "id": 7,
+      "grey": null,
+      "roughness": 0.9264095230589996,
+      "specular_ior_level": 0.7310658542524364
+     },
+     {
+      "dataset": "handal",
+      "id": 38,
+      "grey": null,
+      "roughness": 0.9118949455502378,
+      "specular_ior_level": 0.20411172795890686
+     },
+     {
+      "dataset": "handal",
+      "id": 31,
+      "grey": null,
+      "roughness": 0.44246002367360815,
+      "specular_ior_level": 0.6927574243234731
+     },
+     {
+      "dataset": "hb",
+      "id": 28,
+      "grey": null,
+      "roughness": 0.4874694381470913,
+      "specular_ior_level": 0.11559677303424842
+     },
+     {
+      "dataset": "handal",
+      "id": 35,
+      "grey": null,
+      "roughness": 0.8892824141172078,
+      "specular_ior_level": 0.8398352518904372
+     },
+     {
+      "dataset": "handal",
+      "id": 25,
+      "grey": null,
+      "roughness": 0.3996303206662063,
+      "specular_ior_level": 0.2089121600323146
+     },
+     {
+      "dataset": "tless",
+      "id": 21,
+      "grey": 0.8469958641711028,
+      "roughness": 0.5177922903026824,
+      "specular_ior_level": 0.5476726850487654
+     },
+     {
+      "dataset": "handal",
+      "id": 2,
+      "grey": null,
+      "roughness": 0.32078702783579705,
+      "specular_ior_level": 0.97484929872034
+     },
+     {
+      "dataset": "tyol",
+      "id": 13,
+      "grey": null,
+      "roughness": 0.8601699729282374,
+      "specular_ior_level": 0.18868588241783002
+     },
+     {
+      "dataset": "tless",
+      "id": 9,
+      "grey": 0.8851011554699889,
+      "roughness": 0.03684836101401001,
+      "specular_ior_level": 0.22321355012754795
+     },
+     {
+      "dataset": "tyol",
+      "id": 21,
+      "grey": null,
+      "roughness": 0.9959636492976105,
+      "specular_ior_level": 0.17079605301565348
+     },
+     {
+      "dataset": "handal",
+      "id": 40,
+      "grey": null,
+      "roughness": 0.7767583118038095,
+      "specular_ior_level": 0.6712940135602202
+     },
+     {
+      "dataset": "handal",
+      "id": 16,
+      "grey": null,
+      "roughness": 0.1736765054422501,
+      "specular_ior_level": 0.9849238104316297
+     },
+     {
+      "dataset": "handal",
+      "id": 12,
+      "grey": null,
+      "roughness": 0.22759206667433196,
+      "specular_ior_level": 0.14016280803118197
+     },
+     {
+      "dataset": "handal",
+      "id": 13,
+      "grey": null,
+      "roughness": 0.9807097074376657,
+      "specular_ior_level": 0.2502955185171877
+     },
+     {
+      "dataset": "handal",
+      "id": 29,
+      "grey": null,
+      "roughness": 0.8976606756336537,
+      "specular_ior_level": 0.09301724567332681
+     },
+     {
+      "dataset": "handal",
+      "id": 17,
+      "grey": null,
+      "roughness": 0.1806871171780603,
+      "specular_ior_level": 0.9098475437058328
+     },
+     {
+      "dataset": "handal",
+      "id": 33,
+      "grey": null,
+      "roughness": 0.8373260618973908,
+      "specular_ior_level": 0.8310472366822357
+     },
+     {
+      "dataset": "handal",
+      "id": 32,
+      "grey": null,
+      "roughness": 0.36900949394172944,
+      "specular_ior_level": 0.3575451161852832
+     },
+     {
+      "dataset": "handal",
+      "id": 7,
+      "grey": null,
+      "roughness": 0.5509311253663605,
+      "specular_ior_level": 0.8551297849769771
+     },
+     {
+      "dataset": "handal",
+      "id": 28,
+      "grey": null,
+      "roughness": 0.29592504583735535,
+      "specular_ior_level": 0.7066364671340742
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "WoodFloor018",
+    "emission": 3.755753521140199,
+    "emission_color": [
+     0.7668824935639268,
+     0.5170139367497056,
+     0.5759486732942747,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.5370754571531932,
+     0.7615386993019837,
+     0.6258198325450581
+    ],
+    "point_light_position_m": [
+     -0.5072807754837485,
+     0.0756763665090702,
+     1.0588917185246731
+    ],
+    "rng_state_sha256": "30e776ecb0b89bc1500e5bf9f55dc1361db56b5500419c81bdecd8b72d8ce924"
+   },
+   "60008": {
+    "dataset": "handal",
+    "target_ids": [
+     27,
+     21,
+     29,
+     31,
+     40,
+     37,
+     6,
+     39,
+     24,
+     4,
+     30,
+     11,
+     18,
+     5,
+     34,
+     1,
+     14,
+     26,
+     25,
+     16
+    ],
+    "distractors": {
+     "tless": [
+      13,
+      24
+     ],
+     "hb": [
+      16,
+      8
+     ],
+     "tyol": [
+      18,
+      4
+     ]
+    },
+    "objects": [
+     [
+      "handal",
+      24
+     ],
+     [
+      "handal",
+      14
+     ],
+     [
+      "tless",
+      13
+     ],
+     [
+      "handal",
+      6
+     ],
+     [
+      "handal",
+      29
+     ],
+     [
+      "tless",
+      24
+     ],
+     [
+      "tyol",
+      4
+     ],
+     [
+      "handal",
+      25
+     ],
+     [
+      "hb",
+      16
+     ],
+     [
+      "handal",
+      5
+     ],
+     [
+      "handal",
+      34
+     ],
+     [
+      "handal",
+      30
+     ],
+     [
+      "handal",
+      37
+     ],
+     [
+      "handal",
+      11
+     ],
+     [
+      "handal",
+      31
+     ],
+     [
+      "handal",
+      26
+     ],
+     [
+      "handal",
+      21
+     ],
+     [
+      "handal",
+      18
+     ],
+     [
+      "handal",
+      16
+     ],
+     [
+      "handal",
+      27
+     ],
+     [
+      "handal",
+      39
+     ],
+     [
+      "handal",
+      40
+     ],
+     [
+      "tyol",
+      18
+     ],
+     [
+      "handal",
+      1
+     ],
+     [
+      "hb",
+      8
+     ],
+     [
+      "handal",
+      4
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "handal",
+      "id": 24,
+      "grey": null,
+      "roughness": 0.44023320881268146,
+      "specular_ior_level": 0.33167209657247276
+     },
+     {
+      "dataset": "handal",
+      "id": 14,
+      "grey": null,
+      "roughness": 0.2371586250370078,
+      "specular_ior_level": 0.8518222669998833
+     },
+     {
+      "dataset": "tless",
+      "id": 13,
+      "grey": 0.4422329968180404,
+      "roughness": 0.7466552255149029,
+      "specular_ior_level": 0.5860602815916794
+     },
+     {
+      "dataset": "handal",
+      "id": 6,
+      "grey": null,
+      "roughness": 0.7576926288385014,
+      "specular_ior_level": 0.9851938203329204
+     },
+     {
+      "dataset": "handal",
+      "id": 29,
+      "grey": null,
+      "roughness": 0.5667694951583881,
+      "specular_ior_level": 0.28354659608220734
+     },
+     {
+      "dataset": "tless",
+      "id": 24,
+      "grey": 0.5693970454235312,
+      "roughness": 0.539675864216889,
+      "specular_ior_level": 0.8619825505808991
+     },
+     {
+      "dataset": "tyol",
+      "id": 4,
+      "grey": null,
+      "roughness": 0.7791482566429629,
+      "specular_ior_level": 0.5134599718236617
+     },
+     {
+      "dataset": "handal",
+      "id": 25,
+      "grey": null,
+      "roughness": 0.46250724481602734,
+      "specular_ior_level": 0.19228675912069904
+     },
+     {
+      "dataset": "hb",
+      "id": 16,
+      "grey": null,
+      "roughness": 0.3282360693618036,
+      "specular_ior_level": 0.4127627678778799
+     },
+     {
+      "dataset": "handal",
+      "id": 5,
+      "grey": null,
+      "roughness": 0.8514718865886417,
+      "specular_ior_level": 0.6899528771254212
+     },
+     {
+      "dataset": "handal",
+      "id": 34,
+      "grey": null,
+      "roughness": 0.2039078226077795,
+      "specular_ior_level": 0.3705994775932162
+     },
+     {
+      "dataset": "handal",
+      "id": 30,
+      "grey": null,
+      "roughness": 0.10183026643351956,
+      "specular_ior_level": 0.7402155663075609
+     },
+     {
+      "dataset": "handal",
+      "id": 37,
+      "grey": null,
+      "roughness": 0.8163587927380378,
+      "specular_ior_level": 0.7171248272377798
+     },
+     {
+      "dataset": "handal",
+      "id": 11,
+      "grey": null,
+      "roughness": 0.7551737862176626,
+      "specular_ior_level": 0.5287259343956305
+     },
+     {
+      "dataset": "handal",
+      "id": 31,
+      "grey": null,
+      "roughness": 0.41236595151303257,
+      "specular_ior_level": 0.01268270995389753
+     },
+     {
+      "dataset": "handal",
+      "id": 26,
+      "grey": null,
+      "roughness": 0.30512763885691296,
+      "specular_ior_level": 0.534032701994608
+     },
+     {
+      "dataset": "handal",
+      "id": 21,
+      "grey": null,
+      "roughness": 0.9894347264902622,
+      "specular_ior_level": 0.10804233590779377
+     },
+     {
+      "dataset": "handal",
+      "id": 18,
+      "grey": null,
+      "roughness": 0.6795702837358139,
+      "specular_ior_level": 0.9720635329706597
+     },
+     {
+      "dataset": "handal",
+      "id": 16,
+      "grey": null,
+      "roughness": 0.754628490348573,
+      "specular_ior_level": 0.3435495915204395
+     },
+     {
+      "dataset": "handal",
+      "id": 27,
+      "grey": null,
+      "roughness": 0.697585455699946,
+      "specular_ior_level": 0.6729478792749808
+     },
+     {
+      "dataset": "handal",
+      "id": 39,
+      "grey": null,
+      "roughness": 0.3549502129768394,
+      "specular_ior_level": 0.2907394899440806
+     },
+     {
+      "dataset": "handal",
+      "id": 40,
+      "grey": null,
+      "roughness": 0.23829907468398492,
+      "specular_ior_level": 0.3139345852624199
+     },
+     {
+      "dataset": "tyol",
+      "id": 18,
+      "grey": null,
+      "roughness": 0.6708947433751411,
+      "specular_ior_level": 0.6569548372435826
+     },
+     {
+      "dataset": "handal",
+      "id": 1,
+      "grey": null,
+      "roughness": 0.81134352794666,
+      "specular_ior_level": 0.9956936299531461
+     },
+     {
+      "dataset": "hb",
+      "id": 8,
+      "grey": null,
+      "roughness": 0.42809096212283115,
+      "specular_ior_level": 0.46707001759300104
+     },
+     {
+      "dataset": "handal",
+      "id": 4,
+      "grey": null,
+      "roughness": 0.7768480444056083,
+      "specular_ior_level": 0.8114121314159252
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "Metal004",
+    "emission": 3.5072110763840803,
+    "emission_color": [
+     0.8501147070742558,
+     0.6315472671684328,
+     0.9601379977885023,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.8452243639520131,
+     0.9026708074424984,
+     0.7545106243092067
+    ],
+    "point_light_position_m": [
+     -0.13627886512852685,
+     0.10428029041632936,
+     1.0923149507565957
+    ],
+    "rng_state_sha256": "35d421e35172c0b3727f38411a6371034b33e0c8e2d0f61a0f0f4661ad41c73f"
+   },
+   "60009": {
+    "dataset": "handal",
+    "target_ids": [
+     19,
+     18,
+     11,
+     37,
+     38,
+     13,
+     10,
+     29,
+     33,
+     12,
+     8,
+     39,
+     17,
+     14,
+     28,
+     21,
+     40,
+     4,
+     23,
+     1
+    ],
+    "distractors": {
+     "tless": [
+      24,
+      13
+     ],
+     "hb": [
+      25,
+      19
+     ],
+     "tyol": [
+      3,
+      15
+     ]
+    },
+    "objects": [
+     [
+      "handal",
+      12
+     ],
+     [
+      "tyol",
+      15
+     ],
+     [
+      "handal",
+      19
+     ],
+     [
+      "tyol",
+      3
+     ],
+     [
+      "handal",
+      21
+     ],
+     [
+      "handal",
+      37
+     ],
+     [
+      "handal",
+      23
+     ],
+     [
+      "handal",
+      38
+     ],
+     [
+      "handal",
+      29
+     ],
+     [
+      "handal",
+      4
+     ],
+     [
+      "hb",
+      19
+     ],
+     [
+      "tless",
+      13
+     ],
+     [
+      "handal",
+      1
+     ],
+     [
+      "handal",
+      28
+     ],
+     [
+      "handal",
+      40
+     ],
+     [
+      "handal",
+      14
+     ],
+     [
+      "handal",
+      39
+     ],
+     [
+      "handal",
+      33
+     ],
+     [
+      "handal",
+      18
+     ],
+     [
+      "handal",
+      17
+     ],
+     [
+      "tless",
+      24
+     ],
+     [
+      "hb",
+      25
+     ],
+     [
+      "handal",
+      13
+     ],
+     [
+      "handal",
+      8
+     ],
+     [
+      "handal",
+      10
+     ],
+     [
+      "handal",
+      11
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "handal",
+      "id": 12,
+      "grey": null,
+      "roughness": 0.12308730795611478,
+      "specular_ior_level": 0.006456400496769765
+     },
+     {
+      "dataset": "tyol",
+      "id": 15,
+      "grey": null,
+      "roughness": 0.7718099537922111,
+      "specular_ior_level": 0.4625885043817656
+     },
+     {
+      "dataset": "handal",
+      "id": 19,
+      "grey": null,
+      "roughness": 0.45137979344489854,
+      "specular_ior_level": 0.5159550393418094
+     },
+     {
+      "dataset": "tyol",
+      "id": 3,
+      "grey": null,
+      "roughness": 0.36118111498669003,
+      "specular_ior_level": 0.2513475968670008
+     },
+     {
+      "dataset": "handal",
+      "id": 21,
+      "grey": null,
+      "roughness": 0.6632248795151304,
+      "specular_ior_level": 0.3907644096943338
+     },
+     {
+      "dataset": "handal",
+      "id": 37,
+      "grey": null,
+      "roughness": 0.9606527135075158,
+      "specular_ior_level": 0.5752543830218965
+     },
+     {
+      "dataset": "handal",
+      "id": 23,
+      "grey": null,
+      "roughness": 0.510002363926052,
+      "specular_ior_level": 0.3297504485737762
+     },
+     {
+      "dataset": "handal",
+      "id": 38,
+      "grey": null,
+      "roughness": 0.7544559358091237,
+      "specular_ior_level": 0.03451417565564041
+     },
+     {
+      "dataset": "handal",
+      "id": 29,
+      "grey": null,
+      "roughness": 0.41030418815903924,
+      "specular_ior_level": 0.6786238198751866
+     },
+     {
+      "dataset": "handal",
+      "id": 4,
+      "grey": null,
+      "roughness": 0.4712679448416013,
+      "specular_ior_level": 0.13486338990910485
+     },
+     {
+      "dataset": "hb",
+      "id": 19,
+      "grey": null,
+      "roughness": 0.7178896790872551,
+      "specular_ior_level": 0.41837977449653574
+     },
+     {
+      "dataset": "tless",
+      "id": 13,
+      "grey": 0.8992918962889246,
+      "roughness": 0.7678211111307993,
+      "specular_ior_level": 0.0001429621439853479
+     },
+     {
+      "dataset": "handal",
+      "id": 1,
+      "grey": null,
+      "roughness": 0.30771783290212595,
+      "specular_ior_level": 0.23499407167290864
+     },
+     {
+      "dataset": "handal",
+      "id": 28,
+      "grey": null,
+      "roughness": 0.749647118048504,
+      "specular_ior_level": 0.6254417678212673
+     },
+     {
+      "dataset": "handal",
+      "id": 40,
+      "grey": null,
+      "roughness": 0.9597276932137865,
+      "specular_ior_level": 0.9749771124462103
+     },
+     {
+      "dataset": "handal",
+      "id": 14,
+      "grey": null,
+      "roughness": 0.6747750002390758,
+      "specular_ior_level": 0.7269797041053518
+     },
+     {
+      "dataset": "handal",
+      "id": 39,
+      "grey": null,
+      "roughness": 0.5252777756155781,
+      "specular_ior_level": 0.21887206267522685
+     },
+     {
+      "dataset": "handal",
+      "id": 33,
+      "grey": null,
+      "roughness": 0.764594208280797,
+      "specular_ior_level": 0.6674916220322985
+     },
+     {
+      "dataset": "handal",
+      "id": 18,
+      "grey": null,
+      "roughness": 0.8776149372681833,
+      "specular_ior_level": 0.7416501366559932
+     },
+     {
+      "dataset": "handal",
+      "id": 17,
+      "grey": null,
+      "roughness": 0.625634652144621,
+      "specular_ior_level": 0.35669303453939105
+     },
+     {
+      "dataset": "tless",
+      "id": 24,
+      "grey": 0.4252279662195948,
+      "roughness": 0.05148691112495074,
+      "specular_ior_level": 0.05886016770667757
+     },
+     {
+      "dataset": "hb",
+      "id": 25,
+      "grey": null,
+      "roughness": 0.9992896636184507,
+      "specular_ior_level": 0.01155099197939724
+     },
+     {
+      "dataset": "handal",
+      "id": 13,
+      "grey": null,
+      "roughness": 0.20782498921871528,
+      "specular_ior_level": 0.21327248842488167
+     },
+     {
+      "dataset": "handal",
+      "id": 8,
+      "grey": null,
+      "roughness": 0.3519474728590315,
+      "specular_ior_level": 0.16660017595020715
+     },
+     {
+      "dataset": "handal",
+      "id": 10,
+      "grey": null,
+      "roughness": 0.6845308026807657,
+      "specular_ior_level": 0.5565782471892591
+     },
+     {
+      "dataset": "handal",
+      "id": 11,
+      "grey": null,
+      "roughness": 0.7333702369510414,
+      "specular_ior_level": 0.461247204277323
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "Ground024",
+    "emission": 3.5085184112954764,
+    "emission_color": [
+     0.5712856012354279,
+     0.6873170685337645,
+     0.5134547731543229,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.6281465244444662,
+     0.8194894172055315,
+     0.8568947128384856
+    ],
+    "point_light_position_m": [
+     -1.1160207693595843,
+     -0.333074334408146,
+     0.5632897589828527
+    ],
+    "rng_state_sha256": "7fd8cbdf1d1c2802a1d758cdcaca5f9e6b88cae9c5a91b3c4351a02f2e7c2549"
+   }
+  },
+  "hot3d_obj33": {
+   "70000": {
+    "dataset": "hot3d",
+    "target_ids": [
+     3,
+     1,
+     27,
+     6,
+     5,
+     11,
+     24,
+     8,
+     16,
+     19,
+     17,
+     7,
+     14,
+     29,
+     33,
+     26,
+     22,
+     9,
+     13,
+     28
+    ],
+    "distractors": {
+     "tless": [
+      12,
+      6
+     ],
+     "hb": [
+      32,
+      4
+     ],
+     "tyol": [
+      21,
+      10
+     ]
+    },
+    "objects": [
+     [
+      "hot3d",
+      26
+     ],
+     [
+      "hot3d",
+      9
+     ],
+     [
+      "tyol",
+      10
+     ],
+     [
+      "hot3d",
+      22
+     ],
+     [
+      "tless",
+      12
+     ],
+     [
+      "hot3d",
+      6
+     ],
+     [
+      "hot3d",
+      14
+     ],
+     [
+      "hot3d",
+      11
+     ],
+     [
+      "hot3d",
+      28
+     ],
+     [
+      "tless",
+      6
+     ],
+     [
+      "tyol",
+      21
+     ],
+     [
+      "hb",
+      4
+     ],
+     [
+      "hot3d",
+      24
+     ],
+     [
+      "hot3d",
+      1
+     ],
+     [
+      "hot3d",
+      27
+     ],
+     [
+      "hot3d",
+      3
+     ],
+     [
+      "hot3d",
+      17
+     ],
+     [
+      "hb",
+      32
+     ],
+     [
+      "hot3d",
+      13
+     ],
+     [
+      "hot3d",
+      7
+     ],
+     [
+      "hot3d",
+      19
+     ],
+     [
+      "hot3d",
+      33
+     ],
+     [
+      "hot3d",
+      5
+     ],
+     [
+      "hot3d",
+      8
+     ],
+     [
+      "hot3d",
+      29
+     ],
+     [
+      "hot3d",
+      16
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "hot3d",
+      "id": 26,
+      "grey": null,
+      "roughness": 0.6330091564719936,
+      "specular_ior_level": 0.8582540035793433
+     },
+     {
+      "dataset": "hot3d",
+      "id": 9,
+      "grey": null,
+      "roughness": 0.9636135870733056,
+      "specular_ior_level": 0.973545909206019
+     },
+     {
+      "dataset": "tyol",
+      "id": 10,
+      "grey": null,
+      "roughness": 0.4508616038416663,
+      "specular_ior_level": 0.6125389048139875
+     },
+     {
+      "dataset": "hot3d",
+      "id": 22,
+      "grey": null,
+      "roughness": 0.42441242218124264,
+      "specular_ior_level": 0.1382938379727151
+     },
+     {
+      "dataset": "tless",
+      "id": 12,
+      "grey": 0.5768149242859478,
+      "roughness": 0.25722830492807813,
+      "specular_ior_level": 0.5759906890611796
+     },
+     {
+      "dataset": "hot3d",
+      "id": 6,
+      "grey": null,
+      "roughness": 0.593882277314776,
+      "specular_ior_level": 0.6467437180908926
+     },
+     {
+      "dataset": "hot3d",
+      "id": 14,
+      "grey": null,
+      "roughness": 0.8274459785520362,
+      "specular_ior_level": 0.2883866154652376
+     },
+     {
+      "dataset": "hot3d",
+      "id": 11,
+      "grey": null,
+      "roughness": 0.09449202377789878,
+      "specular_ior_level": 0.2312879919545101
+     },
+     {
+      "dataset": "hot3d",
+      "id": 28,
+      "grey": null,
+      "roughness": 0.198353438986546,
+      "specular_ior_level": 0.31268001741358153
+     },
+     {
+      "dataset": "tless",
+      "id": 6,
+      "grey": 0.8678780690036973,
+      "roughness": 0.46795653737501286,
+      "specular_ior_level": 0.17437858663319872
+     },
+     {
+      "dataset": "tyol",
+      "id": 21,
+      "grey": null,
+      "roughness": 0.8948615054822922,
+      "specular_ior_level": 0.8083348105878
+     },
+     {
+      "dataset": "hb",
+      "id": 4,
+      "grey": null,
+      "roughness": 0.129056627228043,
+      "specular_ior_level": 0.5448994623964997
+     },
+     {
+      "dataset": "hot3d",
+      "id": 24,
+      "grey": null,
+      "roughness": 0.5944457025562497,
+      "specular_ior_level": 0.5850668522544933
+     },
+     {
+      "dataset": "hot3d",
+      "id": 1,
+      "grey": null,
+      "roughness": 0.5133033044767491,
+      "specular_ior_level": 0.8123293163465924
+     },
+     {
+      "dataset": "hot3d",
+      "id": 27,
+      "grey": null,
+      "roughness": 0.8680617792433033,
+      "specular_ior_level": 0.7790024167949633
+     },
+     {
+      "dataset": "hot3d",
+      "id": 3,
+      "grey": null,
+      "roughness": 0.7029124200153954,
+      "specular_ior_level": 0.5071846782604967
+     },
+     {
+      "dataset": "hot3d",
+      "id": 17,
+      "grey": null,
+      "roughness": 0.7696846169232595,
+      "specular_ior_level": 0.6593218646091568
+     },
+     {
+      "dataset": "hb",
+      "id": 32,
+      "grey": null,
+      "roughness": 0.30184472266472084,
+      "specular_ior_level": 0.9550592652289752
+     },
+     {
+      "dataset": "hot3d",
+      "id": 13,
+      "grey": null,
+      "roughness": 0.9291277994786923,
+      "specular_ior_level": 0.8209532014381458
+     },
+     {
+      "dataset": "hot3d",
+      "id": 7,
+      "grey": null,
+      "roughness": 0.2884686739149652,
+      "specular_ior_level": 0.7251055001168322
+     },
+     {
+      "dataset": "hot3d",
+      "id": 19,
+      "grey": null,
+      "roughness": 0.4217552541121966,
+      "specular_ior_level": 0.03857471740471374
+     },
+     {
+      "dataset": "hot3d",
+      "id": 33,
+      "grey": null,
+      "roughness": 0.8353842281879844,
+      "specular_ior_level": 0.8126354661952901
+     },
+     {
+      "dataset": "hot3d",
+      "id": 5,
+      "grey": null,
+      "roughness": 0.8625379227626709,
+      "specular_ior_level": 0.5886492235702051
+     },
+     {
+      "dataset": "hot3d",
+      "id": 8,
+      "grey": null,
+      "roughness": 0.9093842898127302,
+      "specular_ior_level": 0.9525508974450013
+     },
+     {
+      "dataset": "hot3d",
+      "id": 29,
+      "grey": null,
+      "roughness": 0.9928594293395964,
+      "specular_ior_level": 0.6387743074830357
+     },
+     {
+      "dataset": "hot3d",
+      "id": 16,
+      "grey": null,
+      "roughness": 0.6317840500778323,
+      "specular_ior_level": 0.5706207532499914
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "Bricks020",
+    "emission": 3.7854102948605224,
+    "emission_color": [
+     0.8284337813373367,
+     0.6739723502640119,
+     0.5836801583915596,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.5158570268543022,
+     0.9061511020209838,
+     0.5440598215186894
+    ],
+    "point_light_position_m": [
+     0.2694497974244482,
+     -0.7827138538004612,
+     1.007556391091828
+    ],
+    "rng_state_sha256": "f4b5d0429150b54aecf10f338cb058c3f6818cfd434f3bf43d70888b65a6f141"
+   },
+   "70001": {
+    "dataset": "hot3d",
+    "target_ids": [
+     7,
+     11,
+     2,
+     6,
+     33,
+     10,
+     30,
+     31,
+     14,
+     15,
+     16,
+     32,
+     1,
+     29,
+     26,
+     25,
+     22,
+     17,
+     13,
+     8
+    ],
+    "distractors": {
+     "tless": [
+      13,
+      16
+     ],
+     "hb": [
+      9,
+      26
+     ],
+     "tyol": [
+      18,
+      11
+     ]
+    },
+    "objects": [
+     [
+      "hot3d",
+      6
+     ],
+     [
+      "hot3d",
+      7
+     ],
+     [
+      "tless",
+      13
+     ],
+     [
+      "tyol",
+      11
+     ],
+     [
+      "tyol",
+      18
+     ],
+     [
+      "hot3d",
+      8
+     ],
+     [
+      "hot3d",
+      13
+     ],
+     [
+      "hot3d",
+      10
+     ],
+     [
+      "hot3d",
+      11
+     ],
+     [
+      "hot3d",
+      22
+     ],
+     [
+      "hot3d",
+      1
+     ],
+     [
+      "hot3d",
+      2
+     ],
+     [
+      "hot3d",
+      29
+     ],
+     [
+      "hot3d",
+      32
+     ],
+     [
+      "hot3d",
+      14
+     ],
+     [
+      "hot3d",
+      31
+     ],
+     [
+      "hot3d",
+      17
+     ],
+     [
+      "hot3d",
+      26
+     ],
+     [
+      "hot3d",
+      25
+     ],
+     [
+      "tless",
+      16
+     ],
+     [
+      "hot3d",
+      30
+     ],
+     [
+      "hb",
+      26
+     ],
+     [
+      "hot3d",
+      33
+     ],
+     [
+      "hot3d",
+      16
+     ],
+     [
+      "hb",
+      9
+     ],
+     [
+      "hot3d",
+      15
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "hot3d",
+      "id": 6,
+      "grey": null,
+      "roughness": 0.4770422151779231,
+      "specular_ior_level": 0.4304323307330429
+     },
+     {
+      "dataset": "hot3d",
+      "id": 7,
+      "grey": null,
+      "roughness": 0.878011958307472,
+      "specular_ior_level": 0.11236808954049926
+     },
+     {
+      "dataset": "tless",
+      "id": 13,
+      "grey": 0.5520454096982305,
+      "roughness": 0.3072049135753877,
+      "specular_ior_level": 0.39226663442240395
+     },
+     {
+      "dataset": "tyol",
+      "id": 11,
+      "grey": null,
+      "roughness": 0.1832120805318166,
+      "specular_ior_level": 0.2904976204744206
+     },
+     {
+      "dataset": "tyol",
+      "id": 18,
+      "grey": null,
+      "roughness": 0.37516871779596794,
+      "specular_ior_level": 0.6533991880382093
+     },
+     {
+      "dataset": "hot3d",
+      "id": 8,
+      "grey": null,
+      "roughness": 0.5106962640160165,
+      "specular_ior_level": 0.21263647836251198
+     },
+     {
+      "dataset": "hot3d",
+      "id": 13,
+      "grey": null,
+      "roughness": 0.2589316582179566,
+      "specular_ior_level": 0.5874627602986296
+     },
+     {
+      "dataset": "hot3d",
+      "id": 10,
+      "grey": null,
+      "roughness": 0.845973645389396,
+      "specular_ior_level": 0.6036304361020536
+     },
+     {
+      "dataset": "hot3d",
+      "id": 11,
+      "grey": null,
+      "roughness": 0.2530621982443767,
+      "specular_ior_level": 0.5457831071457417
+     },
+     {
+      "dataset": "hot3d",
+      "id": 22,
+      "grey": null,
+      "roughness": 0.421378423961719,
+      "specular_ior_level": 0.6299195138478494
+     },
+     {
+      "dataset": "hot3d",
+      "id": 1,
+      "grey": null,
+      "roughness": 0.06867885607249391,
+      "specular_ior_level": 0.31294212992266524
+     },
+     {
+      "dataset": "hot3d",
+      "id": 2,
+      "grey": null,
+      "roughness": 0.4108543272296419,
+      "specular_ior_level": 0.416811048995568
+     },
+     {
+      "dataset": "hot3d",
+      "id": 29,
+      "grey": null,
+      "roughness": 0.19560114451864197,
+      "specular_ior_level": 0.8307145220853454
+     },
+     {
+      "dataset": "hot3d",
+      "id": 32,
+      "grey": null,
+      "roughness": 0.9281646072511274,
+      "specular_ior_level": 0.6794605040875626
+     },
+     {
+      "dataset": "hot3d",
+      "id": 14,
+      "grey": null,
+      "roughness": 0.19960108755702355,
+      "specular_ior_level": 0.4956166646924697
+     },
+     {
+      "dataset": "hot3d",
+      "id": 31,
+      "grey": null,
+      "roughness": 0.6155918178768913,
+      "specular_ior_level": 0.5878619688817787
+     },
+     {
+      "dataset": "hot3d",
+      "id": 17,
+      "grey": null,
+      "roughness": 0.6237411543978704,
+      "specular_ior_level": 0.11233704431468172
+     },
+     {
+      "dataset": "hot3d",
+      "id": 26,
+      "grey": null,
+      "roughness": 0.07569977629774982,
+      "specular_ior_level": 0.7073104232650089
+     },
+     {
+      "dataset": "hot3d",
+      "id": 25,
+      "grey": null,
+      "roughness": 0.5698964760270834,
+      "specular_ior_level": 0.14007152277112067
+     },
+     {
+      "dataset": "tless",
+      "id": 16,
+      "grey": 0.5097013710685028,
+      "roughness": 0.5789799617920619,
+      "specular_ior_level": 0.09272308323361345
+     },
+     {
+      "dataset": "hot3d",
+      "id": 30,
+      "grey": null,
+      "roughness": 0.7711520222789903,
+      "specular_ior_level": 0.6680552717315801
+     },
+     {
+      "dataset": "hb",
+      "id": 26,
+      "grey": null,
+      "roughness": 0.977619577321748,
+      "specular_ior_level": 0.9450611478909753
+     },
+     {
+      "dataset": "hot3d",
+      "id": 33,
+      "grey": null,
+      "roughness": 0.37207823735439405,
+      "specular_ior_level": 0.1855161628662676
+     },
+     {
+      "dataset": "hot3d",
+      "id": 16,
+      "grey": null,
+      "roughness": 0.3066992926139953,
+      "specular_ior_level": 0.4761533316909118
+     },
+     {
+      "dataset": "hb",
+      "id": 9,
+      "grey": null,
+      "roughness": 0.31872097799908783,
+      "specular_ior_level": 0.8872272229100735
+     },
+     {
+      "dataset": "hot3d",
+      "id": 15,
+      "grey": null,
+      "roughness": 0.8109247098931754,
+      "specular_ior_level": 0.7681961764048573
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "Fabric030",
+    "emission": 4.758261497478466,
+    "emission_color": [
+     0.5224872151021669,
+     0.8748481094854127,
+     0.5633378150492732,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.9274883883312977,
+     0.7831228274908735,
+     0.6950743170641293
+    ],
+    "point_light_position_m": [
+     0.0004981978923498187,
+     -0.5345680547884663,
+     1.0508879016963302
+    ],
+    "rng_state_sha256": "a74edc67fe28982ce93826f222daaee0162ac744b8c84cac22c33e6112dc4d1c"
+   },
+   "70002": {
+    "dataset": "hot3d",
+    "target_ids": [
+     3,
+     6,
+     20,
+     8,
+     7,
+     30,
+     31,
+     17,
+     33,
+     1,
+     19,
+     4,
+     22,
+     25,
+     14,
+     10,
+     24,
+     15,
+     12,
+     32
+    ],
+    "distractors": {
+     "tless": [
+      8,
+      17
+     ],
+     "hb": [
+      14,
+      20
+     ],
+     "tyol": [
+      20,
+      17
+     ]
+    },
+    "objects": [
+     [
+      "tyol",
+      20
+     ],
+     [
+      "hot3d",
+      1
+     ],
+     [
+      "hot3d",
+      15
+     ],
+     [
+      "hot3d",
+      7
+     ],
+     [
+      "hot3d",
+      22
+     ],
+     [
+      "hb",
+      14
+     ],
+     [
+      "hot3d",
+      19
+     ],
+     [
+      "hot3d",
+      20
+     ],
+     [
+      "hot3d",
+      25
+     ],
+     [
+      "hot3d",
+      24
+     ],
+     [
+      "tless",
+      8
+     ],
+     [
+      "hot3d",
+      17
+     ],
+     [
+      "hot3d",
+      4
+     ],
+     [
+      "hot3d",
+      14
+     ],
+     [
+      "hot3d",
+      30
+     ],
+     [
+      "hot3d",
+      3
+     ],
+     [
+      "tyol",
+      17
+     ],
+     [
+      "hb",
+      20
+     ],
+     [
+      "hot3d",
+      6
+     ],
+     [
+      "hot3d",
+      8
+     ],
+     [
+      "hot3d",
+      10
+     ],
+     [
+      "tless",
+      17
+     ],
+     [
+      "hot3d",
+      12
+     ],
+     [
+      "hot3d",
+      33
+     ],
+     [
+      "hot3d",
+      32
+     ],
+     [
+      "hot3d",
+      31
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "tyol",
+      "id": 20,
+      "grey": null,
+      "roughness": 0.2322988333762348,
+      "specular_ior_level": 0.7307485530263146
+     },
+     {
+      "dataset": "hot3d",
+      "id": 1,
+      "grey": null,
+      "roughness": 0.49809696265399994,
+      "specular_ior_level": 0.9198376226558949
+     },
+     {
+      "dataset": "hot3d",
+      "id": 15,
+      "grey": null,
+      "roughness": 0.7437920624156098,
+      "specular_ior_level": 0.6659561791215209
+     },
+     {
+      "dataset": "hot3d",
+      "id": 7,
+      "grey": null,
+      "roughness": 0.26883738314515926,
+      "specular_ior_level": 0.7762407869861261
+     },
+     {
+      "dataset": "hot3d",
+      "id": 22,
+      "grey": null,
+      "roughness": 0.09390369183639524,
+      "specular_ior_level": 0.6395081679183922
+     },
+     {
+      "dataset": "hb",
+      "id": 14,
+      "grey": null,
+      "roughness": 0.8598398390009075,
+      "specular_ior_level": 0.27727824964223813
+     },
+     {
+      "dataset": "hot3d",
+      "id": 19,
+      "grey": null,
+      "roughness": 0.9969788518819336,
+      "specular_ior_level": 0.553613745894304
+     },
+     {
+      "dataset": "hot3d",
+      "id": 20,
+      "grey": null,
+      "roughness": 0.23156710838498862,
+      "specular_ior_level": 0.21995654915366591
+     },
+     {
+      "dataset": "hot3d",
+      "id": 25,
+      "grey": null,
+      "roughness": 0.03249441754248383,
+      "specular_ior_level": 0.16561579494066714
+     },
+     {
+      "dataset": "hot3d",
+      "id": 24,
+      "grey": null,
+      "roughness": 0.43982549433023155,
+      "specular_ior_level": 0.4525103161934032
+     },
+     {
+      "dataset": "tless",
+      "id": 8,
+      "grey": 0.8672157440013837,
+      "roughness": 0.3972276915680829,
+      "specular_ior_level": 0.5952902210636859
+     },
+     {
+      "dataset": "hot3d",
+      "id": 17,
+      "grey": null,
+      "roughness": 0.4459200833657272,
+      "specular_ior_level": 0.48259332286823353
+     },
+     {
+      "dataset": "hot3d",
+      "id": 4,
+      "grey": null,
+      "roughness": 0.9570322106871719,
+      "specular_ior_level": 0.6430187316833889
+     },
+     {
+      "dataset": "hot3d",
+      "id": 14,
+      "grey": null,
+      "roughness": 0.4345142486544087,
+      "specular_ior_level": 0.6648186420225632
+     },
+     {
+      "dataset": "hot3d",
+      "id": 30,
+      "grey": null,
+      "roughness": 0.6030664358061444,
+      "specular_ior_level": 0.22528470093428987
+     },
+     {
+      "dataset": "hot3d",
+      "id": 3,
+      "grey": null,
+      "roughness": 0.5657122760766318,
+      "specular_ior_level": 0.9898506812845305
+     },
+     {
+      "dataset": "tyol",
+      "id": 17,
+      "grey": null,
+      "roughness": 0.8327470212672746,
+      "specular_ior_level": 0.9355245983970781
+     },
+     {
+      "dataset": "hb",
+      "id": 20,
+      "grey": null,
+      "roughness": 0.745471873138103,
+      "specular_ior_level": 0.9049145341709149
+     },
+     {
+      "dataset": "hot3d",
+      "id": 6,
+      "grey": null,
+      "roughness": 0.34761915031057,
+      "specular_ior_level": 0.8990900480878687
+     },
+     {
+      "dataset": "hot3d",
+      "id": 8,
+      "grey": null,
+      "roughness": 0.27143198536044366,
+      "specular_ior_level": 0.3466250557478143
+     },
+     {
+      "dataset": "hot3d",
+      "id": 10,
+      "grey": null,
+      "roughness": 0.43358331894878765,
+      "specular_ior_level": 0.344703607798181
+     },
+     {
+      "dataset": "tless",
+      "id": 17,
+      "grey": 0.6082677055392959,
+      "roughness": 0.3505058291210129,
+      "specular_ior_level": 0.5731641876422615
+     },
+     {
+      "dataset": "hot3d",
+      "id": 12,
+      "grey": null,
+      "roughness": 0.5584657762529261,
+      "specular_ior_level": 0.2620484382283057
+     },
+     {
+      "dataset": "hot3d",
+      "id": 33,
+      "grey": null,
+      "roughness": 0.8188196725153845,
+      "specular_ior_level": 0.00694259917293083
+     },
+     {
+      "dataset": "hot3d",
+      "id": 32,
+      "grey": null,
+      "roughness": 0.07486396357804015,
+      "specular_ior_level": 0.06799600606936984
+     },
+     {
+      "dataset": "hot3d",
+      "id": 31,
+      "grey": null,
+      "roughness": 0.8033295598559178,
+      "specular_ior_level": 0.2636901099797785
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "Concrete013",
+    "emission": 3.4004595116092218,
+    "emission_color": [
+     0.6505687282061543,
+     0.9699200428349408,
+     0.9119207047896092,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.9462743856123285,
+     0.5288449100975048,
+     0.7666182453429453
+    ],
+    "point_light_position_m": [
+     -0.6297094095249354,
+     -0.9712638359357351,
+     0.6125755098777192
+    ],
+    "rng_state_sha256": "88638869cdda12f61cd5ddbbeae313058a20586b0231541c9c01aa56277ffcf9"
+   },
+   "70003": {
+    "dataset": "hot3d",
+    "target_ids": [
+     7,
+     2,
+     24,
+     11,
+     33,
+     22,
+     9,
+     5,
+     27,
+     14,
+     20,
+     19,
+     10,
+     1,
+     13,
+     12,
+     32,
+     15,
+     29,
+     31
+    ],
+    "distractors": {
+     "tless": [
+      2,
+      19
+     ],
+     "hb": [
+      6,
+      32
+     ],
+     "tyol": [
+      5,
+      20
+     ]
+    },
+    "objects": [
+     [
+      "hot3d",
+      27
+     ],
+     [
+      "hb",
+      6
+     ],
+     [
+      "hot3d",
+      14
+     ],
+     [
+      "hot3d",
+      20
+     ],
+     [
+      "hot3d",
+      7
+     ],
+     [
+      "hot3d",
+      9
+     ],
+     [
+      "tyol",
+      5
+     ],
+     [
+      "hot3d",
+      24
+     ],
+     [
+      "hot3d",
+      15
+     ],
+     [
+      "hot3d",
+      33
+     ],
+     [
+      "hot3d",
+      10
+     ],
+     [
+      "hot3d",
+      11
+     ],
+     [
+      "tless",
+      2
+     ],
+     [
+      "tyol",
+      20
+     ],
+     [
+      "hot3d",
+      13
+     ],
+     [
+      "hot3d",
+      5
+     ],
+     [
+      "hb",
+      32
+     ],
+     [
+      "hot3d",
+      29
+     ],
+     [
+      "hot3d",
+      22
+     ],
+     [
+      "hot3d",
+      1
+     ],
+     [
+      "hot3d",
+      12
+     ],
+     [
+      "tless",
+      19
+     ],
+     [
+      "hot3d",
+      19
+     ],
+     [
+      "hot3d",
+      31
+     ],
+     [
+      "hot3d",
+      2
+     ],
+     [
+      "hot3d",
+      32
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "hot3d",
+      "id": 27,
+      "grey": null,
+      "roughness": 0.05938255625752664,
+      "specular_ior_level": 0.6903443533238922
+     },
+     {
+      "dataset": "hb",
+      "id": 6,
+      "grey": null,
+      "roughness": 0.7078721919492955,
+      "specular_ior_level": 0.4098829832762987
+     },
+     {
+      "dataset": "hot3d",
+      "id": 14,
+      "grey": null,
+      "roughness": 0.08425897238330671,
+      "specular_ior_level": 0.7717713162274993
+     },
+     {
+      "dataset": "hot3d",
+      "id": 20,
+      "grey": null,
+      "roughness": 0.6049037627010698,
+      "specular_ior_level": 0.4555644150642443
+     },
+     {
+      "dataset": "hot3d",
+      "id": 7,
+      "grey": null,
+      "roughness": 0.11987346377596308,
+      "specular_ior_level": 0.19471740447951902
+     },
+     {
+      "dataset": "hot3d",
+      "id": 9,
+      "grey": null,
+      "roughness": 0.4879988437741559,
+      "specular_ior_level": 0.7277366784235275
+     },
+     {
+      "dataset": "tyol",
+      "id": 5,
+      "grey": null,
+      "roughness": 0.11932849383837751,
+      "specular_ior_level": 0.2132284856335782
+     },
+     {
+      "dataset": "hot3d",
+      "id": 24,
+      "grey": null,
+      "roughness": 0.8653697571043173,
+      "specular_ior_level": 0.1946591420014796
+     },
+     {
+      "dataset": "hot3d",
+      "id": 15,
+      "grey": null,
+      "roughness": 0.23729844807088774,
+      "specular_ior_level": 0.566720280126687
+     },
+     {
+      "dataset": "hot3d",
+      "id": 33,
+      "grey": null,
+      "roughness": 0.37156316702077286,
+      "specular_ior_level": 0.26951797279869705
+     },
+     {
+      "dataset": "hot3d",
+      "id": 10,
+      "grey": null,
+      "roughness": 0.22497875525952893,
+      "specular_ior_level": 0.3576562899133898
+     },
+     {
+      "dataset": "hot3d",
+      "id": 11,
+      "grey": null,
+      "roughness": 0.17725838262022597,
+      "specular_ior_level": 0.42661272381753834
+     },
+     {
+      "dataset": "tless",
+      "id": 2,
+      "grey": 0.6609976324428841,
+      "roughness": 0.03288893872736198,
+      "specular_ior_level": 0.8579709854021302
+     },
+     {
+      "dataset": "tyol",
+      "id": 20,
+      "grey": null,
+      "roughness": 0.40828691716067467,
+      "specular_ior_level": 0.723830564829993
+     },
+     {
+      "dataset": "hot3d",
+      "id": 13,
+      "grey": null,
+      "roughness": 0.9309193055717684,
+      "specular_ior_level": 0.7614229992048255
+     },
+     {
+      "dataset": "hot3d",
+      "id": 5,
+      "grey": null,
+      "roughness": 0.41815546372915335,
+      "specular_ior_level": 0.15870134683739923
+     },
+     {
+      "dataset": "hb",
+      "id": 32,
+      "grey": null,
+      "roughness": 0.10367150113402124,
+      "specular_ior_level": 0.7123320260810738
+     },
+     {
+      "dataset": "hot3d",
+      "id": 29,
+      "grey": null,
+      "roughness": 0.32541501657064986,
+      "specular_ior_level": 0.8272458652911227
+     },
+     {
+      "dataset": "hot3d",
+      "id": 22,
+      "grey": null,
+      "roughness": 0.25923045396780187,
+      "specular_ior_level": 0.8889995149702898
+     },
+     {
+      "dataset": "hot3d",
+      "id": 1,
+      "grey": null,
+      "roughness": 0.02230625745483583,
+      "specular_ior_level": 0.5300343178838398
+     },
+     {
+      "dataset": "hot3d",
+      "id": 12,
+      "grey": null,
+      "roughness": 0.940898538291142,
+      "specular_ior_level": 0.33044164197384174
+     },
+     {
+      "dataset": "tless",
+      "id": 19,
+      "grey": 0.7750348339531817,
+      "roughness": 0.10372332613487911,
+      "specular_ior_level": 0.4263326468916051
+     },
+     {
+      "dataset": "hot3d",
+      "id": 19,
+      "grey": null,
+      "roughness": 0.9479418185046653,
+      "specular_ior_level": 0.5337818097863329
+     },
+     {
+      "dataset": "hot3d",
+      "id": 31,
+      "grey": null,
+      "roughness": 0.37272487196117843,
+      "specular_ior_level": 0.8822633472231641
+     },
+     {
+      "dataset": "hot3d",
+      "id": 2,
+      "grey": null,
+      "roughness": 0.5288646203126811,
+      "specular_ior_level": 0.5385483730123128
+     },
+     {
+      "dataset": "hot3d",
+      "id": 32,
+      "grey": null,
+      "roughness": 0.7865764395732904,
+      "specular_ior_level": 0.29662244637064983
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "Carpet004",
+    "emission": 3.370434935700163,
+    "emission_color": [
+     0.6632153389626766,
+     0.7626679728771175,
+     0.904105821679114,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.6542828027298642,
+     0.6309036775471284,
+     0.7915816927391692
+    ],
+    "point_light_position_m": [
+     0.058687168624437645,
+     0.02439573899128303,
+     1.116102015531398
+    ],
+    "rng_state_sha256": "37c9337befa4fc1bd4035dbb650de5cf0e34058ff181ee9e1b19f7e8d2062a9e"
+   },
+   "70004": {
+    "dataset": "hot3d",
+    "target_ids": [
+     25,
+     21,
+     24,
+     8,
+     18,
+     14,
+     28,
+     6,
+     15,
+     26,
+     13,
+     10,
+     5,
+     7,
+     3,
+     11,
+     30,
+     17,
+     33,
+     32
+    ],
+    "distractors": {
+     "tless": [
+      14,
+      9
+     ],
+     "hb": [
+      26,
+      24
+     ],
+     "tyol": [
+      2,
+      20
+     ]
+    },
+    "objects": [
+     [
+      "tyol",
+      2
+     ],
+     [
+      "tyol",
+      20
+     ],
+     [
+      "hot3d",
+      14
+     ],
+     [
+      "hot3d",
+      17
+     ],
+     [
+      "hot3d",
+      7
+     ],
+     [
+      "hot3d",
+      13
+     ],
+     [
+      "hot3d",
+      21
+     ],
+     [
+      "hot3d",
+      11
+     ],
+     [
+      "hot3d",
+      30
+     ],
+     [
+      "hot3d",
+      3
+     ],
+     [
+      "hot3d",
+      24
+     ],
+     [
+      "hot3d",
+      26
+     ],
+     [
+      "hb",
+      24
+     ],
+     [
+      "hot3d",
+      15
+     ],
+     [
+      "hot3d",
+      33
+     ],
+     [
+      "hot3d",
+      32
+     ],
+     [
+      "hot3d",
+      6
+     ],
+     [
+      "hb",
+      26
+     ],
+     [
+      "hot3d",
+      5
+     ],
+     [
+      "hot3d",
+      10
+     ],
+     [
+      "hot3d",
+      8
+     ],
+     [
+      "hot3d",
+      25
+     ],
+     [
+      "hot3d",
+      28
+     ],
+     [
+      "tless",
+      14
+     ],
+     [
+      "tless",
+      9
+     ],
+     [
+      "hot3d",
+      18
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "tyol",
+      "id": 2,
+      "grey": null,
+      "roughness": 0.3675265498097141,
+      "specular_ior_level": 0.48674510709742413
+     },
+     {
+      "dataset": "tyol",
+      "id": 20,
+      "grey": null,
+      "roughness": 0.6510363753125913,
+      "specular_ior_level": 0.8809687096946393
+     },
+     {
+      "dataset": "hot3d",
+      "id": 14,
+      "grey": null,
+      "roughness": 0.10657541048940311,
+      "specular_ior_level": 0.8777616525895151
+     },
+     {
+      "dataset": "hot3d",
+      "id": 17,
+      "grey": null,
+      "roughness": 0.2868093172033017,
+      "specular_ior_level": 0.20705154601329423
+     },
+     {
+      "dataset": "hot3d",
+      "id": 7,
+      "grey": null,
+      "roughness": 0.20145208762688172,
+      "specular_ior_level": 0.42836388573410467
+     },
+     {
+      "dataset": "hot3d",
+      "id": 13,
+      "grey": null,
+      "roughness": 0.4637078399741733,
+      "specular_ior_level": 0.5937438256888967
+     },
+     {
+      "dataset": "hot3d",
+      "id": 21,
+      "grey": null,
+      "roughness": 0.15390556318743998,
+      "specular_ior_level": 0.40820570775435316
+     },
+     {
+      "dataset": "hot3d",
+      "id": 11,
+      "grey": null,
+      "roughness": 0.28941515073412016,
+      "specular_ior_level": 0.3240426084400464
+     },
+     {
+      "dataset": "hot3d",
+      "id": 30,
+      "grey": null,
+      "roughness": 0.7517201322270134,
+      "specular_ior_level": 0.2547044546802283
+     },
+     {
+      "dataset": "hot3d",
+      "id": 3,
+      "grey": null,
+      "roughness": 0.5083163293946054,
+      "specular_ior_level": 0.10051411286207401
+     },
+     {
+      "dataset": "hot3d",
+      "id": 24,
+      "grey": null,
+      "roughness": 0.6234495932204167,
+      "specular_ior_level": 0.14362960684929793
+     },
+     {
+      "dataset": "hot3d",
+      "id": 26,
+      "grey": null,
+      "roughness": 0.9184223016693769,
+      "specular_ior_level": 0.42541742592533494
+     },
+     {
+      "dataset": "hb",
+      "id": 24,
+      "grey": null,
+      "roughness": 0.22093688105558196,
+      "specular_ior_level": 0.22348425413051753
+     },
+     {
+      "dataset": "hot3d",
+      "id": 15,
+      "grey": null,
+      "roughness": 0.2615465166381502,
+      "specular_ior_level": 0.017922029381852722
+     },
+     {
+      "dataset": "hot3d",
+      "id": 33,
+      "grey": null,
+      "roughness": 0.525313914453366,
+      "specular_ior_level": 0.7779264303126463
+     },
+     {
+      "dataset": "hot3d",
+      "id": 32,
+      "grey": null,
+      "roughness": 0.3172725582946919,
+      "specular_ior_level": 0.5106751287438636
+     },
+     {
+      "dataset": "hot3d",
+      "id": 6,
+      "grey": null,
+      "roughness": 0.7639356082136424,
+      "specular_ior_level": 0.9012412938731694
+     },
+     {
+      "dataset": "hb",
+      "id": 26,
+      "grey": null,
+      "roughness": 0.2680430751377214,
+      "specular_ior_level": 0.6476814167139481
+     },
+     {
+      "dataset": "hot3d",
+      "id": 5,
+      "grey": null,
+      "roughness": 0.5815727053197868,
+      "specular_ior_level": 0.9536296390202446
+     },
+     {
+      "dataset": "hot3d",
+      "id": 10,
+      "grey": null,
+      "roughness": 0.9134822492925514,
+      "specular_ior_level": 0.6657362415075523
+     },
+     {
+      "dataset": "hot3d",
+      "id": 8,
+      "grey": null,
+      "roughness": 0.8808801146682435,
+      "specular_ior_level": 0.12834075028814695
+     },
+     {
+      "dataset": "hot3d",
+      "id": 25,
+      "grey": null,
+      "roughness": 0.8740820761337855,
+      "specular_ior_level": 0.26410252818198954
+     },
+     {
+      "dataset": "hot3d",
+      "id": 28,
+      "grey": null,
+      "roughness": 0.864166438328727,
+      "specular_ior_level": 0.445639517194903
+     },
+     {
+      "dataset": "tless",
+      "id": 14,
+      "grey": 0.34473644669921755,
+      "roughness": 0.3344116256328862,
+      "specular_ior_level": 0.6691235942884431
+     },
+     {
+      "dataset": "tless",
+      "id": 9,
+      "grey": 0.4785603177020613,
+      "roughness": 0.6226303895855707,
+      "specular_ior_level": 0.6019642776170487
+     },
+     {
+      "dataset": "hot3d",
+      "id": 18,
+      "grey": null,
+      "roughness": 0.6832799727825939,
+      "specular_ior_level": 0.4816194935347947
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "Metal001",
+    "emission": 3.1626148073296116,
+    "emission_color": [
+     0.7587058979903909,
+     0.6940145152629769,
+     0.6740441215077264,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.6500649960720867,
+     0.5970526187578928,
+     0.9340237963621313
+    ],
+    "point_light_position_m": [
+     -0.13004370298277537,
+     -0.1607500198653364,
+     1.2780140413533132
+    ],
+    "rng_state_sha256": "cb5dce0f31165d858c722deb6b01f27707d8ce0acee76b0f8c633828abbb45aa"
+   },
+   "70005": {
+    "dataset": "hot3d",
+    "target_ids": [
+     4,
+     13,
+     2,
+     23,
+     25,
+     33,
+     28,
+     27,
+     20,
+     1,
+     12,
+     31,
+     11,
+     21,
+     32,
+     18,
+     6,
+     26,
+     3,
+     9
+    ],
+    "distractors": {
+     "tless": [
+      8,
+      12
+     ],
+     "hb": [
+      16,
+      4
+     ],
+     "tyol": [
+      18,
+      17
+     ]
+    },
+    "objects": [
+     [
+      "hot3d",
+      3
+     ],
+     [
+      "hot3d",
+      4
+     ],
+     [
+      "hot3d",
+      1
+     ],
+     [
+      "hot3d",
+      12
+     ],
+     [
+      "tless",
+      12
+     ],
+     [
+      "hot3d",
+      27
+     ],
+     [
+      "hot3d",
+      31
+     ],
+     [
+      "hot3d",
+      18
+     ],
+     [
+      "tyol",
+      17
+     ],
+     [
+      "hot3d",
+      6
+     ],
+     [
+      "hot3d",
+      11
+     ],
+     [
+      "hot3d",
+      32
+     ],
+     [
+      "hot3d",
+      23
+     ],
+     [
+      "hot3d",
+      20
+     ],
+     [
+      "hb",
+      4
+     ],
+     [
+      "hot3d",
+      21
+     ],
+     [
+      "hb",
+      16
+     ],
+     [
+      "hot3d",
+      33
+     ],
+     [
+      "hot3d",
+      25
+     ],
+     [
+      "hot3d",
+      9
+     ],
+     [
+      "tless",
+      8
+     ],
+     [
+      "hot3d",
+      13
+     ],
+     [
+      "hot3d",
+      2
+     ],
+     [
+      "tyol",
+      18
+     ],
+     [
+      "hot3d",
+      26
+     ],
+     [
+      "hot3d",
+      28
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "hot3d",
+      "id": 3,
+      "grey": null,
+      "roughness": 0.21879907200878912,
+      "specular_ior_level": 0.9004330687551235
+     },
+     {
+      "dataset": "hot3d",
+      "id": 4,
+      "grey": null,
+      "roughness": 0.38930756278760903,
+      "specular_ior_level": 0.6265711678704755
+     },
+     {
+      "dataset": "hot3d",
+      "id": 1,
+      "grey": null,
+      "roughness": 0.7669518624923306,
+      "specular_ior_level": 0.8591444312361172
+     },
+     {
+      "dataset": "hot3d",
+      "id": 12,
+      "grey": null,
+      "roughness": 0.9511723031852769,
+      "specular_ior_level": 0.9028892210963821
+     },
+     {
+      "dataset": "tless",
+      "id": 12,
+      "grey": 0.30723989021125586,
+      "roughness": 0.1783573753316149,
+      "specular_ior_level": 0.8212026230375272
+     },
+     {
+      "dataset": "hot3d",
+      "id": 27,
+      "grey": null,
+      "roughness": 0.21792292947268666,
+      "specular_ior_level": 0.8536085685068805
+     },
+     {
+      "dataset": "hot3d",
+      "id": 31,
+      "grey": null,
+      "roughness": 0.3586494225413147,
+      "specular_ior_level": 0.8658168782289859
+     },
+     {
+      "dataset": "hot3d",
+      "id": 18,
+      "grey": null,
+      "roughness": 0.8835608590046542,
+      "specular_ior_level": 0.8733323463493301
+     },
+     {
+      "dataset": "tyol",
+      "id": 17,
+      "grey": null,
+      "roughness": 0.2501564636661623,
+      "specular_ior_level": 0.42987796610435236
+     },
+     {
+      "dataset": "hot3d",
+      "id": 6,
+      "grey": null,
+      "roughness": 0.5608143606956324,
+      "specular_ior_level": 0.8395618662619888
+     },
+     {
+      "dataset": "hot3d",
+      "id": 11,
+      "grey": null,
+      "roughness": 0.19234590679699703,
+      "specular_ior_level": 0.3013312387608009
+     },
+     {
+      "dataset": "hot3d",
+      "id": 32,
+      "grey": null,
+      "roughness": 0.09648275171526854,
+      "specular_ior_level": 0.1926927890846154
+     },
+     {
+      "dataset": "hot3d",
+      "id": 23,
+      "grey": null,
+      "roughness": 0.6488225858819928,
+      "specular_ior_level": 0.4325071811866421
+     },
+     {
+      "dataset": "hot3d",
+      "id": 20,
+      "grey": null,
+      "roughness": 0.4044498871303879,
+      "specular_ior_level": 0.09987209003143316
+     },
+     {
+      "dataset": "hb",
+      "id": 4,
+      "grey": null,
+      "roughness": 0.00488091513083333,
+      "specular_ior_level": 0.7870355520569956
+     },
+     {
+      "dataset": "hot3d",
+      "id": 21,
+      "grey": null,
+      "roughness": 0.4717276061900897,
+      "specular_ior_level": 0.7562544169680454
+     },
+     {
+      "dataset": "hb",
+      "id": 16,
+      "grey": null,
+      "roughness": 0.4248342630423595,
+      "specular_ior_level": 0.8214853202104344
+     },
+     {
+      "dataset": "hot3d",
+      "id": 33,
+      "grey": null,
+      "roughness": 0.43981589086333184,
+      "specular_ior_level": 0.5003449130621156
+     },
+     {
+      "dataset": "hot3d",
+      "id": 25,
+      "grey": null,
+      "roughness": 0.5563158056867802,
+      "specular_ior_level": 0.7094897303028626
+     },
+     {
+      "dataset": "hot3d",
+      "id": 9,
+      "grey": null,
+      "roughness": 0.504389422528421,
+      "specular_ior_level": 0.7698383751738511
+     },
+     {
+      "dataset": "tless",
+      "id": 8,
+      "grey": 0.1847893522378116,
+      "roughness": 0.4910404345909297,
+      "specular_ior_level": 0.4555700763069169
+     },
+     {
+      "dataset": "hot3d",
+      "id": 13,
+      "grey": null,
+      "roughness": 0.05176273907248974,
+      "specular_ior_level": 0.6850285136949475
+     },
+     {
+      "dataset": "hot3d",
+      "id": 2,
+      "grey": null,
+      "roughness": 0.7042459370380676,
+      "specular_ior_level": 0.08642943524473545
+     },
+     {
+      "dataset": "tyol",
+      "id": 18,
+      "grey": null,
+      "roughness": 0.395052881822087,
+      "specular_ior_level": 0.046392271467192825
+     },
+     {
+      "dataset": "hot3d",
+      "id": 26,
+      "grey": null,
+      "roughness": 0.20426699656212155,
+      "specular_ior_level": 0.14690314449888486
+     },
+     {
+      "dataset": "hot3d",
+      "id": 28,
+      "grey": null,
+      "roughness": 0.1816977609650735,
+      "specular_ior_level": 0.7913844208357907
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "Marble001",
+    "emission": 4.6875987493297675,
+    "emission_color": [
+     0.6376792941292513,
+     0.8619670903261722,
+     0.8150870077061471,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.716400503905917,
+     0.5494470141636449,
+     0.7371862612006805
+    ],
+    "point_light_position_m": [
+     -0.8530621956115613,
+     -0.7519571924038287,
+     0.8321869718160442
+    ],
+    "rng_state_sha256": "97aff19a68bfde4d421f187c0c6ac1ee9d6329ee4a79e4c9c981fb89b22289ec"
+   },
+   "70006": {
+    "dataset": "hot3d",
+    "target_ids": [
+     29,
+     5,
+     20,
+     15,
+     8,
+     18,
+     27,
+     11,
+     16,
+     33,
+     1,
+     17,
+     31,
+     6,
+     10,
+     19,
+     4,
+     12,
+     2,
+     9
+    ],
+    "distractors": {
+     "tless": [
+      17,
+      27
+     ],
+     "hb": [
+      23,
+      14
+     ],
+     "tyol": [
+      20,
+      18
+     ]
+    },
+    "objects": [
+     [
+      "hot3d",
+      18
+     ],
+     [
+      "hot3d",
+      8
+     ],
+     [
+      "tless",
+      17
+     ],
+     [
+      "hot3d",
+      15
+     ],
+     [
+      "hot3d",
+      12
+     ],
+     [
+      "hot3d",
+      9
+     ],
+     [
+      "hot3d",
+      16
+     ],
+     [
+      "tyol",
+      20
+     ],
+     [
+      "hot3d",
+      33
+     ],
+     [
+      "hot3d",
+      29
+     ],
+     [
+      "hot3d",
+      4
+     ],
+     [
+      "hot3d",
+      10
+     ],
+     [
+      "tless",
+      27
+     ],
+     [
+      "hot3d",
+      27
+     ],
+     [
+      "hot3d",
+      5
+     ],
+     [
+      "hot3d",
+      6
+     ],
+     [
+      "hot3d",
+      11
+     ],
+     [
+      "hot3d",
+      17
+     ],
+     [
+      "hb",
+      23
+     ],
+     [
+      "hot3d",
+      31
+     ],
+     [
+      "hot3d",
+      2
+     ],
+     [
+      "hot3d",
+      19
+     ],
+     [
+      "hot3d",
+      1
+     ],
+     [
+      "hot3d",
+      20
+     ],
+     [
+      "tyol",
+      18
+     ],
+     [
+      "hb",
+      14
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "hot3d",
+      "id": 18,
+      "grey": null,
+      "roughness": 0.9773070292667356,
+      "specular_ior_level": 0.10635184014686072
+     },
+     {
+      "dataset": "hot3d",
+      "id": 8,
+      "grey": null,
+      "roughness": 0.5493363852496235,
+      "specular_ior_level": 0.8190469803352589
+     },
+     {
+      "dataset": "tless",
+      "id": 17,
+      "grey": 0.5900703407631572,
+      "roughness": 0.37859279364348575,
+      "specular_ior_level": 0.31585897952125486
+     },
+     {
+      "dataset": "hot3d",
+      "id": 15,
+      "grey": null,
+      "roughness": 0.18889525428351317,
+      "specular_ior_level": 0.7222921082142082
+     },
+     {
+      "dataset": "hot3d",
+      "id": 12,
+      "grey": null,
+      "roughness": 0.9398006897356221,
+      "specular_ior_level": 0.006801124552639259
+     },
+     {
+      "dataset": "hot3d",
+      "id": 9,
+      "grey": null,
+      "roughness": 0.8975310053026878,
+      "specular_ior_level": 0.4360860131721179
+     },
+     {
+      "dataset": "hot3d",
+      "id": 16,
+      "grey": null,
+      "roughness": 0.028350380878484183,
+      "specular_ior_level": 0.05239304459676619
+     },
+     {
+      "dataset": "tyol",
+      "id": 20,
+      "grey": null,
+      "roughness": 0.14034589835241096,
+      "specular_ior_level": 0.04150352683193703
+     },
+     {
+      "dataset": "hot3d",
+      "id": 33,
+      "grey": null,
+      "roughness": 0.8705238733579986,
+      "specular_ior_level": 0.7798396501426708
+     },
+     {
+      "dataset": "hot3d",
+      "id": 29,
+      "grey": null,
+      "roughness": 0.5404959304073177,
+      "specular_ior_level": 0.6369342217985253
+     },
+     {
+      "dataset": "hot3d",
+      "id": 4,
+      "grey": null,
+      "roughness": 0.49419983097992226,
+      "specular_ior_level": 0.2413217759669115
+     },
+     {
+      "dataset": "hot3d",
+      "id": 10,
+      "grey": null,
+      "roughness": 0.26864891266277224,
+      "specular_ior_level": 0.9264963245815634
+     },
+     {
+      "dataset": "tless",
+      "id": 27,
+      "grey": 0.16956433961059292,
+      "roughness": 0.24177793803671332,
+      "specular_ior_level": 0.5963131744668292
+     },
+     {
+      "dataset": "hot3d",
+      "id": 27,
+      "grey": null,
+      "roughness": 0.11230560262326639,
+      "specular_ior_level": 0.15606879128021411
+     },
+     {
+      "dataset": "hot3d",
+      "id": 5,
+      "grey": null,
+      "roughness": 0.5883799881014483,
+      "specular_ior_level": 0.6985346667926903
+     },
+     {
+      "dataset": "hot3d",
+      "id": 6,
+      "grey": null,
+      "roughness": 0.6248898570755895,
+      "specular_ior_level": 0.49607307394991795
+     },
+     {
+      "dataset": "hot3d",
+      "id": 11,
+      "grey": null,
+      "roughness": 0.6749656950772809,
+      "specular_ior_level": 0.36681002157252574
+     },
+     {
+      "dataset": "hot3d",
+      "id": 17,
+      "grey": null,
+      "roughness": 0.7572659243386991,
+      "specular_ior_level": 0.6409013190520835
+     },
+     {
+      "dataset": "hb",
+      "id": 23,
+      "grey": null,
+      "roughness": 0.059734569620135014,
+      "specular_ior_level": 0.7585813303158769
+     },
+     {
+      "dataset": "hot3d",
+      "id": 31,
+      "grey": null,
+      "roughness": 0.8957454383184614,
+      "specular_ior_level": 0.9732622689291393
+     },
+     {
+      "dataset": "hot3d",
+      "id": 2,
+      "grey": null,
+      "roughness": 0.04166104033242346,
+      "specular_ior_level": 0.17700498128425346
+     },
+     {
+      "dataset": "hot3d",
+      "id": 19,
+      "grey": null,
+      "roughness": 0.1500601546790522,
+      "specular_ior_level": 0.43209925843600117
+     },
+     {
+      "dataset": "hot3d",
+      "id": 1,
+      "grey": null,
+      "roughness": 0.38410675640215775,
+      "specular_ior_level": 0.6001599286525053
+     },
+     {
+      "dataset": "hot3d",
+      "id": 20,
+      "grey": null,
+      "roughness": 0.8246564641214508,
+      "specular_ior_level": 0.33420398181271915
+     },
+     {
+      "dataset": "tyol",
+      "id": 18,
+      "grey": null,
+      "roughness": 0.17638961770428185,
+      "specular_ior_level": 0.11496893725972979
+     },
+     {
+      "dataset": "hb",
+      "id": 14,
+      "grey": null,
+      "roughness": 0.0688847532532042,
+      "specular_ior_level": 0.33448469687408133
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "Concrete013",
+    "emission": 5.97343253311303,
+    "emission_color": [
+     0.5031746440069629,
+     0.7980119222444383,
+     0.9582614269225205,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.6679963328854328,
+     0.6543621845959564,
+     0.7343156060532237
+    ],
+    "point_light_position_m": [
+     0.33541698298207784,
+     -0.6789598365223799,
+     0.7178998109254703
+    ],
+    "rng_state_sha256": "0139fffd40a0714c0c1a5d64e73a22032354fac1f92bbce3610281ea44b08334"
+   },
+   "70007": {
+    "dataset": "hot3d",
+    "target_ids": [
+     33,
+     24,
+     27,
+     23,
+     22,
+     16,
+     19,
+     28,
+     18,
+     9,
+     14,
+     8,
+     12,
+     5,
+     30,
+     3,
+     2,
+     21,
+     10,
+     32
+    ],
+    "distractors": {
+     "tless": [
+      15,
+      7
+     ],
+     "hb": [
+      32,
+      31
+     ],
+     "tyol": [
+      6,
+      16
+     ]
+    },
+    "objects": [
+     [
+      "hot3d",
+      3
+     ],
+     [
+      "hot3d",
+      33
+     ],
+     [
+      "hb",
+      32
+     ],
+     [
+      "hot3d",
+      5
+     ],
+     [
+      "hot3d",
+      32
+     ],
+     [
+      "hot3d",
+      12
+     ],
+     [
+      "hot3d",
+      24
+     ],
+     [
+      "hot3d",
+      22
+     ],
+     [
+      "hot3d",
+      10
+     ],
+     [
+      "tless",
+      15
+     ],
+     [
+      "hot3d",
+      9
+     ],
+     [
+      "hot3d",
+      23
+     ],
+     [
+      "hot3d",
+      19
+     ],
+     [
+      "hot3d",
+      8
+     ],
+     [
+      "hot3d",
+      14
+     ],
+     [
+      "hot3d",
+      27
+     ],
+     [
+      "hot3d",
+      18
+     ],
+     [
+      "hot3d",
+      28
+     ],
+     [
+      "hot3d",
+      16
+     ],
+     [
+      "hb",
+      31
+     ],
+     [
+      "hot3d",
+      21
+     ],
+     [
+      "hot3d",
+      2
+     ],
+     [
+      "tyol",
+      16
+     ],
+     [
+      "tless",
+      7
+     ],
+     [
+      "hot3d",
+      30
+     ],
+     [
+      "tyol",
+      6
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "hot3d",
+      "id": 3,
+      "grey": null,
+      "roughness": 0.5279308541979993,
+      "specular_ior_level": 0.37889570685096297
+     },
+     {
+      "dataset": "hot3d",
+      "id": 33,
+      "grey": null,
+      "roughness": 0.6582448039651846,
+      "specular_ior_level": 0.20233480896900713
+     },
+     {
+      "dataset": "hb",
+      "id": 32,
+      "grey": null,
+      "roughness": 0.4811772351747957,
+      "specular_ior_level": 0.6179829873940251
+     },
+     {
+      "dataset": "hot3d",
+      "id": 5,
+      "grey": null,
+      "roughness": 0.7600589853620205,
+      "specular_ior_level": 0.7430097468854018
+     },
+     {
+      "dataset": "hot3d",
+      "id": 32,
+      "grey": null,
+      "roughness": 0.35601722177236206,
+      "specular_ior_level": 0.08784457644972898
+     },
+     {
+      "dataset": "hot3d",
+      "id": 12,
+      "grey": null,
+      "roughness": 0.783232697263364,
+      "specular_ior_level": 0.2286270497154136
+     },
+     {
+      "dataset": "hot3d",
+      "id": 24,
+      "grey": null,
+      "roughness": 0.423214337644333,
+      "specular_ior_level": 0.866889417435874
+     },
+     {
+      "dataset": "hot3d",
+      "id": 22,
+      "grey": null,
+      "roughness": 0.17373736041221044,
+      "specular_ior_level": 0.5038568502740964
+     },
+     {
+      "dataset": "hot3d",
+      "id": 10,
+      "grey": null,
+      "roughness": 0.40345279927344946,
+      "specular_ior_level": 0.4990317400315045
+     },
+     {
+      "dataset": "tless",
+      "id": 15,
+      "grey": 0.1741899902743974,
+      "roughness": 0.5700510854583316,
+      "specular_ior_level": 0.42114062894307736
+     },
+     {
+      "dataset": "hot3d",
+      "id": 9,
+      "grey": null,
+      "roughness": 0.8077566842302553,
+      "specular_ior_level": 0.05210282683847711
+     },
+     {
+      "dataset": "hot3d",
+      "id": 23,
+      "grey": null,
+      "roughness": 0.4394679646382107,
+      "specular_ior_level": 0.9671229536995806
+     },
+     {
+      "dataset": "hot3d",
+      "id": 19,
+      "grey": null,
+      "roughness": 0.4745162391388602,
+      "specular_ior_level": 0.07950182176164489
+     },
+     {
+      "dataset": "hot3d",
+      "id": 8,
+      "grey": null,
+      "roughness": 0.9252657080927608,
+      "specular_ior_level": 0.3507455282733133
+     },
+     {
+      "dataset": "hot3d",
+      "id": 14,
+      "grey": null,
+      "roughness": 0.93856920298089,
+      "specular_ior_level": 0.800964485480074
+     },
+     {
+      "dataset": "hot3d",
+      "id": 27,
+      "grey": null,
+      "roughness": 0.14649245245175324,
+      "specular_ior_level": 0.36954769390125297
+     },
+     {
+      "dataset": "hot3d",
+      "id": 18,
+      "grey": null,
+      "roughness": 0.5197443486305338,
+      "specular_ior_level": 0.20743673605938384
+     },
+     {
+      "dataset": "hot3d",
+      "id": 28,
+      "grey": null,
+      "roughness": 0.0071600626275720725,
+      "specular_ior_level": 0.5552290692416985
+     },
+     {
+      "dataset": "hot3d",
+      "id": 16,
+      "grey": null,
+      "roughness": 0.34787035835316726,
+      "specular_ior_level": 0.7893626244971811
+     },
+     {
+      "dataset": "hb",
+      "id": 31,
+      "grey": null,
+      "roughness": 0.16971145763889894,
+      "specular_ior_level": 0.894016821223613
+     },
+     {
+      "dataset": "hot3d",
+      "id": 21,
+      "grey": null,
+      "roughness": 0.6419538610424057,
+      "specular_ior_level": 0.499909600458576
+     },
+     {
+      "dataset": "hot3d",
+      "id": 2,
+      "grey": null,
+      "roughness": 0.3212966750872891,
+      "specular_ior_level": 0.11746262527835849
+     },
+     {
+      "dataset": "tyol",
+      "id": 16,
+      "grey": null,
+      "roughness": 0.5535208701830434,
+      "specular_ior_level": 0.7502663820314437
+     },
+     {
+      "dataset": "tless",
+      "id": 7,
+      "grey": 0.5001093016640932,
+      "roughness": 0.5982326020498471,
+      "specular_ior_level": 0.5432076451063084
+     },
+     {
+      "dataset": "hot3d",
+      "id": 30,
+      "grey": null,
+      "roughness": 0.783856113316414,
+      "specular_ior_level": 0.055957827732398546
+     },
+     {
+      "dataset": "tyol",
+      "id": 6,
+      "grey": null,
+      "roughness": 0.3392534130488102,
+      "specular_ior_level": 0.4702501793029017
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "Rocks006",
+    "emission": 5.856073452052895,
+    "emission_color": [
+     0.8419110457992798,
+     0.6780893349810844,
+     0.6378945554574684,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.5169465954470933,
+     0.9743033841634492,
+     0.641605551429235
+    ],
+    "point_light_position_m": [
+     0.3151813953218201,
+     -0.7632221873352223,
+     0.575108726915939
+    ],
+    "rng_state_sha256": "bb02b70fc5d4a8c47d1821c41999f61ca19ec4887383e9c490f076c5d1eb73fd"
+   },
+   "70008": {
+    "dataset": "hot3d",
+    "target_ids": [
+     17,
+     11,
+     8,
+     12,
+     14,
+     21,
+     24,
+     30,
+     31,
+     10,
+     5,
+     27,
+     28,
+     29,
+     20,
+     16,
+     2,
+     23,
+     33,
+     4
+    ],
+    "distractors": {
+     "tless": [
+      1,
+      10
+     ],
+     "hb": [
+      29,
+      32
+     ],
+     "tyol": [
+      5,
+      7
+     ]
+    },
+    "objects": [
+     [
+      "tyol",
+      7
+     ],
+     [
+      "hot3d",
+      20
+     ],
+     [
+      "hot3d",
+      4
+     ],
+     [
+      "hot3d",
+      29
+     ],
+     [
+      "hot3d",
+      16
+     ],
+     [
+      "hot3d",
+      28
+     ],
+     [
+      "hot3d",
+      17
+     ],
+     [
+      "hot3d",
+      5
+     ],
+     [
+      "hot3d",
+      27
+     ],
+     [
+      "hot3d",
+      31
+     ],
+     [
+      "hot3d",
+      2
+     ],
+     [
+      "hb",
+      32
+     ],
+     [
+      "hot3d",
+      12
+     ],
+     [
+      "hot3d",
+      10
+     ],
+     [
+      "hot3d",
+      21
+     ],
+     [
+      "hot3d",
+      23
+     ],
+     [
+      "hot3d",
+      24
+     ],
+     [
+      "hot3d",
+      11
+     ],
+     [
+      "hb",
+      29
+     ],
+     [
+      "hot3d",
+      30
+     ],
+     [
+      "hot3d",
+      14
+     ],
+     [
+      "hot3d",
+      8
+     ],
+     [
+      "tless",
+      1
+     ],
+     [
+      "hot3d",
+      33
+     ],
+     [
+      "tless",
+      10
+     ],
+     [
+      "tyol",
+      5
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "tyol",
+      "id": 7,
+      "grey": null,
+      "roughness": 0.14640019472791177,
+      "specular_ior_level": 0.7953074033035229
+     },
+     {
+      "dataset": "hot3d",
+      "id": 20,
+      "grey": null,
+      "roughness": 0.06741157919419494,
+      "specular_ior_level": 0.49817779410668384
+     },
+     {
+      "dataset": "hot3d",
+      "id": 4,
+      "grey": null,
+      "roughness": 0.45856560396154167,
+      "specular_ior_level": 0.7002782966855474
+     },
+     {
+      "dataset": "hot3d",
+      "id": 29,
+      "grey": null,
+      "roughness": 0.21850462997517162,
+      "specular_ior_level": 0.4319222877125355
+     },
+     {
+      "dataset": "hot3d",
+      "id": 16,
+      "grey": null,
+      "roughness": 0.07593784036195361,
+      "specular_ior_level": 0.6406082875513136
+     },
+     {
+      "dataset": "hot3d",
+      "id": 28,
+      "grey": null,
+      "roughness": 0.09827559229056304,
+      "specular_ior_level": 0.138594169957718
+     },
+     {
+      "dataset": "hot3d",
+      "id": 17,
+      "grey": null,
+      "roughness": 0.987247996154725,
+      "specular_ior_level": 0.6071631905485884
+     },
+     {
+      "dataset": "hot3d",
+      "id": 5,
+      "grey": null,
+      "roughness": 0.4725838952627007,
+      "specular_ior_level": 0.6885537408494313
+     },
+     {
+      "dataset": "hot3d",
+      "id": 27,
+      "grey": null,
+      "roughness": 0.3066456905989361,
+      "specular_ior_level": 0.5477831125522282
+     },
+     {
+      "dataset": "hot3d",
+      "id": 31,
+      "grey": null,
+      "roughness": 0.5955330649914847,
+      "specular_ior_level": 0.9877757868464208
+     },
+     {
+      "dataset": "hot3d",
+      "id": 2,
+      "grey": null,
+      "roughness": 0.7942366902192499,
+      "specular_ior_level": 0.2705559230296889
+     },
+     {
+      "dataset": "hb",
+      "id": 32,
+      "grey": null,
+      "roughness": 0.43194770295254814,
+      "specular_ior_level": 0.49523119150953476
+     },
+     {
+      "dataset": "hot3d",
+      "id": 12,
+      "grey": null,
+      "roughness": 0.038663621580405816,
+      "specular_ior_level": 0.22694847296625464
+     },
+     {
+      "dataset": "hot3d",
+      "id": 10,
+      "grey": null,
+      "roughness": 0.6081814626487209,
+      "specular_ior_level": 0.13772786677798443
+     },
+     {
+      "dataset": "hot3d",
+      "id": 21,
+      "grey": null,
+      "roughness": 0.09943213851927091,
+      "specular_ior_level": 0.8342892560045141
+     },
+     {
+      "dataset": "hot3d",
+      "id": 23,
+      "grey": null,
+      "roughness": 0.4180873496848939,
+      "specular_ior_level": 0.6731461468307322
+     },
+     {
+      "dataset": "hot3d",
+      "id": 24,
+      "grey": null,
+      "roughness": 0.6665321236830792,
+      "specular_ior_level": 0.5586058384932481
+     },
+     {
+      "dataset": "hot3d",
+      "id": 11,
+      "grey": null,
+      "roughness": 0.41039889758656456,
+      "specular_ior_level": 0.6931682990466594
+     },
+     {
+      "dataset": "hb",
+      "id": 29,
+      "grey": null,
+      "roughness": 0.20600682260051795,
+      "specular_ior_level": 0.28435705926730437
+     },
+     {
+      "dataset": "hot3d",
+      "id": 30,
+      "grey": null,
+      "roughness": 0.8046557206803969,
+      "specular_ior_level": 0.7931661602819887
+     },
+     {
+      "dataset": "hot3d",
+      "id": 14,
+      "grey": null,
+      "roughness": 0.6522269225559644,
+      "specular_ior_level": 0.5123247052383245
+     },
+     {
+      "dataset": "hot3d",
+      "id": 8,
+      "grey": null,
+      "roughness": 0.22422546492746753,
+      "specular_ior_level": 0.32214134843022124
+     },
+     {
+      "dataset": "tless",
+      "id": 1,
+      "grey": 0.6922741738999719,
+      "roughness": 0.49510930964777533,
+      "specular_ior_level": 0.873709605823177
+     },
+     {
+      "dataset": "hot3d",
+      "id": 33,
+      "grey": null,
+      "roughness": 0.39575378480087164,
+      "specular_ior_level": 0.74721564048233
+     },
+     {
+      "dataset": "tless",
+      "id": 10,
+      "grey": 0.5430164884697127,
+      "roughness": 0.5100010904350447,
+      "specular_ior_level": 0.17215385815525053
+     },
+     {
+      "dataset": "tyol",
+      "id": 5,
+      "grey": null,
+      "roughness": 0.3920210571576582,
+      "specular_ior_level": 0.5338132104085227
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "Tiles046",
+    "emission": 5.455832713098732,
+    "emission_color": [
+     0.9004515383604235,
+     0.7512328445779562,
+     0.5323997207294219,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.9854909491940806,
+     0.8698883975727398,
+     0.7704365084403898
+    ],
+    "point_light_position_m": [
+     0.9106313810504417,
+     -0.9036548023521873,
+     0.38110591747202305
+    ],
+    "rng_state_sha256": "965ca955c7cb37128ebdede2d6683d0762fc2b12a0d7bdf7de1ec103615d2379"
+   },
+   "70009": {
+    "dataset": "hot3d",
+    "target_ids": [
+     31,
+     5,
+     30,
+     16,
+     3,
+     33,
+     26,
+     20,
+     17,
+     21,
+     1,
+     27,
+     7,
+     11,
+     2,
+     8,
+     14,
+     15,
+     23,
+     25
+    ],
+    "distractors": {
+     "tless": [
+      25,
+      19
+     ],
+     "hb": [
+      10,
+      19
+     ],
+     "tyol": [
+      2,
+      19
+     ]
+    },
+    "objects": [
+     [
+      "hot3d",
+      8
+     ],
+     [
+      "hot3d",
+      3
+     ],
+     [
+      "hot3d",
+      27
+     ],
+     [
+      "tless",
+      19
+     ],
+     [
+      "hot3d",
+      21
+     ],
+     [
+      "hot3d",
+      20
+     ],
+     [
+      "tless",
+      25
+     ],
+     [
+      "hot3d",
+      23
+     ],
+     [
+      "tyol",
+      19
+     ],
+     [
+      "hot3d",
+      33
+     ],
+     [
+      "hot3d",
+      7
+     ],
+     [
+      "hot3d",
+      16
+     ],
+     [
+      "hot3d",
+      5
+     ],
+     [
+      "hot3d",
+      26
+     ],
+     [
+      "hot3d",
+      14
+     ],
+     [
+      "tyol",
+      2
+     ],
+     [
+      "hot3d",
+      1
+     ],
+     [
+      "hot3d",
+      17
+     ],
+     [
+      "hot3d",
+      15
+     ],
+     [
+      "hb",
+      10
+     ],
+     [
+      "hot3d",
+      25
+     ],
+     [
+      "hot3d",
+      30
+     ],
+     [
+      "hot3d",
+      2
+     ],
+     [
+      "hot3d",
+      31
+     ],
+     [
+      "hot3d",
+      11
+     ],
+     [
+      "hb",
+      19
+     ]
+    ],
+    "material_samples": [
+     {
+      "dataset": "hot3d",
+      "id": 8,
+      "grey": null,
+      "roughness": 0.7045201599794397,
+      "specular_ior_level": 0.20582318972461133
+     },
+     {
+      "dataset": "hot3d",
+      "id": 3,
+      "grey": null,
+      "roughness": 0.700260084572351,
+      "specular_ior_level": 0.8905697485170978
+     },
+     {
+      "dataset": "hot3d",
+      "id": 27,
+      "grey": null,
+      "roughness": 0.4455621383867714,
+      "specular_ior_level": 0.9276529281778606
+     },
+     {
+      "dataset": "tless",
+      "id": 19,
+      "grey": 0.6473951318548108,
+      "roughness": 0.723178904299645,
+      "specular_ior_level": 0.03544148337127495
+     },
+     {
+      "dataset": "hot3d",
+      "id": 21,
+      "grey": null,
+      "roughness": 0.33301589256494524,
+      "specular_ior_level": 0.28117323053583676
+     },
+     {
+      "dataset": "hot3d",
+      "id": 20,
+      "grey": null,
+      "roughness": 0.07108946765182023,
+      "specular_ior_level": 0.5472669765743752
+     },
+     {
+      "dataset": "tless",
+      "id": 25,
+      "grey": 0.8933245504664484,
+      "roughness": 0.8020629848738784,
+      "specular_ior_level": 0.7412790831402474
+     },
+     {
+      "dataset": "hot3d",
+      "id": 23,
+      "grey": null,
+      "roughness": 0.9275278351622103,
+      "specular_ior_level": 0.6925660598931982
+     },
+     {
+      "dataset": "tyol",
+      "id": 19,
+      "grey": null,
+      "roughness": 0.13040480356898632,
+      "specular_ior_level": 0.06815132778048483
+     },
+     {
+      "dataset": "hot3d",
+      "id": 33,
+      "grey": null,
+      "roughness": 0.03766299003126139,
+      "specular_ior_level": 0.9281666456421646
+     },
+     {
+      "dataset": "hot3d",
+      "id": 7,
+      "grey": null,
+      "roughness": 0.42638224612412345,
+      "specular_ior_level": 0.443184455678198
+     },
+     {
+      "dataset": "hot3d",
+      "id": 16,
+      "grey": null,
+      "roughness": 0.21164217938658103,
+      "specular_ior_level": 0.644598137190144
+     },
+     {
+      "dataset": "hot3d",
+      "id": 5,
+      "grey": null,
+      "roughness": 0.8478003396933287,
+      "specular_ior_level": 0.8976925328566534
+     },
+     {
+      "dataset": "hot3d",
+      "id": 26,
+      "grey": null,
+      "roughness": 0.5893586410936085,
+      "specular_ior_level": 0.8345171141826665
+     },
+     {
+      "dataset": "hot3d",
+      "id": 14,
+      "grey": null,
+      "roughness": 0.1614877483727014,
+      "specular_ior_level": 0.6680241168959349
+     },
+     {
+      "dataset": "tyol",
+      "id": 2,
+      "grey": null,
+      "roughness": 0.32071044348847555,
+      "specular_ior_level": 0.16433434422517834
+     },
+     {
+      "dataset": "hot3d",
+      "id": 1,
+      "grey": null,
+      "roughness": 0.09161614891361824,
+      "specular_ior_level": 0.9171927531268725
+     },
+     {
+      "dataset": "hot3d",
+      "id": 17,
+      "grey": null,
+      "roughness": 0.49921442224804735,
+      "specular_ior_level": 0.5064135603423493
+     },
+     {
+      "dataset": "hot3d",
+      "id": 15,
+      "grey": null,
+      "roughness": 0.5818534624595211,
+      "specular_ior_level": 0.6823383924425861
+     },
+     {
+      "dataset": "hb",
+      "id": 10,
+      "grey": null,
+      "roughness": 0.3510637540125402,
+      "specular_ior_level": 0.5396925627598186
+     },
+     {
+      "dataset": "hot3d",
+      "id": 25,
+      "grey": null,
+      "roughness": 0.8979002616143268,
+      "specular_ior_level": 0.24949125328716693
+     },
+     {
+      "dataset": "hot3d",
+      "id": 30,
+      "grey": null,
+      "roughness": 0.7051592451255865,
+      "specular_ior_level": 0.7580188941266165
+     },
+     {
+      "dataset": "hot3d",
+      "id": 2,
+      "grey": null,
+      "roughness": 0.6606801178192859,
+      "specular_ior_level": 0.7217153723691566
+     },
+     {
+      "dataset": "hot3d",
+      "id": 31,
+      "grey": null,
+      "roughness": 0.5154358774530078,
+      "specular_ior_level": 0.12831908297034855
+     },
+     {
+      "dataset": "hot3d",
+      "id": 11,
+      "grey": null,
+      "roughness": 0.3677246589231138,
+      "specular_ior_level": 0.5456742634735064
+     },
+     {
+      "dataset": "hb",
+      "id": 19,
+      "grey": null,
+      "roughness": 0.13748663013311502,
+      "specular_ior_level": 0.9074738043286854
+     }
+    ],
+    "room_materials": [
+     "Bricks002",
+     "Bricks020",
+     "Carpet004",
+     "Concrete013",
+     "Fabric030",
+     "Ground024",
+     "Marble001",
+     "Metal001",
+     "Metal004",
+     "Metal032",
+     "Plastic001",
+     "Rocks006",
+     "Tiles011",
+     "Tiles046",
+     "WoodFloor007",
+     "WoodFloor018"
+    ],
+    "room_material": "Tiles011",
+    "emission": 3.034680354904192,
+    "emission_color": [
+     0.7367976757848238,
+     0.8640390721157999,
+     0.7657551180407598,
+     1.0
+    ],
+    "point_light_energy": 200,
+    "point_light_color": [
+     0.5359491754347299,
+     0.8351465748503162,
+     0.5482810271868013
+    ],
+    "point_light_position_m": [
+     -1.1403105515525975,
+     -0.435709550909065,
+     0.23802115377814662
+    ],
+    "rng_state_sha256": "223071a2f7a08d3803c868964e31a0f13bb7dd75bf0aea45e7c355c3a63d5fb5"
+   }
+  }
+ }
+}

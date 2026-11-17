@@ -1,0 +1,19 @@
+.checks:
+  # The project's runners take tagged jobs only.
+  tags:
+    - os-linux
+    - arch-amd64
+  before_script:
+    - pip install uv
+  script:
+    - uv sync --extra filter --extra hdf5 --extra tensorrt --group dev
+    - uv pip install --no-deps --reinstall torch==2.14.1 torchvision==0.29.1 --index-url https://download.pytorch.org/whl/cpu
+    - uv run --no-sync make check test
+
+checks-py311:
+  extends: .checks
+  image: python:3.11
+
+checks-py312:
+  extends: .checks
+  image: python:3.12

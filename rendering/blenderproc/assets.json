@@ -1,0 +1,140 @@
+{
+  "schema": 1,
+  "bop_toolkit_revision": "cea62d651c7e395b2e1962b9749e4e89693c6ac4",
+  "bop_models": {
+    "tless": {
+      "hf_repo": "bop-benchmark/tless",
+      "revision": "5fd309a04476a842d93abfb584fba9ee7caecdf1",
+      "filename": "tless_models.zip",
+      "sha256": "6a29c59766b8d2af05e62e71739f0ca7243ad81bc3c7f9a24925504a8cb37928",
+      "license": "BOP dataset license (see the Hugging Face dataset card)"
+    },
+    "hb": {
+      "hf_repo": "bop-benchmark/hb",
+      "revision": "985ebaef7b1bd4bffb2039f18dd81faa647fd060",
+      "filename": "hb_models.zip",
+      "sha256": "026a9417387e7225463e63fd0f4ac9b1b15a961d85f3095f9dbf416f0b8bd9b8",
+      "license": "BOP dataset license (see the Hugging Face dataset card)"
+    },
+    "tyol": {
+      "hf_repo": "bop-benchmark/tyol",
+      "revision": "b8226af3cb5fb143980b6bd44b01ea3134746327",
+      "filename": "tyol_models.zip",
+      "sha256": "a200a97b26adecd9dc38da2fa0e9841048d898def7d25741ec7fd67bfd864390",
+      "license": "BOP dataset license (see the Hugging Face dataset card)"
+    }
+  },
+  "materials": {
+    "Metal001": {
+      "url": "https://ambientcg.com/get?file=Metal001_2K-JPG.zip",
+      "sha256": "0b22df0a8fc4706b2e91f26d5ae6e475dd09bfaf74ad27d1883e5d074fef088e",
+      "license": "CC0",
+      "resolution": "2K-JPG"
+    },
+    "Metal004": {
+      "url": "https://ambientcg.com/get?file=Metal004_2K-JPG.zip",
+      "sha256": "d517565b0f1694c7309500e604a77ca497d2fc57f61f85bff464a40c90e1b376",
+      "license": "CC0",
+      "resolution": "2K-JPG"
+    },
+    "Metal032": {
+      "url": "https://ambientcg.com/get?file=Metal032_2K-JPG.zip",
+      "sha256": "4b8884843c490963d5734be036c35639d064e7a817eb61145322f69c6c19895a",
+      "license": "CC0",
+      "resolution": "2K-JPG"
+    },
+    "Plastic001": {
+      "url": "https://ambientcg.com/get?file=Plastic001_2K-JPG.zip",
+      "sha256": "b5794733ceb475d3955d69607e7f8e5bf6305ca4395005367f5e7784dae14e35",
+      "license": "CC0",
+      "resolution": "2K-JPG"
+    },
+    "WoodFloor007": {
+      "url": "https://ambientcg.com/get?file=WoodFloor007_2K-JPG.zip",
+      "sha256": "8d7065ec1281113d68c1e9dd7593df833a9727b4c9bc46e98ac68a65c9374063",
+      "license": "CC0",
+      "resolution": "2K-JPG"
+    },
+    "WoodFloor018": {
+      "url": "https://ambientcg.com/get?file=WoodFloor018_2K-JPG.zip",
+      "sha256": "ef3056464cafe4896f9a2187bd6505015d0260dff5dad0babdb713e072e0aad6",
+      "license": "CC0",
+      "resolution": "2K-JPG"
+    },
+    "Bricks002": {
+      "url": "https://ambientcg.com/get?file=Bricks002_2K-JPG.zip",
+      "sha256": "d71530de46996ef7d44bfdca74abc1d90936157f54dae9bb986749e81b38dbd6",
+      "license": "CC0",
+      "resolution": "2K-JPG"
+    },
+    "Bricks020": {
+      "url": "https://ambientcg.com/get?file=Bricks020_2K-JPG.zip",
+      "sha256": "39f1ab1199ff7678517ab9c878acd99634dd021bba95add9514f3ab99279df11",
+      "license": "CC0",
+      "resolution": "2K-JPG"
+    },
+    "Tiles011": {
+      "url": "https://ambientcg.com/get?file=Tiles011_2K-JPG.zip",
+      "sha256": "a29a0f415424a37534103dc4e017cc7d2a5479d7f0b6ccc149cd23c9e4009bbb",
+      "license": "CC0",
+      "resolution": "2K-JPG"
+    },
+    "Tiles046": {
+      "url": "https://ambientcg.com/get?file=Tiles046_2K-JPG.zip",
+      "sha256": "9c690ae51380ad00d2318c8587fc20e052de0aba5b2d4150eb5123e706faac79",
+      "license": "CC0",
+      "resolution": "2K-JPG"
+    },
+    "Concrete013": {
+      "url": "https://ambientcg.com/get?file=Concrete013_2K-JPG.zip",
+      "sha256": "8c5f350480abd73b4a27a1b2ea4b02ec08d1444598c0cf51ac2a17e1fb297b76",
+      "license": "CC0",
+      "resolution": "2K-JPG"
+    },
+    "Ground024": {
+      "url": "https://ambientcg.com/get?file=Ground024_2K-JPG.zip",
+      "sha256": "f4da7152a8c8cd299010e98b341e27185cdce5eb065febac47d08e41516d4692",
+      "license": "CC0",
+      "resolution": "2K-JPG"
+    },
+    "Carpet004": {
+      "url": "https://ambientcg.com/get?file=Carpet004_2K-JPG.zip",
+      "sha256": "3dea5a23316442f03c836608acfabee8010fb055b95f3a19a85d774a71c60233",
+      "license": "CC0",
+      "resolution": "2K-JPG"
+    },
+    "Fabric030": {
+      "url": "https://ambientcg.com/get?file=Fabric030_2K-JPG.zip",
+      "sha256": "7fc77fde6203911713a2fa41fa54f41f400c2670f7f7a3f4d57567dfdbf733e8",
+      "license": "CC0",
+      "resolution": "2K-JPG"
+    },
+    "Rocks006": {
+      "url": "https://ambientcg.com/get?file=Rocks006_2K-JPG.zip",
+      "sha256": "50337c03a369a8a4622a2f88281d543e3d65b13801b9e9eb9e294a6514bc090b",
+      "license": "CC0",
+      "resolution": "2K-JPG"
+    },
+    "Marble001": {
+      "url": "https://ambientcg.com/get?file=Marble001_2K-JPG.zip",
+      "sha256": "38c22282d25a8b65be383f4fbedea54927461cd4dc7616a14065d8ce2ed4e4f5",
+      "license": "CC0",
+      "resolution": "2K-JPG"
+    }
+  },
+  "blender": {
+    "version": "4.2.1",
+    "filename": "blender-4.2.1-linux-x64.tar.xz",
+    "sha256": "be0fbaa0c1e52d4552023220b4c67351efbb707cac49bb381fcbee2182447005",
+    "directory": "blender-4.2.1-linux-x64",
+    "mirrors": [
+      "https://ftp.nluug.nl/pub/graphics/blender/release/Blender4.2/",
+      "https://mirrors.dotsrc.org/blender/blender-release/Blender4.2/"
+    ]
+  },
+  "blenderproc": {
+    "version": "2.8.0",
+    "wheel": "blenderproc-2.8.0-py3-none-any.whl",
+    "wheel_sha256": "fe17744bed3e5e76201b18da7b8827c7fc8228c25e77deaa055acac73bef3584"
+  }
+}

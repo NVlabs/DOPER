@@ -1,0 +1,113 @@
+# T-LESS base recipe: one ConvNeXt-Small DOPER model per object, trained on official PBR only.
+#
+# Source: configs/pbronly/tless_small_all_instances_base25.yaml as the T-LESS Small campaign
+# launched it. Every annotated instance is a training sample and the mask target is the union of
+# the instance masks; training geometry is the CAD model bank (models_cad). T-LESS has no
+# validation split: its BOP19 PrimeSense test set is reporting only, so no test-based choice is
+# ever made: the `base` bank keeps the base models and the fixed `multisensor` bank the adapted
+# students of every object.
+#
+# Adaptation: configs/pbronly/tless_small_multisensor_adapt3.yaml as tless_multisensor_run
+# resolved it. Each object's student starts from its epoch-25 base and mixes 10 PBR samples with
+# 2 PrimeSense, 2 Kinect and 2 Canon real TRAIN samples per batch (GT keypoints and masks,
+# `doper prepare tless --multisensor`, reviewed with `doper review tless`), for 3 uncapped epochs.
+name: tless
+profile: tless
+objects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+generated_objects: []
+prepare:
+  parts: [models, pbr]
+keypoints:
+  count: 64
+  source_units: mm
+convert:
+  models: models_cad
+  val_scenes: 5
+  seed: 42
+  source_view: none
+  allow_source_empty_masks: true
+base:
+  launch:
+    init_from: null
+    resume: null
+    require_no_init_from: true
+    require_pretrained_backbone: true
+  config:
+    backbone: convnext_small.dinov3_lvd1689m
+    no_pretrained: false
+    backbone_lr_multiplier: 0.1
+    num_classes: 1
+    num_keypoints: 64
+    det_size: 640
+    crop_size: 512
+    letterbox: true
+    instance_sampling: all
+    mask_target_mode: union
+    keypoint_head: heatmap
+    keypoint_heatmap_sigma: 0.75
+    epochs: 25
+    max_iters_per_epoch: 0
+    batch_size: 16
+    gradient_accumulation_steps: 4
+    num_workers: 8
+    lr: 5.0e-4
+    warmup_iters: 200
+    grad_clip: 5.0
+    val_interval: 1
+    save_interval: 1
+    seed: 42
+    no_amp: false
+validation:
+  population: none
+  models: models_eval
+  protocol: top5-greedy
+  camera: pinhole
+adapt:
+  gate:
+    # The paper's EPnP RANSAC; USAC is the default. Remove this block for USAC.
+    pnp_method: epnp
+  multisensor:
+    mix_per_batch: [2, 2, 2]
+    min_mix_keypoint_samples: 1
+    min_mix_mask_only_samples: 0
+    config:
+      no_pretrained: true
+      backbone_lr_multiplier: 0.1
+      instance_sampling: all
+      mask_target_mode: union
+      epochs: 3
+      batch_size: 16
+      gradient_accumulation_steps: 1
+      num_workers: 8
+      lr: 1.0e-5
+      warmup_iters: 20
+      grad_clip: 5.0
+      val_interval: 1
+      save_interval: 1
+      seed: 42
+      no_amp: true
+test:
+  population: test_primesense
+  camera: pinhole
+  method: doper
+  dataset: tless
+  policies:
+    # The paper's adapted T-LESS row: every object's multisensor student, no fallback. The
+    # source CSV was directly timed, so this bank always records time (the base stays untimed).
+    multisensor:
+      method: multisensor
+      csv_method: dopermultisensor
+      fallback: none
+      record_time: true
+
+# Multi-view fusion (doper.bop.multiview): the cam_*_w2c fields are world-to-camera; each test
+# target fuses with the 3 nearest camera centers among the same scene's test targets.
+multiview:
+  gate:
+    # The paper's EPnP RANSAC; USAC is the default. Remove this block for USAC.
+    pnp_method: epnp
+  convention: w2c
+  support: nearest
+  nearest_k: 3
+  scope: test_targets
+  skip_nonpositive_support_depth: false

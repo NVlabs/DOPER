@@ -1,0 +1,183 @@
+# NuRec recipe template: adapt a synthetic-trained DOPER model to a real object from NuRec renders
+# of a reconstruction of your own captures (see docs/nurec.md). Copy this file, set the object
+# section to your mesh and keypoint layout, choose the capture views, and pass the copy's path
+# where the commands take RECIPE:
+#   doper prepare RECIPE --stage capture|reconstruct|register|render|labels|synthetic
+#   (register writes a candidate; --accept-registration --reviewer-note TEXT accepts it)
+#   doper train RECIPE --stage base     # synthetic baseline, from the pretrained backbone
+#   doper train RECIPE --stage adapt    # adaptation from the base run's best.pth
+#   doper evaluate RECIPE / doper report RECIPE
+# The values outside `object` and the view lists are working defaults.
+name: my-object
+kind: nurec
+profile: my-object
+#
+# object: the mesh in your capture bundle (an OBJ in meters) and its file SHA-256 (checked by
+# every stage that reads it), the 64-keypoint layout by its points hash (SHA-256 of the 64x3
+# little-endian float64 array) and the COCO category of the datasets. Replace both hashes with
+# your files' values (`sha256sum`, `doper.keypoints.points_sha256`); every stage refuses others.
+object:
+  mesh: object.obj
+  mesh_sha256: "0000000000000000000000000000000000000000000000000000000000000000"
+  keypoints_points_sha256: "0000000000000000000000000000000000000000000000000000000000000000"
+  category: object
+#
+# seed_mode: how the capture cameras enter COLMAP. robot_handeye seeds every camera from its known
+# pose (robot.jsonl and handeye.json in the bundle), then triangulates and bundle-adjusts with
+# fixed intrinsics; colmap_sfm runs incremental SfM; doper_pnp seeds from DOPER poses.
+seed_mode: robot_handeye
+#
+# colmap: flags per COLMAP 3.13 command (the bundle's intrinsics are added when it gives K).
+# FeatureExtraction.num_threads 1 makes reruns identical: threaded extraction changes the order of
+# the images in the database, and with it the reconstruction's scale. -1 restores threaded
+# extraction.
+colmap:
+  feature_extractor:
+    ImageReader.camera_model: OPENCV
+    ImageReader.single_camera: 1
+    FeatureExtraction.use_gpu: 0
+    FeatureExtraction.num_threads: 1
+    SiftExtraction.max_num_features: 16384
+    SiftExtraction.estimate_affine_shape: 1
+    SiftExtraction.domain_size_pooling: 1
+  exhaustive_matcher:
+    FeatureMatching.use_gpu: 1
+    FeatureMatching.guided_matching: 1
+    FeatureMatching.max_num_matches: 65536
+  point_triangulator:
+    refine_intrinsics: 0
+  bundle_adjuster:
+    BundleAdjustment.refine_focal_length: 0
+    BundleAdjustment.refine_principal_point: 0
+    BundleAdjustment.refine_extra_params: 0
+    BundleAdjustment.refine_rig_from_world: 1
+    BundleAdjustment.refine_sensor_from_rig: 0
+#
+# doper_pnp: the gates of seed_mode doper_pnp (experimental; this recipe seeds with
+# robot_handeye). A DOPER pose seeds an image when its
+# detection scores >= score_thr, at least min_keypoints keypoints score >= score_thr, its PnP
+# median reprojection error is <= max_reproj_px and its keypoints agree with the other views
+# within max_consistency_px (median, capture pixels); after the first triangulation an image
+# whose COLMAP features reproject worse than max_consistency_px (median) or that has fewer than
+# a quarter of the median triangulated observations is un-seeded; image_registrator adds the
+# rest when register_leftovers is true.
+doper_pnp:
+  score_thr: 0.3
+  min_keypoints: 8
+  max_reproj_px: 3.0
+  max_consistency_px: 5.0
+  register_leftovers: true
+#
+# registration: the CAD model in the NuRec scene (prepare --stage register). The DOPER keypoints
+# of the capture views (a `doper evaluate` frames.json) are triangulated with the scene cameras,
+# leaving out exclude_views and views whose PnP error is not below max_reproj_px, and the CAD
+# keypoints are fitted to them (the seed). The scale is fixed from the posed camera centers
+# (else the reconstruction's anchor), then the rotation and translation are refined against the
+# Canny edges of fit_views; holdout_views are reported. restarts re-run the refinement from
+# perturbed starts as a diagnostic. Views are capture indices (capture order); the lists below are
+# examples for a loop of about 35 captures: pick views spread around your object. The result is a
+# candidate that a reviewer accepts (--accept-registration --reviewer-note).
+registration:
+  exclude_views: []
+  max_reproj_px: 5.0
+  fit_views: [0, 7, 14, 21, 28]
+  holdout_views: [2, 10, 18, 25, 32]
+  canny: [40, 100]
+  boundary_px: 1.5
+  points: 250
+  f_scale: 2.0
+  diff_step: 1.0e-4
+  max_nfev: 200
+  restarts:
+    seed: 62
+    starts: 6
+    rot_deg: 5.0
+    trans: 0.002
+    max_nfev: 150
+#
+# render: novel views of the reconstruction. Each view perturbs a seed view's camera locally
+# (uniform per-axis rotation and translation); a view within reject_deg AND reject_mm of any
+# source camera is rejected. perturb_m is in scene units. seed_views are capture indices (an
+# example list; pick views spread around your object). The renderer image is pinned to the
+# digest of the public nre-ga:26.04 tag.
+render:
+  image_digest: "nvcr.io/nvidia/nre/nre-ga@sha256:97f43e7130c5636ce3e80ea3184d97f56a87fdd989b05cce42230881dbdea284"
+  count: 1600
+  seed: 891
+  seed_views: [0, 2, 4, 6, 8, 10, 14, 16, 17, 19, 21, 24, 26, 28, 30, 32]
+  perturb_deg: 4.0
+  perturb_m: 0.005
+  reject_deg: 1.0
+  reject_mm: 2.0
+#
+# labels: a view qualifies with at least min_visible keypoints that are ray-visible, inside the
+# eroded mask and not of the excluded color, and a mask covering at least min_coverage of the CAD
+# silhouette. exclude_hsv (optional; OpenCV HSV, strict bounds, e.g. {h_above: 85, h_below: 120,
+# s_above: 90, v_above: 100} for a blue fixture holding the object) excludes a color. mask_mode
+# sam2 segments the views with SAM2 (the nurec-sam extra; `prepare --stage labels --sam2-weights
+# sam2.1_hiera_small.pt`); cad_only supervises boxes and keypoints only. erode_px is the erosion
+# kernel's side.
+labels:
+  mask_mode: sam2
+  min_visible: 12
+  min_coverage: 0.5
+  exclude_hsv: null
+  visibility_tolerance_m: 0.0005
+  erode_px: 5
+#
+# split: the qualified views of the one reconstruction, shuffled with the seed. Validation views
+# share the scene with training; single_reconstruction_split states that this is intended.
+split:
+  seed: 817
+  train: 1024
+  val: 128
+  single_reconstruction_split: true
+#
+# base: the synthetic baseline (doper.train keys). Weight decay is the training
+# default, 0.05. Validation every epoch selects best.pth, which the adaptation starts from. The
+# baseline renders the object in one dark material (BODY_MATERIAL in rendering/nurec_assets.py);
+# edit it to match your object.
+base:
+  backbone: convnext_small.dinov3_lvd1689m
+  num_keypoints: 64
+  det_size: 640
+  crop_size: 256
+  keypoint_head: heatmap
+  keypoint_heatmap_sigma: 0.75
+  kp_dark: true
+  epochs: 40
+  batch_size: 16
+  gradient_accumulation_steps: 4
+  lr: 5.0e-4
+  backbone_lr_multiplier: 0.1
+  warmup_iters: 500
+  lr_schedule: cosine
+  lr_cooldown_fraction: 0.2
+  grad_clip: 5.0
+  seed: 42
+  no_amp: true
+  background: false
+  mix_data_root: []
+  keypoint_only_mix_data_root: []
+  save_interval: 10
+  val_interval: 1
+  require_no_init_from: true
+  require_pretrained_backbone: true
+#
+# adapt: the five-epoch full-label adaptation from the base run's best.pth; every other key is
+# the base's.
+adapt:
+  epochs: 5
+  lr: 1.0e-5
+  warmup_iters: 2
+  save_interval: 1
+  val_interval: 1
+  no_pretrained: true
+  require_init_from: true
+  require_no_init_from: false
+  require_pretrained_backbone: false
+#
+# evaluation: relative pose over every capture of the bundle (exclude names none).
+evaluation:
+  score_thr: 0.3
+  exclude: []
