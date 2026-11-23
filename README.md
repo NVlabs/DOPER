@@ -4,7 +4,7 @@
 
 Hugo Hadfield, Alperen Degirmenci, Jonathan Tremblay
 
-🌐 Website (coming soon) · 📄 Paper (coming soon)
+🌐 [Website](https://nvlabs.github.io/DOPER/) · 📄 Paper (coming soon)
 
 DOPER trains and evaluates keypoint-based 6-DoF object pose models from synthetic data: it
 renders COCO-style training splits from a CAD model with Blender, trains a DINOv3 ConvNeXt
