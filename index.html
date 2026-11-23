@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DOPER: Deep Object Pose Estimation Revisited</title>
+  <meta name="description" content="DOPER estimates the 6D pose of known objects from RGB images through keypoint prediction and Perspective-n-Point, with synthetic training on an approximate CAD model and adaptation to real observations.">
+  <meta property="og:title" content="DOPER: Deep Object Pose Estimation Revisited">
+  <meta property="og:description" content="RGB 6D object pose estimation from synthetic training on an approximate CAD model, adapted to real observations.">
+  <meta property="og:image" content="https://nvlabs.github.io/DOPER/assets/img/social.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="https://images.nvidia.com/etc/designs/nvidiaGDC/clientlibs_base/fonts/nvidia-sans/NALA/var/NVIDIASansVF_NALA_W_Wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css?v=0738f71">
+  <link rel="stylesheet" href="assets/css/gallery.css?v=0738f71">
+  <link rel="stylesheet" href="assets/css/onboarding.css?v=0738f71">
+</head>
+<body>
+  <nav class="topnav" aria-label="Sections">
+    <a class="brand" href="#top">DOPER</a>
+    <div class="links">
+      <a href="#abstract">Abstract</a>
+      <a href="#method">Method</a>
+      <a href="#results">Results</a>
+      <a href="#cad">CAD</a>
+      <a href="#space">Space</a>
+      <a href="#try">Code</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap">
+      <h1>DOPER</h1>
+      <p class="subtitle">Deep Object Pose Estimation Revisited</p>
+      <p class="authors">
+        <span>Hugo Hadfield</span><span>Alperen Degirmenci</span><span>Jonathan Tremblay</span>
+      </p>
+      <p class="affil"><img src="assets/img/nvidia-logo.png" width="125" height="24" alt="NVIDIA"></p>
+      <div class="buttons">
+        <a class="btn disabled" aria-disabled="true" title="Coming soon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+          arXiv <small>coming soon</small></a>
+        <a class="btn" href="https://github.com/NVlabs/DOPER">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.7 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+          Code</a>
+        <a class="btn" href="#citation">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h4v4H8v3H5v-3l2-4zm8 0h4v4h-3v3h-3v-3l2-4z" fill="currentColor"/></svg>
+          BibTeX</a>
+      </div>
+    </div>
+
+    <figure class="teaser wrap-wide">
+      <video id="overview-video" muted loop playsinline controls preload="none" poster="assets/video/doper_overview.webp" width="1280" height="784" aria-label="Title card, then accuracy against runtime chart, then DOPER and FoundationPose pose estimates on a hand-held connector side by side, then DOPER results on other objects.">
+        <source src="assets/video/doper_overview.mp4" type="video/mp4">
+        <source src="assets/video/doper_overview.webm" type="video/webm">
+      </video>
+    </figure>
+
+    <div class="wrap">
+      <p class="tldr"><b>Summary.</b> DOPER estimates the 6D pose of known objects from RGB images. A shared backbone detects each object and predicts keypoint heatmaps, from which Perspective-<i>n</i>-Point recovers the pose. DOPER is first trained on domain-randomized renders of an approximate CAD model. It then adapts to real images using partial labels, such as boxes and masks, and geometry from calibrated multi-view captures.</p>
+      <h2 class="stats-title" id="stats-title">SOTA on detection and pose estimation</h2>
+      <dl class="stats" aria-label="SOTA on detection and pose estimation">
+        <div><dt>81.4</dt><dd>AP on HANDAL<span>RGB only, single view</span></dd></div>
+        <div><dt>87.7</dt><dd>AP on T-LESS<span>four-view RGB</span></dd></div>
+        <div><dt>0.576°</dt><dd>SHIRT rotation error<span>UKF + RTS smoothing, ROE1</span></dd></div>
+        <div><dt>28.6&thinsp;ms</dt><dd>single-view latency<span>TF32, on GB300</span></dd></div>
+      </dl>
+    </div>
+
+    <section class="live wrap-wide" id="live" hidden>
+      <h2 class="minor">Qualitative results on HOT3D sequences</h2>
+      <div class="seg clip-mode" role="radiogroup" aria-label="Pose display" id="clip-mode" hidden>
+        <button type="button" role="radio" aria-checked="false" tabindex="-1" data-mode="raw">Per frame</button>
+        <button type="button" role="radio" aria-checked="true" tabindex="0" data-mode="smooth">Smoothed (offline)</button>
+      </div>
+      <div class="clips" id="clips"></div>
+    </section>
+  </header>
+
+  <main>
+    <section class="sec wrap" id="abstract">
+      <h2><span class="num">01</span>Abstract</h2>
+      <div class="abstract-grid">
+        <figure class="loopfig" id="fig1">
+          <div class="fig" data-src="assets/img/fig1.webp" >
+            <img class="base" src="assets/img/fig1.webp" loading="lazy" decoding="async" width="2000" height="915" alt="Overview: an approximate CAD model supplies randomized renders; real observations drive an adaptation loop; DOPER predicts box, mask and keypoints for PnP pose recovery.">
+          </div>
+          <figcaption class="cap"></figcaption>
+          <button class="loop-toggle" type="button" aria-label="Pause animation">Pause</button>
+        </figure>
+        <div class="abstract-text">
+          <p>We present DOPER, an RGB pose estimation framework that shares a visual backbone across object detection, segmentation, and keypoint prediction to recover the 6D pose of known objects through Perspective-<i>n</i>-Point. Starting from synthetic training, DOPER adapts to real observations using partial supervision while retaining synthetic keypoint labels. Calibrated multi-view observations provide geometric constraints for keypoint supervision. During inference, optional heatmap refinement fits a rigid pose directly to the predicted keypoint distributions, resolving ambiguous correspondences without depth input or a learned pose refiner. Starting from underspecified CAD models, DOPER progressively refines the object representation and pose estimator. Results on SPEED+ and SHIRT further demonstrate effective adaptation to illumination changes and accurate temporal pose estimation. Across the evaluated single-view and multi-view configurations, DOPER achieves state-of-the-art detection AP results on HANDAL, HOPEv2, HOT3D, and T-LESS while using only RGB and running in real time (35&thinsp;Hz per object model on one GB300). These results demonstrate the effectiveness of jointly learning detection and pose keypoints, with real observations and geometric constraints.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec wrap" id="method">
+      <h2><span class="num">02</span>Method</h2>
+      <p class="lead">DOPER is object-specific. Given a calibrated RGB image, an approximate CAD model with known metric scale, and a fixed set of object-frame keypoints, it detects the object, predicts a heatmap per keypoint in a high-resolution crop, and recovers rotation and translation with robust PnP. Detection on the full image and keypoint prediction on the crop share one ConvNeXt backbone, pretrained with DINOv3.</p>
+      <figure class="loopfig wide" id="methodfig">
+        <div class="fig" data-src="assets/img/method.webp">
+          <img class="base" src="assets/img/method.webp" loading="lazy" decoding="async" width="2400" height="1104" alt="Method: synthetic initialization, real observations, accepted supervision, and model adaptation, repeated with the updated network.">
+        </div>
+        <figcaption class="cap"></figcaption>
+        <button class="loop-toggle" type="button" aria-label="Pause animation">Pause</button>
+      </figure>
+      <ol class="stages" id="stages">
+        <li><b>Synthetic initialization</b>Domain-randomized renders of the CAD model provide boxes, masks and exact keypoint labels to train the first estimator.</li>
+        <li><b>Real observations</b>Single-camera images are kept only if they pass an orientation check. For calibrated multi-camera captures, one pose is fit jointly across all views.</li>
+        <li><b>Accepted supervision</b>Accepted single-camera images provide box, mask and coarse-orientation targets. Multi-view fits also provide keypoint targets that agree across views.</li>
+        <li><b>Model adaptation</b>Each round fine-tunes the model on a fixed mix of real and synthetic images. Every batch includes synthetic images with exact keypoint labels.</li>
+      </ol>
+
+      <div class="split">
+        <figure class="plain">
+          <img src="assets/img/heatmap.webp" width="1000" height="900" loading="lazy" alt="Heatmap refinement: ambiguous heatmaps for eight CAD corners, sampled PnP hypotheses, and pose optimization from one hypothesis.">
+          <figcaption><b>Heatmap refinement.</b> Ambiguous heatmaps for eight CAD corners (1), sampled PnP hypotheses (2), and pose optimization from hypothesis C (3). Cyan cuboids and yellow boxes show pose projections.</figcaption>
+        </figure>
+        <div>
+          <h3>Resolving ambiguous keypoints</h3>
+          <p>Symmetric shapes and unclear image evidence can give one keypoint heatmap several peaks, so choosing each keypoint's location on its own is unreliable. Instead, DOPER projects the CAD keypoints into their heatmaps and reads the log probability at each projected point. A bounded non-linear optimizer adjusts the object's rotation and translation to minimize the summed negative log probability, moving all keypoints together through one rigid pose.</p>
+          <p>With several calibrated views, the same objective is summed over all views while the cameras stay fixed. An update is kept only if it improves the objective and leaves the keypoints in front of every camera. No depth and no learned pose refiner are needed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec wrap-wide" id="results">
+      <div class="wrap-inner">
+        <h2><span class="num">03</span>Results on BOP</h2>
+        <p class="lead">Official BOP test results. In single-view evaluation, every object model runs on every image and keeps up to five detections with confidence above 0.15 before PnP. Ground-truth boxes and the list of objects in each image are not used. MV refers to multiview inference; here, four views are used with calibrated support cameras. Their annotations are never used.</p>
+        <div class="tabs" role="tablist" id="bop-tabs"></div>
+      </div>
+      <div class="results-grid">
+        <div class="table-card">
+          <div class="table-scroll" id="bop-table" role="tabpanel" tabindex="0" aria-label="BOP test results"></div>
+          <p class="legend" id="bop-legend"></p>
+        </div>
+        <figure class="montage" id="bop-montage" aria-live="off"></figure>
+      </div>
+    </section>
+
+    <section class="sec wrap" id="cad">
+      <h2><span class="num">04</span>Adapting from an underspecified CAD model</h2>
+      <p class="lead">Real CAD models are often incomplete. We removed the texture, or 20% of the geometry, from 19 HANDAL objects, reconstructed each object from its onboarding video with NuRec, and replaced half of the synthetic training images with NuRec composites. Compared with matched composites of the degraded CAD model, NuRec improves validation AR by <b>+23.6</b> points (95% CI 13.4&ndash;33.8) without texture and <b>+16.3</b> points (10.8&ndash;21.9) with 20% removed.</p>
+      <div class="compare-card">
+        <div class="compare-controls">
+          <div class="seg" role="radiogroup" aria-label="CAD variant" id="cad-variant">
+            <button type="button" role="radio" aria-checked="true" data-variant="notex">No texture</button>
+            <button type="button" role="radio" aria-checked="false" data-variant="removed">20% removed</button>
+          </div>
+          <label class="objpick">Object
+            <select id="cad-object"></select>
+          </label>
+        </div>
+        <div class="compare" id="compare">
+          <img class="after" alt="">
+          <div class="before-clip"><img class="before" alt=""></div>
+          <div class="handle" aria-hidden="true"></div>
+          <span class="tag left" id="cad-left-label">CAD, no texture</span>
+          <span class="tag right">NuRec</span>
+          <input type="range" min="0" max="100" value="50" aria-label="Compare CAD and NuRec" id="compare-range">
+        </div>
+        <p class="gain" id="cad-gain" role="status"></p>
+        <div class="thumbs" id="cad-thumbs"></div>
+      </div>
+    </section>
+
+    <section class="sec wrap" id="space">
+      <h2><span class="num">05</span>Spacecraft pose estimation: SPEED+ and SHIRT</h2>
+      <p class="lead">SPEED+ tests whether a model trained on synthetic renders works on real photographs of a Tango spacecraft mockup, under two lighting conditions. DOPER adapts to these photographs over several rounds without using their pose labels. On SHIRT, we run the final adapted model, unchanged, along two rendezvous trajectories.</p>
+      <div class="split top space">
+        <div class="table-card">
+          <h3>SPEED+ <small>score, lower is better</small></h3>
+          <div class="table-scroll" id="speed-table"></div>
+        </div>
+        <figure class="plain" id="speed-media">
+          <div class="speed-panels">
+            <p class="speed-head">Synthetic Training Data</p>
+            <div class="panel"><img src="assets/img/speedplus/render.webp" width="959" height="479" loading="lazy" alt="A synthetic training render of the Tango spacecraft."></div>
+            <div class="panel"><img src="assets/img/speedplus/flare.webp" width="959" height="479" loading="lazy" alt="A synthetic training render with simulated lens flare."></div>
+            <hr class="speed-rule">
+            <div class="panel wide"><img src="assets/img/speedplus/lightbox.webp" width="771" height="479" loading="lazy" alt="DOPER detection and pose on a Lightbox image."><span>Lightbox</span></div>
+            <div class="panel wide"><img src="assets/img/speedplus/sunlamp.webp" width="771" height="479" loading="lazy" alt="DOPER detection and pose on a Sunlamp image."><span>Sunlamp</span></div>
+          </div>
+        </figure>
+      </div>
+      <div class="split top space">
+        <div class="table-card">
+          <h3>SHIRT tracking <small>pose errors, lower is better</small></h3>
+          <div class="table-scroll" id="shirt-table"></div>
+          <h3 class="sub">Second-orbit mean position error (cm)</h3>
+          <div class="table-scroll" id="shirt-orbit"></div>
+        </div>
+        <div class="shirt-videos" id="shirt-videos" hidden></div>
+      </div>
+    </section>
+
+    <section class="sec wrap" id="try">
+      <h2><span class="num">06</span>Code and usage</h2>
+      <p class="lead">The code is released under Apache-2.0. It requires Python 3.11 or newer, <a href="https://docs.astral.sh/uv/">uv</a>, and Blender 4.2 LTS or newer for rendering. Every <code>doper</code> command accepts <code>--dry-run</code>, which prints its steps without modifying data.</p>
+      <ol class="steps">
+        <li>
+          <h3>Installation</h3>
+          <div class="code"><pre><code>git clone https://github.com/NVlabs/DOPER.git
+cd DOPER
+uv sync
+source .venv/bin/activate</code></pre></div>
+          <p>Optional features are extras, for example <code>uv sync --extra bop --extra refine</code>. The <a href="https://github.com/NVlabs/DOPER/blob/main/examples/minimal/README.md">minimal example</a> is an end-to-end check: it takes the public-domain 3DBenchy model from keypoint selection to a short training run.</p>
+        </li>
+        <li>
+          <h3>Keypoint selection and synthetic data generation</h3>
+          <div class="code"><pre><code>blender --background --python rendering/mesh_setup.py -- --input CAD --output draft.blend \
+  --source-units m --center-geometry --centered-mesh-output centered.stl
+python -m doper.keypoint_selection --mesh centered.stl --source-units m \
+  --object-frame aabb_centered --out-json keypoints.json --object-name object --keypoint-prefix KP_object_
+blender --background --python rendering/mesh_setup.py -- --input CAD --output object.blend \
+  --source-units m --center-geometry --keypoints-input keypoints.json --usd-output object.usda \
+  --keypoints-output keypoints_3d.json
+python rendering/synth_parallel.py --blend-file object.blend --usd object.usda \
+  --config configs/synth_example.yaml --outdir data/train --num-images 200 --num-workers 2</code></pre></div>
+          <p>This writes a COCO-style split with images, masks, annotations and <code>keypoints_3d.json</code>. Render a validation split the same way.</p>
+        </li>
+        <li>
+          <h3>Training</h3>
+          <div class="code"><pre><code>cp doper/recipes/train_example.yaml my_training.yaml   # edit data_root, keypoints_3d, work_dir
+python -m doper.train --config my_training.yaml --dry-run
+python -m doper.train --config my_training.yaml</code></pre></div>
+          <p>The default backbone is DINOv3 ConvNeXt-Small, downloaded through <code>timm</code> under Meta's DINOv3 License.</p>
+        </li>
+        <li>
+          <h3>Inference on a recorded sequence</h3>
+          <div class="code"><pre><code>python -m doper.infer_recorded --checkpoint runs/best.pth \
+  --data-dir recordings/cam_0 --keypoints-3d data/keypoints_3d.json</code></pre></div>
+          <p>Detection, keypoint prediction and PnP run on every frame of a single-camera recording; the outputs are overlay images, an MP4 and per-frame poses.</p>
+        </li>
+        <li>
+          <h3>Reproducing the paper results</h3>
+          <div class="code"><pre><code>doper prepare handal --root data/bop --dry-run
+doper train handal --stage base --root data/bop --runs runs --obj-id 1 --dry-run
+doper evaluate handal --split val --root data/bop --runs runs --dry-run
+doper report handal --runs runs --dry-run</code></pre></div>
+          <p>Recipes cover HANDAL, HOPEv2, HOT3D and T-LESS end to end, SPEED+ data preparation, and the SHIRT evaluation; the <a href="https://github.com/NVlabs/DOPER#readme">README</a> lists all of them.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="sec wrap-wide" id="onboarding" aria-labelledby="onboarding-title">
+      <div class="wrap-inner">
+        <h2 id="onboarding-title"><span class="num">07</span>Onboarding gallery</h2>
+      </div>
+      <div class="onboarding-clips" id="onboarding-clips"></div>
+    </section>
+
+    <section class="sec wrap-wide" id="static-gallery" aria-labelledby="static-gallery-title">
+      <div class="wrap-inner">
+        <h2 id="static-gallery-title"><span class="num">08</span>Static gallery</h2>
+      </div>
+      <!-- STATIC-GALLERY:START -->
+      <div class="static-gallery-grid">
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/static/strongest-rgb/handal/00_000009_000653_predictions.webp" data-gallery-title="HANDAL · Scene 000009 · Image 000653" data-dataset-label="HANDAL" data-description="DOPER detections and poses. Yellow boxes are detected objects; cyan outlines are the CAD models at their predicted poses." data-scene="000009" data-image="000653" aria-label="Enlarge HANDAL · Scene 000009 · Image 000653">
+            <img src="assets/media/static/strongest-rgb/handal/00_000009_000653_predictions-thumb.webp" width="320" height="320" loading="lazy" decoding="async" alt="HANDAL · Scene 000009 · Image 000653: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/static/strongest-rgb/hopev2/00_000005_000003_predictions.webp" data-gallery-title="HOPEv2 · Scene 000005 · Image 000003" data-dataset-label="HOPEv2" data-description="DOPER detections and poses. Yellow boxes are detected objects; cyan outlines are the CAD models at their predicted poses." data-scene="000005" data-image="000003" aria-label="Enlarge HOPEv2 · Scene 000005 · Image 000003">
+            <img src="assets/media/static/strongest-rgb/hopev2/00_000005_000003_predictions-thumb.webp" width="320" height="320" loading="lazy" decoding="async" alt="HOPEv2 · Scene 000005 · Image 000003: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/static/strongest-rgb/hot3d/00_002090_000149_predictions.webp" data-gallery-title="HOT3D · Scene 002090 · Image 000149" data-dataset-label="HOT3D" data-description="DOPER detections and poses. Yellow boxes are detected objects; cyan outlines are the CAD models at their predicted poses." data-scene="002090" data-image="000149" aria-label="Enlarge HOT3D · Scene 002090 · Image 000149">
+            <img src="assets/media/static/strongest-rgb/hot3d/00_002090_000149_predictions-thumb.webp" width="320" height="320" loading="lazy" decoding="async" alt="HOT3D · Scene 002090 · Image 000149: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/static/strongest-rgb/tless/00_000001_000356_predictions.webp" data-gallery-title="T-LESS · Scene 000001 · Image 000356" data-dataset-label="T-LESS" data-description="DOPER detections and poses. Yellow boxes are detected objects; cyan outlines are the CAD models at their predicted poses." data-scene="000001" data-image="000356" aria-label="Enlarge T-LESS · Scene 000001 · Image 000356">
+            <img src="assets/media/static/strongest-rgb/tless/00_000001_000356_predictions-thumb.webp" width="320" height="320" loading="lazy" decoding="async" alt="T-LESS · Scene 000001 · Image 000356: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/static/strongest-rgb/handal/01_000007_000072_predictions.webp" data-gallery-title="HANDAL · Scene 000007 · Image 000072" data-dataset-label="HANDAL" data-description="DOPER detections and poses. Yellow boxes are detected objects; cyan outlines are the CAD models at their predicted poses." data-scene="000007" data-image="000072" aria-label="Enlarge HANDAL · Scene 000007 · Image 000072">
+            <img src="assets/media/static/strongest-rgb/handal/01_000007_000072_predictions-thumb.webp" width="320" height="320" loading="lazy" decoding="async" alt="HANDAL · Scene 000007 · Image 000072: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/static/strongest-rgb/hopev2/01_000010_000004_predictions.webp" data-gallery-title="HOPEv2 · Scene 000010 · Image 000004" data-dataset-label="HOPEv2" data-description="DOPER detections and poses. Yellow boxes are detected objects; cyan outlines are the CAD models at their predicted poses." data-scene="000010" data-image="000004" aria-label="Enlarge HOPEv2 · Scene 000010 · Image 000004">
+            <img src="assets/media/static/strongest-rgb/hopev2/01_000010_000004_predictions-thumb.webp" width="320" height="320" loading="lazy" decoding="async" alt="HOPEv2 · Scene 000010 · Image 000004: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/static/strongest-rgb/hot3d/01_002940_000149_predictions.webp" data-gallery-title="HOT3D · Scene 002940 · Image 000149" data-dataset-label="HOT3D" data-description="DOPER detections and poses. Yellow boxes are detected objects; cyan outlines are the CAD models at their predicted poses." data-scene="002940" data-image="000149" aria-label="Enlarge HOT3D · Scene 002940 · Image 000149">
+            <img src="assets/media/static/strongest-rgb/hot3d/01_002940_000149_predictions-thumb.webp" width="320" height="320" loading="lazy" decoding="async" alt="HOT3D · Scene 002940 · Image 000149: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/static/strongest-rgb/tless/01_000006_000214_predictions.webp" data-gallery-title="T-LESS · Scene 000006 · Image 000214" data-dataset-label="T-LESS" data-description="DOPER detections and poses. Yellow boxes are detected objects; cyan outlines are the CAD models at their predicted poses." data-scene="000006" data-image="000214" aria-label="Enlarge T-LESS · Scene 000006 · Image 000214">
+            <img src="assets/media/static/strongest-rgb/tless/01_000006_000214_predictions-thumb.webp" width="320" height="320" loading="lazy" decoding="async" alt="T-LESS · Scene 000006 · Image 000214: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/static/strongest-rgb/handal/02_000003_001295_predictions.webp" data-gallery-title="HANDAL · Scene 000003 · Image 001295" data-dataset-label="HANDAL" data-description="DOPER detections and poses. Yellow boxes are detected objects; cyan outlines are the CAD models at their predicted poses." data-scene="000003" data-image="001295" aria-label="Enlarge HANDAL · Scene 000003 · Image 001295">
+            <img src="assets/media/static/strongest-rgb/handal/02_000003_001295_predictions-thumb.webp" width="320" height="320" loading="lazy" decoding="async" alt="HANDAL · Scene 000003 · Image 001295: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/static/strongest-rgb/hopev2/02_000006_000003_predictions.webp" data-gallery-title="HOPEv2 · Scene 000006 · Image 000003" data-dataset-label="HOPEv2" data-description="DOPER detections and poses. Yellow boxes are detected objects; cyan outlines are the CAD models at their predicted poses." data-scene="000006" data-image="000003" aria-label="Enlarge HOPEv2 · Scene 000006 · Image 000003">
+            <img src="assets/media/static/strongest-rgb/hopev2/02_000006_000003_predictions-thumb.webp" width="320" height="320" loading="lazy" decoding="async" alt="HOPEv2 · Scene 000006 · Image 000003: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/static/strongest-rgb/hot3d/02_001133_000029_predictions.webp" data-gallery-title="HOT3D · Scene 001133 · Image 000029" data-dataset-label="HOT3D" data-description="DOPER detections and poses. Yellow boxes are detected objects; cyan outlines are the CAD models at their predicted poses." data-scene="001133" data-image="000029" aria-label="Enlarge HOT3D · Scene 001133 · Image 000029">
+            <img src="assets/media/static/strongest-rgb/hot3d/02_001133_000029_predictions-thumb.webp" width="320" height="320" loading="lazy" decoding="async" alt="HOT3D · Scene 001133 · Image 000029: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/static/strongest-rgb/tless/02_000011_000092_predictions.webp" data-gallery-title="T-LESS · Scene 000011 · Image 000092" data-dataset-label="T-LESS" data-description="DOPER detections and poses. Yellow boxes are detected objects; cyan outlines are the CAD models at their predicted poses." data-scene="000011" data-image="000092" aria-label="Enlarge T-LESS · Scene 000011 · Image 000092">
+            <img src="assets/media/static/strongest-rgb/tless/02_000011_000092_predictions-thumb.webp" width="320" height="320" loading="lazy" decoding="async" alt="T-LESS · Scene 000011 · Image 000092: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/handal/01.webp" data-gallery-title="HANDAL · Sample 01" data-dataset-label="HANDAL" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="01" aria-label="Enlarge HANDAL · Sample 01">
+            <img src="assets/media/static/thumbs/handal/01.webp" width="320" height="320" loading="lazy" decoding="async" alt="HANDAL · Sample 01: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/hopev2/01.webp" data-gallery-title="HOPEv2 · Sample 01" data-dataset-label="HOPEv2" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="01" aria-label="Enlarge HOPEv2 · Sample 01">
+            <img src="assets/media/static/thumbs/hopev2/01.webp" width="320" height="320" loading="lazy" decoding="async" alt="HOPEv2 · Sample 01: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/hot3d/01.webp" data-gallery-title="HOT3D · Sample 01" data-dataset-label="HOT3D" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="01" aria-label="Enlarge HOT3D · Sample 01">
+            <img src="assets/media/static/thumbs/hot3d/01.webp" width="320" height="320" loading="lazy" decoding="async" alt="HOT3D · Sample 01: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/tless/01.webp" data-gallery-title="T-LESS · Sample 01" data-dataset-label="T-LESS" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="01" aria-label="Enlarge T-LESS · Sample 01">
+            <img src="assets/media/static/thumbs/tless/01.webp" width="320" height="320" loading="lazy" decoding="async" alt="T-LESS · Sample 01: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/handal/04.webp" data-gallery-title="HANDAL · Sample 04" data-dataset-label="HANDAL" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="04" aria-label="Enlarge HANDAL · Sample 04">
+            <img src="assets/media/static/thumbs/handal/04.webp" width="320" height="320" loading="lazy" decoding="async" alt="HANDAL · Sample 04: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/hopev2/05.webp" data-gallery-title="HOPEv2 · Sample 05" data-dataset-label="HOPEv2" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="05" aria-label="Enlarge HOPEv2 · Sample 05">
+            <img src="assets/media/static/thumbs/hopev2/05.webp" width="320" height="320" loading="lazy" decoding="async" alt="HOPEv2 · Sample 05: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/hot3d/05.webp" data-gallery-title="HOT3D · Sample 05" data-dataset-label="HOT3D" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="05" aria-label="Enlarge HOT3D · Sample 05">
+            <img src="assets/media/static/thumbs/hot3d/05.webp" width="320" height="320" loading="lazy" decoding="async" alt="HOT3D · Sample 05: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/tless/04.webp" data-gallery-title="T-LESS · Sample 04" data-dataset-label="T-LESS" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="04" aria-label="Enlarge T-LESS · Sample 04">
+            <img src="assets/media/static/thumbs/tless/04.webp" width="320" height="320" loading="lazy" decoding="async" alt="T-LESS · Sample 04: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/handal/08.webp" data-gallery-title="HANDAL · Sample 08" data-dataset-label="HANDAL" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="08" aria-label="Enlarge HANDAL · Sample 08">
+            <img src="assets/media/static/thumbs/handal/08.webp" width="320" height="320" loading="lazy" decoding="async" alt="HANDAL · Sample 08: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/hopev2/09.webp" data-gallery-title="HOPEv2 · Sample 09" data-dataset-label="HOPEv2" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="09" aria-label="Enlarge HOPEv2 · Sample 09">
+            <img src="assets/media/static/thumbs/hopev2/09.webp" width="320" height="320" loading="lazy" decoding="async" alt="HOPEv2 · Sample 09: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/hot3d/09.webp" data-gallery-title="HOT3D · Sample 09" data-dataset-label="HOT3D" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="09" aria-label="Enlarge HOT3D · Sample 09">
+            <img src="assets/media/static/thumbs/hot3d/09.webp" width="320" height="320" loading="lazy" decoding="async" alt="HOT3D · Sample 09: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/tless/07.webp" data-gallery-title="T-LESS · Sample 07" data-dataset-label="T-LESS" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="07" aria-label="Enlarge T-LESS · Sample 07">
+            <img src="assets/media/static/thumbs/tless/07.webp" width="320" height="320" loading="lazy" decoding="async" alt="T-LESS · Sample 07: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/handal/12.webp" data-gallery-title="HANDAL · Sample 12" data-dataset-label="HANDAL" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="12" aria-label="Enlarge HANDAL · Sample 12">
+            <img src="assets/media/static/thumbs/handal/12.webp" width="320" height="320" loading="lazy" decoding="async" alt="HANDAL · Sample 12: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/hopev2/12.webp" data-gallery-title="HOPEv2 · Sample 12" data-dataset-label="HOPEv2" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="12" aria-label="Enlarge HOPEv2 · Sample 12">
+            <img src="assets/media/static/thumbs/hopev2/12.webp" width="320" height="320" loading="lazy" decoding="async" alt="HOPEv2 · Sample 12: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/hot3d/12.webp" data-gallery-title="HOT3D · Sample 12" data-dataset-label="HOT3D" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="12" aria-label="Enlarge HOT3D · Sample 12">
+            <img src="assets/media/static/thumbs/hot3d/12.webp" width="320" height="320" loading="lazy" decoding="async" alt="HOT3D · Sample 12: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/tless/11.webp" data-gallery-title="T-LESS · Sample 11" data-dataset-label="T-LESS" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="11" aria-label="Enlarge T-LESS · Sample 11">
+            <img src="assets/media/static/thumbs/tless/11.webp" width="320" height="320" loading="lazy" decoding="async" alt="T-LESS · Sample 11: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/handal/15.webp" data-gallery-title="HANDAL · Sample 15" data-dataset-label="HANDAL" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="15" aria-label="Enlarge HANDAL · Sample 15">
+            <img src="assets/media/static/thumbs/handal/15.webp" width="320" height="320" loading="lazy" decoding="async" alt="HANDAL · Sample 15: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/hopev2/16.webp" data-gallery-title="HOPEv2 · Sample 16" data-dataset-label="HOPEv2" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="16" aria-label="Enlarge HOPEv2 · Sample 16">
+            <img src="assets/media/static/thumbs/hopev2/16.webp" width="320" height="320" loading="lazy" decoding="async" alt="HOPEv2 · Sample 16: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/hot3d/16.webp" data-gallery-title="HOT3D · Sample 16" data-dataset-label="HOT3D" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="16" aria-label="Enlarge HOT3D · Sample 16">
+            <img src="assets/media/static/thumbs/hot3d/16.webp" width="320" height="320" loading="lazy" decoding="async" alt="HOT3D · Sample 16: DOPER pose overlays.">
+          </a>
+        </figure>
+        <figure class="static-gallery-card">
+          <a class="gallery-open" href="assets/media/tless/14.webp" data-gallery-title="T-LESS · Sample 14" data-dataset-label="T-LESS" data-description="DOPER poses on a BOP test image. Cyan outlines are the CAD models at their predicted poses, dots are keypoints, and arrows are object axes. Ground truth is not shown." data-sample="14" aria-label="Enlarge T-LESS · Sample 14">
+            <img src="assets/media/static/thumbs/tless/14.webp" width="320" height="320" loading="lazy" decoding="async" alt="T-LESS · Sample 14: DOPER pose overlays.">
+          </a>
+        </figure>
+      </div>
+      <!-- STATIC-GALLERY:END -->
+    </section>
+
+    <section class="sec wrap" id="citation">
+      <h2><span class="num">09</span>How to cite</h2>
+      <div class="code bib"><pre><code id="bibtex">@misc{hadfield2026doper,
+  title  = {{DOPER}: Deep Object Pose Estimation Revisited},
+  author = {Hadfield, Hugo and Degirmenci, Alperen and Tremblay, Jonathan},
+  year   = {2026},
+  url    = {https://github.com/NVlabs/DOPER}
+}</code></pre></div>
+      <p class="fineprint">The arXiv identifier will be added when the paper is posted.</p>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>© 2026 NVIDIA Corporation. Code released under <a href="https://github.com/NVlabs/DOPER/blob/main/LICENSE">Apache-2.0</a>.</p>
+    <p class="credits" id="credits">Images and videos include data from <a href="https://bop.felk.cvut.cz/">BOP</a> datasets: HANDAL (Guo et al., NVIDIA, CC BY-NC-SA 4.0), HOPE (Tyree et al., NVIDIA, CC BY-NC-SA 4.0), HOT3D (Banerjee et al., Meta; sequence data CC BY-SA under the HOT3D Dataset License Agreement) and T-LESS (Hodaň et al., CC BY 4.0), and from SPEED+ and SHIRT (Park and D'Amico, Stanford Space Rendezvous Laboratory, CC BY-NC-SA 4.0). DOPER overlays on these images are shared under the same terms as their source.</p>
+  </footer>
+
+  <script src="assets/js/data.js?v=0738f71"></script>
+  <script src="assets/js/media.js?v=0738f71"></script>
+  <script src="assets/js/site.js?v=0738f71"></script>
+  <script src="assets/js/gallery.js?v=0738f71"></script>
+  <script src="assets/js/onboarding-data.js?v=0738f71"></script>
+  <script src="assets/js/presentation-data.js?v=0738f71"></script>
+  <script src="assets/js/onboarding.js?v=0738f71"></script>
+</body>
+</html>
