@@ -4,7 +4,7 @@
 
 Hugo Hadfield, Alperen Degirmenci, Jonathan Tremblay
 
-🌐 [Website](https://nvlabs.github.io/DOPER/) · 📄 Paper (coming soon)
+🌐 [Website](https://nvlabs.github.io/DOPER/) · 📄 [Paper](https://arxiv.org/abs/2611.32846)
 
 DOPER trains and evaluates keypoint-based 6-DoF object pose models from synthetic data: it
 renders COCO-style training splits from a CAD model with Blender, trains a DINOv3 ConvNeXt
@@ -284,7 +284,19 @@ trained model with the commands above.
 
 ## Citation
 
-A BibTeX entry will be added here when the paper is available.
+If you use DOPER, please cite:
+
+```bibtex
+@misc{hadfield2026doper,
+  title         = {{DOPER}: Deep Object Pose Estimation Revisited},
+  author        = {Hadfield, Hugo and Degirmenci, Alperen and Tremblay, Jonathan},
+  year          = {2026},
+  eprint        = {2611.32846},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2611.32846}
+}
+```
 
 ## License
 
